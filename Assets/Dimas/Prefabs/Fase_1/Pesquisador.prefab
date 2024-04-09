@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pesquisador: {fileID: 9073759443656492313}
+  playerPesquisador: {fileID: 0}
   sensibilidade: 2
   suavidade: 1.5
   fatorEscala: 100
@@ -115,7 +116,7 @@ GameObject:
   - component: {fileID: 8969732453605801772}
   m_Layer: 0
   m_Name: Pesquisador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

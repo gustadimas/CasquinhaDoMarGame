@@ -76,4 +76,10 @@ public class Player_Pesquisador : MonoBehaviour
         posicaoPonto = Vector2.zero;
         pontoAnalogico.position = posicaoInicialPonto;
     }
+
+    public void ReativarJogador()
+    {
+        direcaoMovimento = Vector3.zero;
+        ResetarPosicaoJoystick();
+    }
 }
