@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,8 @@ public class ColetarLixos : MonoBehaviour
 {
     public GameObject[] lixosRestantes;
 
+    public event Action<bool> OnConcludedTrashEvent;
+
     private void Update()
     {
         lixosRestantes = GameObject.FindGameObjectsWithTag("Lixo");
@@ -15,7 +18,7 @@ public class ColetarLixos : MonoBehaviour
             
             if (lixosRestantes.Length == 0)
             {
-                GanhoXP.xp += 3;
+                OnConcludedTrashEvent(true);
                 EventController.eventoEmAndamento = false;
                 this.enabled = false;
             }

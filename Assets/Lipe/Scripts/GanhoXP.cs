@@ -3,23 +3,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Data;
 
 public class GanhoXP : MonoBehaviour
 {
-    [SerializeField] Slider barraXP;
-    public static int xp;
+    [SerializeField] int xpNecessario, maxDias;
+    int nivelAtual, numDia;
+    float xpAtual;
 
-    public event Action<bool> OnLevelUp;
+    [Header("Interface")]
+    [SerializeField] TextMeshProUGUI txtDia;
+    [SerializeField] Image preenchimentoXP, fotinha;
+    [SerializeField] Sprite[] icones;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
-        barraXP.value = xp;
+        xpAtual = 0;
+        numDia = 1;
+        fotinha.sprite = icones[0];
+        AtualizarInterface();
+    }
 
-        if (barraXP.value >= 5)
+    private void Update()
+    {
+        AtualizarInterface();
+    }
+
+    //QUANDO CONCLUIR A QUEST, CHAMAR O MÉTODO ADICIONARXP
+    public void AdicionarXP()
+    {
+        xpAtual += 0.35f;
+        VerificarLevelUp();
+    }
+    //-----------------------------------//
+
+    void VerificarLevelUp()
+    {
+        if (xpAtual >= xpNecessario)
         {
-            OnLevelUp(true);
-            xp = 0;
+            fotinha.sprite = icones[1];
+            Invoke(nameof(AtualizarDia), 2f);
+        }
+    }
+
+    void AtualizarInterface()
+    {
+        preenchimentoXP.fillAmount = xpAtual;
+        txtDia.text = "Dia " + numDia.ToString("00");
+    }
+
+    void AtualizarDia()
+    {
+        xpAtual = 0;
+        fotinha.sprite = icones[0];
+        if (numDia < maxDias)
+        {
+            numDia++;
         }
     }
 }
