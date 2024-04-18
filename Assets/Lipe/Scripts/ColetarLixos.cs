@@ -9,11 +9,13 @@ public class ColetarLixos : MonoBehaviour
 
     private void Update()
     {
+        lixosRestantes = GameObject.FindGameObjectsWithTag("Lixo");
         if (EventController.eventoEmAndamento)
         {
-            lixosRestantes = GameObject.FindGameObjectsWithTag("Lixo");
+            
             if (lixosRestantes.Length == 0)
             {
+                GanhoXP.xp += 3;
                 EventController.eventoEmAndamento = false;
                 this.enabled = false;
             }
@@ -24,7 +26,10 @@ public class ColetarLixos : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Lixo"))
         {
+            EventSpawner eventSpawner = FindObjectOfType<EventSpawner>();
+            eventSpawner.RemoveObject(collision.gameObject);
             Destroy(collision.gameObject);
+
         }
     }
 }

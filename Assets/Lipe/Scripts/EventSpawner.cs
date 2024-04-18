@@ -9,6 +9,9 @@ public class EventSpawner : MonoBehaviour
     [SerializeField] GameObject lixos, turistas, pescadores;
     MonoBehaviour scriptColetaLixo;
 
+    private List<GameObject> spawnedObjects = new List<GameObject>();
+    private float minDistance = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +28,8 @@ public class EventSpawner : MonoBehaviour
             EventController.eventoEmAndamento = true;
             for (int i = 0; i < 3; i++)
             {
-                Instantiate(lixos, new Vector3(UnityEngine.Random.Range(-5, 5), 4, -3), Quaternion.identity);
-                
+                GameObject lixoObj = Instantiate(lixos, GetSpawnPosition(), Quaternion.identity);
+                spawnedObjects.Add(lixoObj);
             }
             scriptColetaLixo.enabled = true;
         }
@@ -34,14 +37,50 @@ public class EventSpawner : MonoBehaviour
         if (randomizedEvent == "EventoTurista")
         {
             EventController.eventoEmAndamento = true;
-            Instantiate(turistas, new Vector3(-8, 5, -11), Quaternion.identity);
+            GameObject turistaObj = Instantiate(turistas, GetSpawnPosition(), Quaternion.identity);
+            spawnedObjects.Add(turistaObj);
+            scriptColetaLixo.enabled = true;
         }
 
         if (randomizedEvent == "EventoPescador")
         {
             EventController.eventoEmAndamento = true;
-            Instantiate(pescadores, new Vector3(-4, 5, -11), Quaternion.identity);
+            GameObject pescadorObj = Instantiate(pescadores, GetSpawnPosition(), Quaternion.identity);
+            spawnedObjects.Add(pescadorObj);
+            scriptColetaLixo.enabled = true;
         }
     }
 
+    private Vector3 GetSpawnPosition()
+    {
+        Vector3 spawnPosition;
+        bool positionFound = false;
+
+        while (!positionFound)
+        {
+            spawnPosition = new Vector3(UnityEngine.Random.Range(-5, 5), 4, -3);
+            positionFound = true;
+
+            foreach (GameObject obj in spawnedObjects)
+            {
+                if (Vector3.Distance(spawnPosition, obj.transform.position) < minDistance)
+                {
+                    positionFound = false;
+                    break;
+                }
+            }
+
+            if (positionFound)
+            {
+                return spawnPosition;
+            }
+        }
+
+        return Vector3.zero;
+    }
+
+    public void RemoveObject(GameObject spawnedObject)
+    {
+        spawnedObjects.Remove(spawnedObject);
+    }
 }
