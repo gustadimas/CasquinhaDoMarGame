@@ -1499,7 +1499,7 @@ MonoBehaviour:
   LuzDirecional: {fileID: 1269786580}
   Preset: {fileID: 11400000, guid: ad24b96d5e9855d40a5769d50582642b, type: 2}
   HoraDoDia: 5
-  duracaoDiaMinutos: 0.5
+  duracaoDiaMinutos: 20
 --- !u!4 &1708782685
 Transform:
   m_ObjectHideFlags: 0

@@ -8,10 +8,10 @@ public class GerenciadorDeIluminacao : MonoBehaviour
     [SerializeField] Light LuzDirecional;
     [SerializeField] PresetDeIluminacao Preset;
 
-    [Header("Definir a Hora (Manual):")]
+    [Header("Definir a Hora Manual:")]
     [SerializeField, Range(5, 24)] float HoraDoDia;
 
-    [Header("Definir a Hora (Automatica):")]
+    [Header("Definir a Hora Automatica:")]
     [SerializeField] float duracaoDiaMinutos;
 
     bool atingiu24Horas = false;
