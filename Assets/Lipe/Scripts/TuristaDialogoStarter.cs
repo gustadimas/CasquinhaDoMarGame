@@ -1,4 +1,5 @@
 using cherrydev;
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -39,5 +40,7 @@ public class TuristaDialogoStarter : MonoBehaviour
     {
         scriptMovimentacao.enabled = true;
         analogico.SetActive(true);
+        GameObject.FindObjectOfType<EventSpawner>().SumirNPCs();
+        EventController.eventoEmAndamento = false;
     }
 }

@@ -6,19 +6,20 @@ using UnityEngine;
 
 public class ColetarLixos : MonoBehaviour
 {
-    public GameObject[] lixosRestantes;
+    EventSpawner eventSpawner;
 
-    public event Action<bool> OnConcludedTrashEvent;
+    private void Start()
+    {
+        eventSpawner = FindObjectOfType<EventSpawner>();
+    }
 
     private void Update()
     {
-        lixosRestantes = GameObject.FindGameObjectsWithTag("Lixo");
         if (EventController.eventoEmAndamento)
         {
             
-            if (lixosRestantes.Length == 0)
+            if (eventSpawner.spawnedObjects.Count == 0)
             {
-                OnConcludedTrashEvent(true);
                 EventController.eventoEmAndamento = false;
                 this.enabled = false;
             }
@@ -29,10 +30,8 @@ public class ColetarLixos : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Lixo"))
         {
-            EventSpawner eventSpawner = FindObjectOfType<EventSpawner>();
             eventSpawner.RemoveObject(collision.gameObject);
             Destroy(collision.gameObject);
-
         }
     }
 }
