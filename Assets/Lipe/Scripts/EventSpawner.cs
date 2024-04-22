@@ -6,10 +6,11 @@ using UnityEngine;
 public class EventSpawner : MonoBehaviour
 {
     EventController eventController;
-    [SerializeField] GameObject lixos, turistas, pescadores;
+    [SerializeField] GameObject lixoPrefab;
+    GameObject turista, pescador, pesquisador;
     MonoBehaviour scriptColetaLixo;
 
-    private List<GameObject> spawnedObjects = new List<GameObject>();
+    public List<GameObject> spawnedObjects = new List<GameObject>();
     private float minDistance = 2f;
 
     // Start is called before the first frame update
@@ -17,8 +18,21 @@ public class EventSpawner : MonoBehaviour
     {
         eventController = FindObjectOfType<EventController>();
         eventController.OnRandomizedEvent += EventController_OnRandomizedEvent;
+
         scriptColetaLixo = FindAnyObjectByType<ColetarLixos>();
         scriptColetaLixo.enabled = false;
+
+        pesquisador = GameObject.FindGameObjectWithTag("Player");
+        turista = GameObject.FindGameObjectWithTag("Turista");
+        pescador = GameObject.FindGameObjectWithTag("Pescador");
+
+        SumirNPCs();
+    }
+
+    public void SumirNPCs()
+    {
+        turista.SetActive(false);
+        pescador.SetActive(false);
     }
 
     private void EventController_OnRandomizedEvent(string randomizedEvent)
@@ -28,7 +42,7 @@ public class EventSpawner : MonoBehaviour
             EventController.eventoEmAndamento = true;
             for (int i = 0; i < 3; i++)
             {
-                GameObject lixoObj = Instantiate(lixos, GetSpawnPosition(), Quaternion.identity);
+                GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
                 spawnedObjects.Add(lixoObj);
             }
             scriptColetaLixo.enabled = true;
@@ -37,17 +51,15 @@ public class EventSpawner : MonoBehaviour
         if (randomizedEvent == "EventoTurista")
         {
             EventController.eventoEmAndamento = true;
-            GameObject turistaObj = Instantiate(turistas, GetSpawnPosition(), Quaternion.identity);
-            spawnedObjects.Add(turistaObj);
-            scriptColetaLixo.enabled = true;
+            turista.transform.position = GetSpawnPosition();
+            turista.SetActive(true);
         }
 
         if (randomizedEvent == "EventoPescador")
         {
             EventController.eventoEmAndamento = true;
-            GameObject pescadorObj = Instantiate(pescadores, GetSpawnPosition(), Quaternion.identity);
-            spawnedObjects.Add(pescadorObj);
-            scriptColetaLixo.enabled = true;
+            pescador.transform.position = GetSpawnPosition();
+            pescador.SetActive(true);
         }
     }
 
@@ -58,12 +70,12 @@ public class EventSpawner : MonoBehaviour
 
         while (!positionFound)
         {
-            spawnPosition = new Vector3(UnityEngine.Random.Range(-5, 5), 4, -3);
+            spawnPosition = new Vector3(UnityEngine.Random.Range(-11, 5), 1, UnityEngine.Random.Range(-11, -3));
             positionFound = true;
 
             foreach (GameObject obj in spawnedObjects)
             {
-                if (Vector3.Distance(spawnPosition, obj.transform.position) < minDistance)
+                if (Vector3.Distance(spawnPosition, obj.transform.position) < minDistance || Vector3.Distance(spawnPosition, pesquisador.transform.position) < minDistance)
                 {
                     positionFound = false;
                     break;
@@ -78,6 +90,7 @@ public class EventSpawner : MonoBehaviour
 
         return Vector3.zero;
     }
+
 
     public void RemoveObject(GameObject spawnedObject)
     {

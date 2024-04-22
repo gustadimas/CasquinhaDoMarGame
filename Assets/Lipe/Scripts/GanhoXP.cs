@@ -16,10 +16,9 @@ public class GanhoXP : MonoBehaviour
     [SerializeField] TextMeshProUGUI txtDia;
     [SerializeField] Image preenchimentoXP, fotinha;
     [SerializeField] Sprite[] icones;
-
-
     private void Start()
     {
+
         xpAtual = 0;
         numDia = 1;
         fotinha.sprite = icones[0];
@@ -51,7 +50,7 @@ public class GanhoXP : MonoBehaviour
     void AtualizarInterface()
     {
         preenchimentoXP.fillAmount = xpAtual;
-        txtDia.text = "Dia " + numDia.ToString("00");
+        txtDia.text = "Dia " + numDia + "/5";
     }
 
     void AtualizarDia()

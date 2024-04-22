@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1061306093405394337}
   m_Layer: 0
   m_Name: Turista
-  m_TagString: Untagged
+  m_TagString: Turista
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4292d3e290ba4d449c4939fdf3eb7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scriptDialogo: {fileID: 0}
+  graficoNos: {fileID: 0}
+  scriptMovimentacao: {fileID: 0}
+  analogico: {fileID: 0}

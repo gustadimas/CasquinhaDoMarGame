@@ -9,7 +9,6 @@ public class EventController : MonoBehaviour
 
     public static bool eventoEmAndamento;
 
-    // Lista de eventos
     private List<string> eventos = new List<string> { "EventoLixo", "EventoPescador", "EventoTurista" };
 
     // Start is called before the first frame update

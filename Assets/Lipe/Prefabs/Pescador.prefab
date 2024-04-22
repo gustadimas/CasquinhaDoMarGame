@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5872084066134477317}
   m_Layer: 0
   m_Name: Pescador
-  m_TagString: Untagged
+  m_TagString: Pescador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,3 +130,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptDialogo: {fileID: 0}
   graficoNos: {fileID: 0}
+  scriptMovimentacao: {fileID: 0}
+  analogico: {fileID: 0}

@@ -16,15 +16,15 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 336
-    y: -94
+    x: 421
+    y: -47
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Menina
-    text: Amooo
+    text: A1
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
   parentNode: {fileID: 471083586635087499}
   childNode: {fileID: -7024198181954783653}
@@ -46,12 +46,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 555
-    y: 66
+    x: 729
+    y: 52
     width: 190
     height: 155
   isDragging: 0
-  isSelected: 1
+  isSelected: 0
   sentence:
     characterName: Menina
     text: Tchauu
@@ -98,17 +98,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 6
-    y: 4
+    x: 130
+    y: 19
     width: 190
     height: 175
   isDragging: 0
   isSelected: 0
   answers:
-  - To sim mor
-  - To pessima
-  - "N\xE3o te interessa"
-  - Huh...
+  - A
+  - B
+  - C
+  - D
   parentSentenceNode: {fileID: 2950491750722528214}
   childSentenceNodes:
   - {fileID: -8163236708709823807}
@@ -131,15 +131,15 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 234
-    y: -11
+    x: 393
+    y: 360
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Menina
-    text: Yuh!
+    text: D1
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
   parentNode: {fileID: 471083586635087499}
   childNode: {fileID: -7024198181954783653}
@@ -161,15 +161,15 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 311
-    y: 348
+    x: 428
+    y: 214
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Menina
-    text: "VSFD ent\xE3o"
+    text: C1
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
   parentNode: {fileID: 471083586635087499}
   childNode: {fileID: -7024198181954783653}
@@ -191,15 +191,15 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 322
-    y: 188
+    x: 434
+    y: 83
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Menina
-    text: Fica bem fia
+    text: B1
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
   parentNode: {fileID: 471083586635087499}
   childNode: {fileID: -7024198181954783653}
@@ -221,15 +221,15 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -252
-    y: -55
+    x: -79
+    y: 21
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Menina
-    text: Oii. Ta bem?
+    text: oi
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: 471083586635087499}
