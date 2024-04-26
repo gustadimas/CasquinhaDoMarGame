@@ -8,19 +8,14 @@ public class EventSpawner : MonoBehaviour
     EventController eventController;
     [SerializeField] GameObject lixoPrefab;
     GameObject turista, pescador, pesquisador;
-    MonoBehaviour scriptColetaLixo;
 
     public List<GameObject> spawnedObjects = new List<GameObject>();
     private float minDistance = 2f;
 
-    // Start is called before the first frame update
     void Start()
     {
         eventController = FindObjectOfType<EventController>();
         eventController.OnRandomizedEvent += EventController_OnRandomizedEvent;
-
-        scriptColetaLixo = FindAnyObjectByType<ColetarLixos>();
-        scriptColetaLixo.enabled = false;
 
         pesquisador = GameObject.FindGameObjectWithTag("Player");
         turista = GameObject.FindGameObjectWithTag("Turista");
@@ -45,7 +40,6 @@ public class EventSpawner : MonoBehaviour
                 GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
                 spawnedObjects.Add(lixoObj);
             }
-            scriptColetaLixo.enabled = true;
         }
 
         if (randomizedEvent == "EventoTurista")

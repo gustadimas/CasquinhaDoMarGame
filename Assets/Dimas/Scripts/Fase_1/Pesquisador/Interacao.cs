@@ -4,14 +4,14 @@ using UnityEngine.VFX;
 
 public class Interacao : MonoBehaviour
 {
-    [SerializeField] private TipoInteracao tipoInteracao;
-    [SerializeField] private float distanciaRaio = 3f;
+    [SerializeField] TipoInteracao tipoInteracao;
+    [SerializeField]  float distanciaRaio = 5f;
 
     [Header("Missoes")]
     protected QuestController controladorMissao;
 
-    private Camera mainCamera;
-    private Ray raio;
+    Camera mainCamera;
+    Ray raio;
     protected RaycastHit hitInfo;
     GameObject ultimoObjetoDestacado;
 
@@ -36,6 +36,21 @@ public class Interacao : MonoBehaviour
                 hitInfo.collider.GetComponentInParent<Outline>().enabled = true;
                 ultimoObjetoDestacado = hitInfo.collider.gameObject;
             }
+
+            else if (hitInfo.collider.TryGetComponent(out PescadorDialogoStarter _pescador))
+            {
+                tipoInteracao = TipoInteracao.pescador;
+                hitInfo.collider.GetComponentInParent<Outline>().enabled = true;
+                ultimoObjetoDestacado = hitInfo.collider.gameObject;
+            }
+
+            else if (hitInfo.collider.TryGetComponent(out TuristaDialogoStarter _turista))
+            {
+                tipoInteracao = TipoInteracao.turista;
+                hitInfo.collider.GetComponentInParent<Outline>().enabled = true;
+                ultimoObjetoDestacado = hitInfo.collider.gameObject;
+            }
+
             else tipoInteracao = TipoInteracao.None;
         }
         else
@@ -57,13 +72,53 @@ public class Interacao : MonoBehaviour
                 if (hitInfo.collider.TryGetComponent(out Lixos _lixo))
                 {
                     controladorMissao.AtualizarProgressoMissoes(_lixo.MissaoID, 1);
+                    FindAnyObjectByType<EventSpawner>().RemoveObject(hitInfo.collider.transform.parent.gameObject);
 
                     hitInfo.collider.GetComponent<Collider>().enabled = false;
                     if (hitInfo.collider.GetComponentInParent<Outline>() != null)
                     {
                         hitInfo.collider.GetComponentInParent<Outline>().enabled = false;
                     }
+                    
                     Destroy(hitInfo.collider.transform.parent.gameObject);
+                }
+            }
+        }
+    }
+
+    public void InteragirPescador()
+    {
+        if(tipoInteracao == TipoInteracao.pescador)
+        {
+            if (hitInfo.collider != null)
+            {
+                if (hitInfo.collider.TryGetComponent(out PescadorDialogoStarter _pescador))
+                {
+                    _pescador.PescadorInteracao();
+                    hitInfo.collider.GetComponent<Collider>().enabled = false;
+                    if (hitInfo.collider.GetComponentInParent<Outline>() != null)
+                    {
+                        hitInfo.collider.GetComponentInParent<Outline>().enabled = false;
+                    }
+                }
+            }
+        }
+    }
+
+    public void InteragirTurista()
+    {
+        if (tipoInteracao == TipoInteracao.turista)
+        {
+            if (hitInfo.collider != null)
+            {
+                if (hitInfo.collider.TryGetComponent(out TuristaDialogoStarter _turista))
+                {
+                    _turista.TuristaInteracao();
+                    hitInfo.collider.GetComponent<Collider>().enabled = false;
+                    if (hitInfo.collider.GetComponentInParent<Outline>() != null)
+                    {
+                        hitInfo.collider.GetComponentInParent<Outline>().enabled = false;
+                    }
                 }
             }
         }

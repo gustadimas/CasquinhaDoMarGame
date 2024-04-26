@@ -9,25 +9,15 @@ public class TuristaDialogoStarter : MonoBehaviour
     [SerializeField] DialogNodeGraph graficoNos;
     [SerializeField] MonoBehaviour scriptMovimentacao;
     [SerializeField] GameObject analogico;
-    void Start()
-    {
-        scriptDialogo.BindExternalFunction("AcabouTurista", ReativarPersonagem);
-    }
+    [SerializeField] private int missaoID;
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Start() => scriptDialogo.BindExternalFunction("AcabouTurista", ReativarPersonagem);
 
-    }
-
-    private void OnCollisionEnter(Collision collision)
+    public void TuristaInteracao()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            scriptDialogo.StartDialog(graficoNos);
-            scriptMovimentacao.enabled = false;
-            analogico.SetActive(false);
-        }
+        scriptDialogo.StartDialog(graficoNos);
+        scriptMovimentacao.enabled = false;
+        analogico.SetActive(false);
     }
 
     void ReativarPersonagem()
@@ -41,6 +31,6 @@ public class TuristaDialogoStarter : MonoBehaviour
         scriptMovimentacao.enabled = true;
         analogico.SetActive(true);
         GameObject.FindObjectOfType<EventSpawner>().SumirNPCs();
-        EventController.eventoEmAndamento = false;
+        FindAnyObjectByType<QuestController>().AtualizarProgressoMissoes(missaoID, 1);
     }
 }

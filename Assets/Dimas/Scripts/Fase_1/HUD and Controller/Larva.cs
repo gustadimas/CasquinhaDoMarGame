@@ -5,7 +5,6 @@ using UnityEngine;
 public class Larva : MonoBehaviour
 {
     [SerializeField] private float health = 100f;
-    [SerializeField] private int missaoID;
 
     public void TakeDamage(float damage) 
     {
@@ -23,7 +22,7 @@ public class Larva : MonoBehaviour
 
 	private void DestroyLarva() 
     {
-        FindAnyObjectByType<QuestController>().AtualizarProgressoMissoes(missaoID, 1);
+        
         gameObject.SetActive(false);
     }
 }

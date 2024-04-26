@@ -47,6 +47,36 @@ public class GerenciadorDeIluminacao : MonoBehaviour
         }
     }
 
+    public void AvancarTempo(float quantidade)
+    {
+        HoraDoDia += quantidade;
+        if (HoraDoDia >= 24)
+        {
+            HoraDoDia = 0;
+            atingiu24Horas = true;
+        }
+        else
+        {
+            atingiu24Horas = false;
+        }
+        AtualizarIluminacao(HoraDoDia / 24f);
+    }
+
+    public void DefinirHoraDoDia(float novaHora)
+    {
+        HoraDoDia = novaHora;
+        if (HoraDoDia >= 24)
+        {
+            HoraDoDia = 0;
+            atingiu24Horas = true;
+        }
+        else
+        {
+            atingiu24Horas = false;
+        }
+        AtualizarIluminacao(HoraDoDia / 24f);
+    }
+
     public void ReiniciarDia()
     {
         HoraDoDia = 0;

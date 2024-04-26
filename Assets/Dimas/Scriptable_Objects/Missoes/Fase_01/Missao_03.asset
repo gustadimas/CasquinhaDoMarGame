@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idMissao: 2
   valorAtual: 0
-  quantidade: 0
-  estadoMissao: 0
+  quantidade: 1
+  estadoMissao: 1
   textoMissao: "Conscientize os pescadores locais sobre a preserva\xE7\xE3o da ninhada."

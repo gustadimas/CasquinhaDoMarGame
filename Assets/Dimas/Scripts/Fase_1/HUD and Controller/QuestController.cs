@@ -13,13 +13,16 @@ public class QuestController : MonoBehaviour
     [SerializeField] GameObject espacoMissoes;
     [SerializeField] TextMeshProUGUI[] textoMissoes;
     [SerializeField] Quest[] listaDeMissoes;
+    [SerializeField] ControleXP controleXP;
 
     int missoesRestando;
     int missoesCompletas = 0;
-    bool faseCompleta = false;
+    //bool faseCompleta = false;
 
     private void Start()
     {
+        foreach (Quest missao in listaDeMissoes) missao.Resetar();    
+
         missoesRestando = listaDeMissoes.Length;
         progressoMissoesUI.text = "Missões: " + missoesCompletas + "/" + missoesRestando;
 
@@ -52,6 +55,7 @@ public class QuestController : MonoBehaviour
                     
                     if (_missao.valorAtual >= _missao.quantidade)
                     {
+                        EventController.eventoEmAndamento = false;
                         _missao.estadoMissao = true;
                         textoMissoes[_i].fontStyle = FontStyles.Strikethrough;
                         textoMissoes[_i].color = Color.red;
@@ -63,36 +67,42 @@ public class QuestController : MonoBehaviour
             _i++;
         }
 
-        if(missoesCompletas >= listaDeMissoes.Length && !faseCompleta)
+        if(missoesCompletas > 0)
         {
-            faseCompleta = true;
-            EstagioCompleto();
+            controleXP.AdicionarXP();
+            missoesCompletas = 0;
         }
+        
+        //if(missoesCompletas >= listaDeMissoes.Length && !faseCompleta)
+        //{
+        //    faseCompleta = true;
+        //    EstagioCompleto();
+        //}
     }
 
     public bool ChecarEstadoMissao(int missaoID) 
     {
-		bool estado = false;
+		bool _estado = false;
 
 		foreach (Quest _missao in listaDeMissoes) 
         {
             if(_missao.idMissao == missaoID)
             {
-                estado = _missao.estadoMissao;
+                _estado = _missao.estadoMissao;
 			}
         }
-		return estado;
+		return _estado;
     }
 
-    public void EstagioCompleto()
-    {
-        GameManager.levelsComplete += 1;
+ //   public void EstagioCompleto()
+ //   {
+ //       GameManager.levelsComplete += 1;
 
-		if (GameManager.levelsComplete >= 7) 
-        {
-            proximaFase = 10;
-		}
+	//	if (GameManager.levelsComplete >= 7) 
+ //       {
+ //           proximaFase = 10;
+	//	}
 
-		GameManager.instance.LoadScene(proximaFase);
-	}
+	//	GameManager.instance.LoadScene(proximaFase);
+	//}
 }

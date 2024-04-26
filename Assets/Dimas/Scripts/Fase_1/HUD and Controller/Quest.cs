@@ -8,4 +8,10 @@ public class Quest : ScriptableObject
     public int quantidade;
     public bool estadoMissao;
     public string textoMissao;
+
+    public void Resetar()
+    {
+        valorAtual = 0;
+        estadoMissao = false;
+    }
 }

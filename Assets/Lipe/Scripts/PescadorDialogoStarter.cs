@@ -9,32 +9,21 @@ public class PescadorDialogoStarter : MonoBehaviour
     [SerializeField] DialogNodeGraph graficoNos;
     [SerializeField] MonoBehaviour scriptMovimentacao;
     [SerializeField] GameObject analogico;
+    [SerializeField] private int missaoID;
 
-    void Start()
+    void Start() => scriptDialogo.BindExternalFunction("AcabouPescador", ReativarPersonagem);
+    
+    public void PescadorInteracao()
     {
-        scriptDialogo.BindExternalFunction("AcabouPescador", ReativarPersonagem);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            scriptDialogo.StartDialog(graficoNos);
-            scriptMovimentacao.enabled = false;
-            analogico.SetActive(false);
-        }
+        scriptDialogo.StartDialog(graficoNos);
+        scriptMovimentacao.enabled = false;
+        analogico.SetActive(false);
     }
 
     void ReativarPersonagem()
     {
         GameObject.FindObjectOfType<Player_Pesquisador>().ReativarJogador();
-        Invoke(nameof(Mover), 1.5f); 
+        Invoke(nameof(Mover), 1.5f);
     }
 
     void Mover()
@@ -42,6 +31,6 @@ public class PescadorDialogoStarter : MonoBehaviour
         scriptMovimentacao.enabled = true;
         analogico.SetActive(true);
         GameObject.FindObjectOfType<EventSpawner>().SumirNPCs();
-        EventController.eventoEmAndamento = false;
+        FindAnyObjectByType<QuestController>().AtualizarProgressoMissoes(missaoID, 1);
     }
 }

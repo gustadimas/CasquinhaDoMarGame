@@ -2,5 +2,7 @@
 public enum TipoInteracao
 {
     None,
-    lixo
+    lixo,
+    turista,
+    pescador
 }
