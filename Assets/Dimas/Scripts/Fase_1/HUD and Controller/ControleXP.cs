@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ControleXP : MonoBehaviour
@@ -23,20 +24,25 @@ public class ControleXP : MonoBehaviour
     private void Update()
     {
         AtualizarInterface();
+
+        if (GerenciadorDeIluminacao.atingiu24Horas == true && xpAtual < xpNecessario)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
-    //QUANDO CONCLUIR A QUEST, CHAMAR O MÉTODO ADICIONARXP
     public void AdicionarXP()
     {
         xpAtual += 0.35f;
         VerificarLevelUp();
     }
-    //-----------------------------------//
 
     void VerificarLevelUp()
     {
         if (xpAtual >= xpNecessario)
         {
+            Interface_Passagem.instance.StartCoroutine(nameof(Interface_Passagem.Aparecer));
+            Interface_Passagem.instance.comecarDia?.Invoke();
             fotinha.sprite = icones[1];
             Invoke(nameof(AtualizarDia), 2f);
         }
@@ -52,9 +58,6 @@ public class ControleXP : MonoBehaviour
     {
         xpAtual = 0;
         fotinha.sprite = icones[0];
-        if (numDia < maxDias)
-        {
-            numDia++;
-        }
+        if (numDia < maxDias) numDia++;
     }
 }

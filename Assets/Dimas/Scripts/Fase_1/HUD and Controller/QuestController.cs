@@ -40,6 +40,7 @@ public class QuestController : MonoBehaviour
             textoMissoes[i].text = listaDeMissoes[i].valorAtual + "/" + listaDeMissoes[i].quantidade + " " + listaDeMissoes[i].textoMissao;
         }
     }
+
     public void AtualizarProgressoMissoes(int missaoID, int plus)
     {
         int _i = 0;
@@ -58,7 +59,7 @@ public class QuestController : MonoBehaviour
                         EventController.eventoEmAndamento = false;
                         _missao.estadoMissao = true;
                         textoMissoes[_i].fontStyle = FontStyles.Strikethrough;
-                        textoMissoes[_i].color = Color.red;
+                        textoMissoes[_i].color = Color.green;
                         missoesCompletas++;
                         progressoMissoesUI.text = "Missões: " + missoesCompletas + "/" + missoesRestando;
 					}

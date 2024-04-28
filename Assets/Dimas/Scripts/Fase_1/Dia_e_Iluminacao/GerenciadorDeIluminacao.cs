@@ -14,72 +14,46 @@ public class GerenciadorDeIluminacao : MonoBehaviour
     [Header("Definir a Hora Automatica:")]
     [SerializeField] float duracaoDiaMinutos;
 
-    bool atingiu24Horas = false;
+    [SerializeField] float totalXP;
+
+    public static bool atingiu24Horas = false;
+    public static bool atualizarDia = false;
 
     public Action novoDia;
     public static GerenciadorDeIluminacao instance { get; private set; }
 
     private void Awake() => instance = this;
 
-    private void Update()
+    private void Update() => ComeçarDia();
+
+    void ComeçarDia()
     {
-        AtualizarIluminacao(HoraDoDia / 24f);
-
-        if (Preset == null) return;
-
-        if (Application.isPlaying)
+        if (atualizarDia == true)
         {
-            HoraDoDia += Time.deltaTime * 24f / (duracaoDiaMinutos * 60f);
-            if (HoraDoDia >= 24)
+            AtualizarIluminacao(HoraDoDia / 24f);
+
+            if (Preset == null) return;
+
+            if (Application.isPlaying)
             {
-                HoraDoDia = 24;
-                if (!atingiu24Horas)
+                HoraDoDia += Time.deltaTime * 24f / (duracaoDiaMinutos * 60f);
+                if (HoraDoDia >= 24)
                 {
-                    Atingiu24Horas();
-                    atingiu24Horas = true;
+                    HoraDoDia = 24;
+                    if (!atingiu24Horas) atingiu24Horas = true;
+                }
+                else
+                {
+                    atingiu24Horas = false;
+                    AtualizarIluminacao(HoraDoDia / 24f);
                 }
             }
-            else
-            {
-                atingiu24Horas = false;
-                AtualizarIluminacao(HoraDoDia / 24f);
-            }
         }
-    }
-
-    public void AvancarTempo(float quantidade)
-    {
-        HoraDoDia += quantidade;
-        if (HoraDoDia >= 24)
-        {
-            HoraDoDia = 0;
-            atingiu24Horas = true;
-        }
-        else
-        {
-            atingiu24Horas = false;
-        }
-        AtualizarIluminacao(HoraDoDia / 24f);
-    }
-
-    public void DefinirHoraDoDia(float novaHora)
-    {
-        HoraDoDia = novaHora;
-        if (HoraDoDia >= 24)
-        {
-            HoraDoDia = 0;
-            atingiu24Horas = true;
-        }
-        else
-        {
-            atingiu24Horas = false;
-        }
-        AtualizarIluminacao(HoraDoDia / 24f);
     }
 
     public void ReiniciarDia()
     {
-        HoraDoDia = 0;
+        HoraDoDia = 5;
         atingiu24Horas = false;
     }
 
@@ -113,11 +87,5 @@ public class GerenciadorDeIluminacao : MonoBehaviour
                 }
             }
         }
-    }
-
-    void Atingiu24Horas()
-    {
-        Interface_Passagem.instance.comecarDia?.Invoke();
-        Interface_Passagem.instance.StartCoroutine("Aparecer");
     }
 }

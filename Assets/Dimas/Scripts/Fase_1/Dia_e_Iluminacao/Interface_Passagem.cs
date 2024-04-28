@@ -2,12 +2,13 @@ using UnityEngine;
 using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Interface_Passagem : MonoBehaviour
 {
     [Header("Configuracoes de Desaparecimento")]
     [SerializeField] float tempoDesaparecerTexto = 2f;
-    [SerializeField] float tempoDesaparecerPainel = 3f;
+    [SerializeField] float tempoDesaparecerPainel = .6f;
     [SerializeField] float atraso = 1f;
 
     [Header("Elementos da Interface")]
@@ -27,25 +28,29 @@ public class Interface_Passagem : MonoBehaviour
 
     IEnumerator Desaparecer()
     {
-        yield return new WaitForSeconds(atraso);
-
-        float _tempoPassado = 0f;
-        while (_tempoPassado < tempoDesaparecerTexto)
+        if (GerenciadorDeIluminacao.atualizarDia == false)
         {
-            _tempoPassado += Time.deltaTime;
-            texto.alpha = Mathf.Lerp(1, 0, _tempoPassado / tempoDesaparecerTexto);
-            yield return null;
-        }
-        texto.alpha = 0;
+            yield return new WaitForSeconds(atraso);
 
-        _tempoPassado = 0f;
-        while (_tempoPassado < tempoDesaparecerPainel)
-        {
-            _tempoPassado += Time.deltaTime;
-            painelDias.alpha = Mathf.Lerp(1, 0, _tempoPassado / tempoDesaparecerPainel);
-            yield return null;
+            float _tempoPassado = 0f;
+            while (_tempoPassado < tempoDesaparecerTexto)
+            {
+                _tempoPassado += Time.deltaTime;
+                texto.alpha = Mathf.Lerp(1, 0, _tempoPassado / tempoDesaparecerTexto);
+                yield return null;
+            }
+            texto.alpha = 0;
+
+            _tempoPassado = 0f;
+            while (_tempoPassado < tempoDesaparecerPainel)
+            {
+                _tempoPassado += Time.deltaTime;
+                painelDias.alpha = Mathf.Lerp(1, 0, _tempoPassado / tempoDesaparecerPainel);
+                yield return null;
+            }
+            painelDias.alpha = 0;
+            GerenciadorDeIluminacao.atualizarDia = true;
         }
-        painelDias.alpha = 0;
     }
 
     public IEnumerator Aparecer()
@@ -74,6 +79,7 @@ public class Interface_Passagem : MonoBehaviour
         numDia++;
         texto.text = "DIA " + numDia.ToString("00");
         GerenciadorDeIluminacao.instance.ReiniciarDia();
+        GerenciadorDeIluminacao.atualizarDia = false;
         StartCoroutine(Desaparecer());
     }
 }

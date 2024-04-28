@@ -7,7 +7,7 @@ public class TuristaDialogoStarter : MonoBehaviour
 {
     [SerializeField] DialogBehaviour scriptDialogo;
     [SerializeField] DialogNodeGraph graficoNos;
-    [SerializeField] MonoBehaviour scriptMovimentacao;
+    [SerializeField] MonoBehaviour scriptMovimentacao, scriptCamera;
     [SerializeField] GameObject analogico;
     [SerializeField] private int missaoID;
 
@@ -17,6 +17,7 @@ public class TuristaDialogoStarter : MonoBehaviour
     {
         scriptDialogo.StartDialog(graficoNos);
         scriptMovimentacao.enabled = false;
+        scriptCamera.enabled = false;
         analogico.SetActive(false);
     }
 
@@ -29,6 +30,7 @@ public class TuristaDialogoStarter : MonoBehaviour
     void Mover()
     {
         scriptMovimentacao.enabled = true;
+        scriptCamera.enabled = true;
         analogico.SetActive(true);
         GameObject.FindObjectOfType<EventSpawner>().SumirNPCs();
         FindAnyObjectByType<QuestController>().AtualizarProgressoMissoes(missaoID, 1);
