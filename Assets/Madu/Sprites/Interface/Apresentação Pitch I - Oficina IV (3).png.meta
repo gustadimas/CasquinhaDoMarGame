@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 112442c8337d0a54c8ec4dc245f45422
+guid: c303616fd7599264ba81023aa01cdab6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Apresenta\xE7\xE3o Pitch I - Oficina IV_0"
+      name: "Apresenta\xE7\xE3o Pitch I - Oficina IV (3)_0"
       rect:
         serializedVersion: 2
         x: 1769
@@ -119,14 +119,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e7061a127591944895a480cd0141beb
-      internalID: 753024061
+      spriteID: bca01189363816e43999441756ff2d8f
+      internalID: 460907398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Apresenta\xE7\xE3o Pitch I - Oficina IV_1"
+      name: "Apresenta\xE7\xE3o Pitch I - Oficina IV (3)_1"
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 687
+        width: 93
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e265edc314fe244b252393ecb23247
+      internalID: 2095645463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Apresenta\xE7\xE3o Pitch I - Oficina IV (3)_2"
       rect:
         serializedVersion: 2
         x: 806
@@ -140,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04fdbf9733e36414ebadc9e4acc5d887
-      internalID: -889555553
+      spriteID: 801da4a8f2ba91c4896b3ffbb6ef87ee
+      internalID: 788893516
       vertices: []
       indices: 
       edges: []
@@ -149,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c56d42815df8ad84b81c8d7f3b300135
+    spriteID: 4d60da7265a807d4b9e32291260f82f0
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "Apresenta\xE7\xE3o Pitch I - Oficina IV_0": 753024061
-      "Apresenta\xE7\xE3o Pitch I - Oficina IV_1": -889555553
+      "Apresenta\xE7\xE3o Pitch I - Oficina IV (3)_0": 460907398
+      "Apresenta\xE7\xE3o Pitch I - Oficina IV (3)_1": 2095645463
+      "Apresenta\xE7\xE3o Pitch I - Oficina IV (3)_2": 788893516
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
