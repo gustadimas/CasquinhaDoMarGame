@@ -26,11 +26,10 @@ public class ControleXP : MonoBehaviour
         AtualizarInterface();
 
         if (GerenciadorDeIluminacao.atingiu24Horas == true && xpAtual < xpNecessario)
-        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 
+    [ContextMenu("Adiantar")]
     public void AdicionarXP()
     {
         xpAtual += 0.35f;
@@ -40,9 +39,9 @@ public class ControleXP : MonoBehaviour
     void VerificarLevelUp()
     {
         if (xpAtual >= xpNecessario)
-        {
+        {            
             Interface_Passagem.instance.StartCoroutine(nameof(Interface_Passagem.Aparecer));
-            Interface_Passagem.instance.comecarDia?.Invoke();
+            
             fotinha.sprite = icones[1];
             Invoke(nameof(AtualizarDia), 2f);
         }

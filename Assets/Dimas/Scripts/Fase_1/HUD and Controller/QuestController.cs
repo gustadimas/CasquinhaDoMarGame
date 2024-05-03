@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class QuestController : MonoBehaviour
 {
@@ -21,7 +18,7 @@ public class QuestController : MonoBehaviour
 
     private void Start()
     {
-        foreach (Quest missao in listaDeMissoes) missao.Resetar();    
+        foreach (Quest missao in listaDeMissoes) missao.Resetar();
 
         missoesRestando = listaDeMissoes.Length;
         progressoMissoesUI.text = "Missões: " + missoesCompletas + "/" + missoesRestando;

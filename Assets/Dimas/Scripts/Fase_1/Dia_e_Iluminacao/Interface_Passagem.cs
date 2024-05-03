@@ -16,7 +16,6 @@ public class Interface_Passagem : MonoBehaviour
     [SerializeField] TextMeshProUGUI texto;
 
     int numDia = 1;
-    public Action comecarDia;
     public static Interface_Passagem instance { get; private set; }
 
     void Awake()
@@ -29,7 +28,7 @@ public class Interface_Passagem : MonoBehaviour
     IEnumerator Desaparecer()
     {
         if (GerenciadorDeIluminacao.atualizarDia == false)
-        {
+        {        
             yield return new WaitForSeconds(atraso);
 
             float _tempoPassado = 0f;
@@ -42,22 +41,26 @@ public class Interface_Passagem : MonoBehaviour
             texto.alpha = 0;
 
             _tempoPassado = 0f;
+
             while (_tempoPassado < tempoDesaparecerPainel)
             {
                 _tempoPassado += Time.deltaTime;
                 painelDias.alpha = Mathf.Lerp(1, 0, _tempoPassado / tempoDesaparecerPainel);
-                yield return null;
+                print(painelDias.alpha);
+                yield return null;                
             }
+
             painelDias.alpha = 0;
             GerenciadorDeIluminacao.atualizarDia = true;
         }
     }
 
+
     public IEnumerator Aparecer()
     {
         painelDias.alpha = 0;
         texto.alpha = 0;
-
+        
         float _tempoPassado = 0f;
         while (_tempoPassado < tempoDesaparecerTexto)
         {
@@ -66,8 +69,9 @@ public class Interface_Passagem : MonoBehaviour
             yield return null;
         }
         texto.alpha = 1;
-
+        
         _tempoPassado = 0f;
+
         while (_tempoPassado < tempoDesaparecerPainel)
         {
             _tempoPassado += Time.deltaTime;
@@ -76,10 +80,10 @@ public class Interface_Passagem : MonoBehaviour
         }
         painelDias.alpha = 1;
 
+        GerenciadorDeIluminacao.atualizarDia = false;
+        GerenciadorDeIluminacao.instance.ReiniciarDia();
         numDia++;
         texto.text = "DIA " + numDia.ToString("00");
-        GerenciadorDeIluminacao.instance.ReiniciarDia();
-        GerenciadorDeIluminacao.atualizarDia = false;
         StartCoroutine(Desaparecer());
     }
 }

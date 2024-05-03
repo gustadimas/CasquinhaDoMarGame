@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.VFX;
 
 public class Interacao : MonoBehaviour
 {
@@ -16,7 +14,6 @@ public class Interacao : MonoBehaviour
     GameObject ultimoObjetoDestacado;
 
     public TipoInteracao TipoInteracao => tipoInteracao;
-
 
     private void Awake()
     {
@@ -76,9 +73,7 @@ public class Interacao : MonoBehaviour
 
                     hitInfo.collider.GetComponent<Collider>().enabled = false;
                     if (hitInfo.collider.GetComponentInParent<Outline>() != null)
-                    {
                         hitInfo.collider.GetComponentInParent<Outline>().enabled = false;
-                    }
                     
                     Destroy(hitInfo.collider.transform.parent.gameObject);
                 }
@@ -95,11 +90,8 @@ public class Interacao : MonoBehaviour
                 if (hitInfo.collider.TryGetComponent(out PescadorDialogoStarter _pescador))
                 {
                     _pescador.PescadorInteracao();
-                    hitInfo.collider.GetComponent<Collider>().enabled = false;
                     if (hitInfo.collider.GetComponentInParent<Outline>() != null)
-                    {
                         hitInfo.collider.GetComponentInParent<Outline>().enabled = false;
-                    }
                 }
             }
         }
@@ -114,11 +106,8 @@ public class Interacao : MonoBehaviour
                 if (hitInfo.collider.TryGetComponent(out TuristaDialogoStarter _turista))
                 {
                     _turista.TuristaInteracao();
-                    hitInfo.collider.GetComponent<Collider>().enabled = false;
                     if (hitInfo.collider.GetComponentInParent<Outline>() != null)
-                    {
                         hitInfo.collider.GetComponentInParent<Outline>().enabled = false;
-                    }
                 }
             }
         }
