@@ -28,22 +28,22 @@ MonoBehaviour:
   foamNoiseScaleHQ: 3
   foamNoiseSpeedHQ: 1
   shorelineFoamStrength: 1
-  crestFoamStrength: 0.012
+  crestFoamStrength: 0.563
   crestMaxDepth: 10
   slopeFoamStrength: 0.5
   slopeFoamFlowSpeed: 20
   slopeFoamDistance: 50
-  rippleHeight: 0.081
+  rippleHeight: 0.2
   rippleSpeed: 1
   rippleNoiseScale: 5
   enableWave: 1
-  waveDirection: 29
-  waveSpeed: 12.04
-  waveHeight: 1.12
+  waveDirection: 360
+  waveSpeed: 10
+  waveHeight: 5
   waveLength: 21.28
   waveSteepness: 0.076
   waveDeform: 1
-  fresnelStrength: 0.34
+  fresnelStrength: 0
   fresnelBias: 0
   enableReflection: 1
   reflectionTextureResolution: 256
@@ -59,5 +59,5 @@ MonoBehaviour:
   enableCaustic: 1
   causticTexture: {fileID: 2800000, guid: eeacbffe8eb46d343b0d7a9189130772, type: 3}
   causticSize: 5
-  causticStrength: 1
+  causticStrength: 0.93
   causticDistortionStrength: 3
