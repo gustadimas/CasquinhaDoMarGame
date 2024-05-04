@@ -1,6 +1,4 @@
 using cherrydev;
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PescadorDialogoStarter : MonoBehaviour
@@ -12,7 +10,7 @@ public class PescadorDialogoStarter : MonoBehaviour
     [SerializeField] private int missaoID;
 
     void Start() => scriptDialogo.BindExternalFunction("AcabouPescador", ReativarPersonagem);
-    
+
     public void PescadorInteracao()
     {
         scriptDialogo.StartDialog(graficoNos);
@@ -33,6 +31,6 @@ public class PescadorDialogoStarter : MonoBehaviour
         scriptCamera.enabled = true;
         analogico.SetActive(true);
         GameObject.FindObjectOfType<EventSpawner>().SumirNPCs();
-        FindAnyObjectByType<QuestController>().AtualizarProgressoMissoes(missaoID, 1);
+        QuestController.instance.AtualizarProgressoMissoes(missaoID, 1);
     }
 }

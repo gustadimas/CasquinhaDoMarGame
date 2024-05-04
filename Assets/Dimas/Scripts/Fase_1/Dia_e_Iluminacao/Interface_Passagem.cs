@@ -1,8 +1,6 @@
 using UnityEngine;
-using System;
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 
 public class Interface_Passagem : MonoBehaviour
 {
@@ -15,20 +13,19 @@ public class Interface_Passagem : MonoBehaviour
     [SerializeField] CanvasGroup painelDias;
     [SerializeField] TextMeshProUGUI texto;
 
-    int numDia = 1;
-    public static Interface_Passagem instance { get; private set; }
+    public static Interface_Passagem Instance { get; private set; }
 
     void Awake()
     {
         texto.text = "DIA 01";
-        instance = this;
+        Instance = this;
         StartCoroutine(Desaparecer());
     }
 
     IEnumerator Desaparecer()
     {
         if (GerenciadorDeIluminacao.atualizarDia == false)
-        {        
+        {
             yield return new WaitForSeconds(atraso);
 
             float _tempoPassado = 0f;
@@ -46,8 +43,7 @@ public class Interface_Passagem : MonoBehaviour
             {
                 _tempoPassado += Time.deltaTime;
                 painelDias.alpha = Mathf.Lerp(1, 0, _tempoPassado / tempoDesaparecerPainel);
-                print(painelDias.alpha);
-                yield return null;                
+                yield return null;
             }
 
             painelDias.alpha = 0;
@@ -60,7 +56,7 @@ public class Interface_Passagem : MonoBehaviour
     {
         painelDias.alpha = 0;
         texto.alpha = 0;
-        
+
         float _tempoPassado = 0f;
         while (_tempoPassado < tempoDesaparecerTexto)
         {
@@ -69,7 +65,7 @@ public class Interface_Passagem : MonoBehaviour
             yield return null;
         }
         texto.alpha = 1;
-        
+
         _tempoPassado = 0f;
 
         while (_tempoPassado < tempoDesaparecerPainel)
@@ -82,8 +78,7 @@ public class Interface_Passagem : MonoBehaviour
 
         GerenciadorDeIluminacao.atualizarDia = false;
         GerenciadorDeIluminacao.instance.ReiniciarDia();
-        numDia++;
-        texto.text = "DIA " + numDia.ToString("00");
+        texto.text = "DIA " + QuestController.instance.diaAtual.ToString("00");
         StartCoroutine(Desaparecer());
     }
 }

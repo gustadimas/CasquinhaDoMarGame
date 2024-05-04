@@ -155,7 +155,7 @@ namespace Pinwheel.Poseidon
             return matrix.MultiplyVector(Vector3.up);
         }
 
-        public Matrix4x4 TRS(int segmentIndex,float t)
+        public Matrix4x4 TRS(int segmentIndex, float t)
         {
             Vector3 pos = EvaluatePosition(segmentIndex, t);
             Quaternion rotation = EvaluateRotation(segmentIndex, t);

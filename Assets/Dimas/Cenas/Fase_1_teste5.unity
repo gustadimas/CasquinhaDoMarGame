@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0040961266, g: 0.0036912623, b: 0.0018431569, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1347,7 +1347,7 @@ RectTransform:
   m_Children:
   - {fileID: 1774617671}
   m_Father: {fileID: 932638404}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2689,8 +2689,8 @@ RectTransform:
   - {fileID: 454970824}
   - {fileID: 1386966055}
   - {fileID: 1507657047}
-  - {fileID: 490084058}
   - {fileID: 1214232546}
+  - {fileID: 490084058}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3102,6 +3102,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a7e7ba4caa217094f968dac04a3acf2b, type: 2}
   - {fileID: 11400000, guid: 6f270456e55f14f47a10d6c240c79433, type: 2}
   controleXP: {fileID: 1507657048}
+  missoesDeCadaDia:
+  - quests:
+    - {fileID: 11400000, guid: 6836978ec78af1844822726693194529, type: 2}
+    - {fileID: 11400000, guid: a7e7ba4caa217094f968dac04a3acf2b, type: 2}
+    - {fileID: 11400000, guid: 6f270456e55f14f47a10d6c240c79433, type: 2}
+  - quests:
+    - {fileID: 11400000, guid: bee9f88a8450dc6449c8db87bde85fe1, type: 2}
+    - {fileID: 11400000, guid: ffbd54fee075c664b956175716e10568, type: 2}
+    - {fileID: 11400000, guid: 2747768b1f134e54d96d05ad68e78661, type: 2}
+  missoesDoDiaAtual:
+    quests:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  diaAtual: 1
 --- !u!1 &1066793537
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,7 +3830,7 @@ RectTransform:
   - {fileID: 1214498624}
   - {fileID: 612891157}
   m_Father: {fileID: 932638404}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4854,7 +4869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1604041645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5182,7 +5197,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708782683}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b97488f0cb7e4d448f1e32d0f15f7dd, type: 3}
   m_Name: 

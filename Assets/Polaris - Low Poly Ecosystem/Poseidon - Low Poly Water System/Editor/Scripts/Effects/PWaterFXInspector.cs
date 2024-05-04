@@ -1,10 +1,7 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEngine.Rendering;
 #if UNITY_POST_PROCESSING_STACK_V2
-using UnityEngine.Rendering.PostProcessing;
 #endif
 #if POSEIDON_URP
 using UnityEngine.Rendering.Universal;
@@ -102,7 +99,7 @@ namespace Pinwheel.Poseidon.FX
                 if (rendererFeatures != null)
                 {
                     bool waterFxFeatureAdded = false;
-                    for (int i=0;i<rendererFeatures.Count;++i)
+                    for (int i = 0; i < rendererFeatures.Count; ++i)
                     {
                         if (rendererFeatures[i] is PWaterEffectRendererFeature)
                         {

@@ -1,6 +1,4 @@
 using cherrydev;
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TuristaDialogoStarter : MonoBehaviour
@@ -33,6 +31,6 @@ public class TuristaDialogoStarter : MonoBehaviour
         scriptCamera.enabled = true;
         analogico.SetActive(true);
         GameObject.FindObjectOfType<EventSpawner>().SumirNPCs();
-        FindAnyObjectByType<QuestController>().AtualizarProgressoMissoes(missaoID, 1);
+        QuestController.instance.AtualizarProgressoMissoes(missaoID, 1);
     }
 }

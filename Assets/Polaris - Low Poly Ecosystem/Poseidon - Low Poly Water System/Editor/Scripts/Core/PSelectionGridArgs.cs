@@ -1,11 +1,10 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 namespace Pinwheel.Poseidon
 {
-	public struct PSelectionGridArgs
-	{
+    public struct PSelectionGridArgs
+    {
         public ICollection collection;
         public int selectedIndex;
         public Vector2 tileSize;
@@ -20,5 +19,5 @@ namespace Pinwheel.Poseidon
 
         public delegate string TooltipHandler(object o);
         public TooltipHandler tooltipFunction;
-	}
+    }
 }

@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FuzzyString
+﻿namespace FuzzyString
 {
-	public enum FuzzyStringComparisonTolerance
-	{
-		Strong,
+    public enum FuzzyStringComparisonTolerance
+    {
+        Strong,
 
-		Normal,
+        Normal,
 
-		Weak,
+        Weak,
 
-		Manual
-	}
+        Manual
+    }
 }

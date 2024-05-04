@@ -1,6 +1,3 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 
 namespace Pinwheel.Poseidon
@@ -13,7 +10,7 @@ namespace Pinwheel.Poseidon
         {
             instance = target as PWaterProfile;
         }
-        
+
         public override void OnInspectorGUI()
         {
             EditorGUILayout.LabelField("Select the associated water in the scene to edit this profile.", PEditorCommon.WordWrapItalicLabel);

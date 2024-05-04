@@ -3,7 +3,7 @@ using UnityEngine;
 public class Interacao : MonoBehaviour
 {
     [SerializeField] TipoInteracao tipoInteracao;
-    [SerializeField]  float distanciaRaio = 5f;
+    [SerializeField] float distanciaRaio = 5f;
 
     [Header("Missoes")]
     protected QuestController controladorMissao;
@@ -74,7 +74,7 @@ public class Interacao : MonoBehaviour
                     hitInfo.collider.GetComponent<Collider>().enabled = false;
                     if (hitInfo.collider.GetComponentInParent<Outline>() != null)
                         hitInfo.collider.GetComponentInParent<Outline>().enabled = false;
-                    
+
                     Destroy(hitInfo.collider.transform.parent.gameObject);
                 }
             }
@@ -83,7 +83,7 @@ public class Interacao : MonoBehaviour
 
     public void InteragirPescador()
     {
-        if(tipoInteracao == TipoInteracao.pescador)
+        if (tipoInteracao == TipoInteracao.pescador)
         {
             if (hitInfo.collider != null)
             {

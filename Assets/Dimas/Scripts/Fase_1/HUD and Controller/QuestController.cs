@@ -3,54 +3,78 @@ using TMPro;
 
 public class QuestController : MonoBehaviour
 {
+    public static QuestController instance;
     [SerializeField] int proximaFase;
 
     [Header("Objetos/UI")]
     [SerializeField] TextMeshProUGUI progressoMissoesUI;
     [SerializeField] GameObject espacoMissoes;
     [SerializeField] TextMeshProUGUI[] textoMissoes;
-    [SerializeField] Quest[] listaDeMissoes;
+    [SerializeField] MissoesDia[] missoesDeCadaDia;
+    public MissoesDia missoesDoDiaAtual;
+
+    [HideInInspector] public int diaAtual = 1;
+
     [SerializeField] ControleXP controleXP;
 
     int missoesRestando;
     int missoesCompletas = 0;
     //bool faseCompleta = false;
 
-    private void Start()
+    public void MissoesDiaAtual_Set()
     {
-        foreach (Quest missao in listaDeMissoes) missao.Resetar();
+        missoesDoDiaAtual.quests = missoesDeCadaDia[diaAtual - 1].quests;
+        TextoDasMissoes_Set();
+    }
 
-        missoesRestando = listaDeMissoes.Length;
+    void TextoDasMissoes_Set()
+    {
+        foreach (Quest _missao in missoesDoDiaAtual.quests) _missao.Resetar();
+
+        missoesCompletas = 0;
+
+        missoesRestando = missoesDoDiaAtual.quests.Length;
+
         progressoMissoesUI.text = "Missões: " + missoesCompletas + "/" + missoesRestando;
 
-        for (int i = 0; i < listaDeMissoes.Length; i++)
+        for (int i = 0; i < missoesDoDiaAtual.quests.Length; i++)
         {
-            if (listaDeMissoes[i].valorAtual >= listaDeMissoes[i].quantidade)
+            if (missoesDoDiaAtual.quests[i].valorAtual >= missoesDoDiaAtual.quests[i].quantidade)
             {
-                listaDeMissoes[i].estadoMissao = true;
+                missoesDoDiaAtual.quests[i].estadoMissao = true;
             }
             else
             {
-                listaDeMissoes[i].estadoMissao = false;
+                missoesDoDiaAtual.quests[i].estadoMissao = false;
             }
 
-            textoMissoes[i].text = listaDeMissoes[i].valorAtual + "/" + listaDeMissoes[i].quantidade + " " + listaDeMissoes[i].textoMissao;
+            textoMissoes[i].text = missoesDoDiaAtual.quests[i].valorAtual + "/" + missoesDoDiaAtual.quests[i].quantidade + " " + missoesDoDiaAtual.quests[i].textoMissao;
+
+            textoMissoes[i].fontStyle = FontStyles.Normal;
+            textoMissoes[i].color = Color.black;
         }
+    }
+
+    private void Start()
+    {
+        instance = this;
+        
+        MissoesDiaAtual_Set();
     }
 
     public void AtualizarProgressoMissoes(int missaoID, int plus)
     {
         int _i = 0;
 
-        foreach(Quest _missao in listaDeMissoes)
+        foreach (Quest _missao in missoesDoDiaAtual.quests)
         {
-            if(_missao.idMissao == missaoID)
+            if (_missao.idMissao == missaoID)
             {
                 if (_missao.valorAtual < _missao.quantidade)
                 {
                     _missao.valorAtual += plus;
-                    textoMissoes[_i].text = listaDeMissoes[_i].valorAtual + "/" + listaDeMissoes[_i].quantidade + " " + listaDeMissoes[_i].textoMissao;
-                    
+                    textoMissoes[_i].text = missoesDoDiaAtual.quests[_i].valorAtual + "/" + missoesDoDiaAtual.quests[_i].quantidade + " " + missoesDoDiaAtual.quests[_i].textoMissao;
+
                     if (_missao.valorAtual >= _missao.quantidade)
                     {
                         EventController.eventoEmAndamento = false;
@@ -59,48 +83,42 @@ public class QuestController : MonoBehaviour
                         textoMissoes[_i].color = Color.green;
                         missoesCompletas++;
                         progressoMissoesUI.text = "Missões: " + missoesCompletas + "/" + missoesRestando;
-					}
+
+                        controleXP.AdicionarXP();
+                    }
                 }
             }
             _i++;
         }
 
-        if(missoesCompletas > 0)
-        {
-            controleXP.AdicionarXP();
-            missoesCompletas = 0;
-        }
-        
-        //if(missoesCompletas >= listaDeMissoes.Length && !faseCompleta)
+        //if(missoesCompletas >= missoesDoDiaAtual.quests.Length && !faseCompleta)
         //{
         //    faseCompleta = true;
         //    EstagioCompleto();
         //}
     }
 
-    public bool ChecarEstadoMissao(int missaoID) 
+    public bool ChecarEstadoMissao(int missaoID)
     {
-		bool _estado = false;
+        bool _estado = false;
 
-		foreach (Quest _missao in listaDeMissoes) 
+        foreach (Quest _missao in missoesDoDiaAtual.quests)
         {
-            if(_missao.idMissao == missaoID)
-            {
+            if (_missao.idMissao == missaoID)
                 _estado = _missao.estadoMissao;
-			}
         }
-		return _estado;
+        return _estado;
     }
 
- //   public void EstagioCompleto()
- //   {
- //       GameManager.levelsComplete += 1;
+    //   public void EstagioCompleto()
+    //   {
+    //       GameManager.levelsComplete += 1;
 
-	//	if (GameManager.levelsComplete >= 7) 
- //       {
- //           proximaFase = 10;
-	//	}
+    //	if (GameManager.levelsComplete >= 7) 
+    //       {
+    //           proximaFase = 10;
+    //	}
 
-	//	GameManager.instance.LoadScene(proximaFase);
-	//}
+    //	GameManager.instance.LoadScene(proximaFase);
+    //}
 }

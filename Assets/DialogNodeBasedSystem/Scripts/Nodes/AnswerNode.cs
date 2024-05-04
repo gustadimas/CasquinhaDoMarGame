@@ -92,13 +92,13 @@ namespace cherrydev
         {
             EditorGUILayout.BeginHorizontal();
 
-            EditorGUILayout.LabelField($"{answerNumber}. ", 
+            EditorGUILayout.LabelField($"{answerNumber}. ",
                 GUILayout.Width(lableFieldSpace));
 
-            answers[answerNumber - 1] = EditorGUILayout.TextField(answers[answerNumber - 1], 
+            answers[answerNumber - 1] = EditorGUILayout.TextField(answers[answerNumber - 1],
                 GUILayout.Width(textFieldWidth));
 
-            EditorGUILayout.LabelField(EditorGUIUtility.IconContent(iconPathOrName), 
+            EditorGUILayout.LabelField(EditorGUIUtility.IconContent(iconPathOrName),
                 GUILayout.Width(lableFieldSpace));
 
             EditorGUILayout.EndHorizontal();
@@ -214,8 +214,8 @@ namespace cherrydev
 
         private bool IsCanAddToChildConnectedNode(SentenceNode sentenceNodeToAdd)
         {
-            return sentenceNodeToAdd.parentNode == null 
-                && childSentenceNodes.Count < amountOfAnswers 
+            return sentenceNodeToAdd.parentNode == null
+                && childSentenceNodes.Count < amountOfAnswers
                 && sentenceNodeToAdd.childNode != this;
         }
 

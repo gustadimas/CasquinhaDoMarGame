@@ -33,7 +33,7 @@ public class Player_Pesquisador : MonoBehaviour
         if (direcaoMovimento != Vector3.zero)
         {
             Vector3 _movimentoHorizontal = cameraTransform.TransformDirection(new Vector3(direcaoMovimento.x, 0, direcaoMovimento.y));
-            rb.MovePosition(transform.position +  velocidadeMovimento * Time.deltaTime * _movimentoHorizontal);
+            rb.MovePosition(transform.position + velocidadeMovimento * Time.deltaTime * _movimentoHorizontal);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_movimentoHorizontal), 0.15f);
         }
     }

@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace Pinwheel.Poseidon
 {
@@ -44,6 +42,6 @@ namespace Pinwheel.Poseidon
                 return unlitTextureMaterial;
             }
         }
-        
+
     }
 }

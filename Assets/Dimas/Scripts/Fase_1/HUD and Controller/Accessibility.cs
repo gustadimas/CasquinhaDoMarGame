@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class Accessibility : MonoBehaviour
 {
@@ -15,11 +13,11 @@ public class Accessibility : MonoBehaviour
     [SerializeField] Sprite contornoImgPadrao;
     [SerializeField] Sprite contornoImgSelecionado;
 
-	int contornoAtivo;
+    int contornoAtivo;
 
     private void Start()
     {
-        if(SceneManager.GetActiveScene().buildIndex != 1)
+        if (SceneManager.GetActiveScene().buildIndex != 1)
         {
             contornoAtivo = PlayerPrefs.GetInt("Contorno");
             if (contornoAtivo == 0)
@@ -34,15 +32,15 @@ public class Accessibility : MonoBehaviour
             }
         }
     }
-    
+
     public void ContornoEstado(bool estado)
     {
-        for(int i=0; i< contornos.Count; i++)
+        for (int i = 0; i < contornos.Count; i++)
         {
             contornos[i].enabled = estado;
         }
 
-        if(estado)
+        if (estado)
         {
             PlayerPrefs.SetInt("Contorno", 1);
 
@@ -55,11 +53,11 @@ public class Accessibility : MonoBehaviour
         }
     }
 
-	public void ContornoEstadoIndividual(int contorno, bool estado)
-	{
-		for (int i = 0; i < contornos.Count; i++)
-		{
+    public void ContornoEstadoIndividual(int contorno, bool estado)
+    {
+        for (int i = 0; i < contornos.Count; i++)
+        {
             contornos[contorno].enabled = estado;
-		}
-	}
+        }
+    }
 }

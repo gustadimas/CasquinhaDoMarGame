@@ -1,7 +1,5 @@
 #if UNITY_POST_PROCESSING_STACK_V2
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Rendering.PostProcessing;
 
 namespace Pinwheel.Poseidon.FX.PostProcessing

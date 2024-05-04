@@ -43,7 +43,7 @@ MonoBehaviour:
   waveLength: 21.28
   waveSteepness: 0.076
   waveDeform: 1
-  fresnelStrength: 0.62
+  fresnelStrength: 0.34
   fresnelBias: 0
   enableReflection: 1
   reflectionTextureResolution: 256

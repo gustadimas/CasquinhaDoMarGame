@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using Pinwheel.Poseidon.FX;
@@ -204,7 +203,7 @@ namespace Pinwheel.Poseidon
                 {
                     bool isStackV2Installed = false;
 #if UNITY_POST_PROCESSING_STACK_V2
-                isStackV2Installed = true;
+                    isStackV2Installed = true;
 #endif
                     if (!isStackV2Installed)
                     {

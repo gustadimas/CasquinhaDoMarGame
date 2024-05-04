@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using System;
 using UnityEngine.Rendering;
 
@@ -26,7 +24,7 @@ namespace Pinwheel.Poseidon
         public const string KW_LIGHT_ABSORPTION = "LIGHT_ABSORPTION";
         public const string DEPTH_COLOR = "_DepthColor";
         public const string MAX_DEPTH = "_MaxDepth";
-        
+
         public const string KW_FOAM = "FOAM";
         public const string KW_FOAM_HQ = "FOAM_HQ";
         public const string KW_FOAM_CREST = "FOAM_CREST";
@@ -256,7 +254,7 @@ namespace Pinwheel.Poseidon
             }
             catch { }
         }
-        
+
         public static void SetKeywordEnable(string kw, bool enable)
         {
             try

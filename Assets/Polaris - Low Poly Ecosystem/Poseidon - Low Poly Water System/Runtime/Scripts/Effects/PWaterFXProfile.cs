@@ -1,13 +1,10 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Rendering;
 #if UNITY_POST_PROCESSING_STACK_V2
 using Pinwheel.Poseidon.FX.PostProcessing;
 using UnityEngine.Rendering.PostProcessing;
 #endif
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
 #if POSEIDON_URP
 using Pinwheel.Poseidon.FX.Universal;

@@ -2,6 +2,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
+using System.Reflection;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class ControleXP : MonoBehaviour
 {
@@ -39,11 +45,11 @@ public class ControleXP : MonoBehaviour
     void VerificarLevelUp()
     {
         if (xpAtual >= xpNecessario)
-        {            
-            Interface_Passagem.instance.StartCoroutine(nameof(Interface_Passagem.Aparecer));
-            
+        {
+            Interface_Passagem.Instance.StartCoroutine(nameof(Interface_Passagem.Aparecer));
+
             fotinha.sprite = icones[1];
-            Invoke(nameof(AtualizarDia), 2f);
+            Invoke(nameof(AtualizarDia), 5f);
         }
     }
 
@@ -59,4 +65,28 @@ public class ControleXP : MonoBehaviour
         fotinha.sprite = icones[0];
         if (numDia < maxDias) numDia++;
     }
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(ControleXP))]
+    public class ContextMenuButton : Editor 
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+            ControleXP _componente = (ControleXP) target;
+            MethodInfo[] _metodos = typeof(ControleXP).GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            foreach (MethodInfo _metodo in _metodos)
+            {
+                var _atributos = _metodo.GetCustomAttributes(typeof(ContextMenu), false);
+                if (_atributos.Length > 0)
+                {
+                    var _contextMenu = _atributos[0] as ContextMenu;
+                    if (GUILayout.Button(_contextMenu.menuItem))
+                        _metodo.Invoke(_componente, null);
+                }
+            }
+        }
+    }
+#endif
 }

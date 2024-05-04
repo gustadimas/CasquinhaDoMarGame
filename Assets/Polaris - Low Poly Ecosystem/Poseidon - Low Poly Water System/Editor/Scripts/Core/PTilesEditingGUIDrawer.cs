@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 
 namespace Pinwheel.Poseidon
@@ -20,7 +18,7 @@ namespace Pinwheel.Poseidon
                 return;
             DrawExistingTiles();
             HandleAddRemoveTiles();
-            CatchHotControl();            
+            CatchHotControl();
         }
 
         private void DrawExistingTiles()
@@ -72,7 +70,7 @@ namespace Pinwheel.Poseidon
                 if (Event.current.type == EventType.MouseDrag || Event.current.type == EventType.MouseUp)
                 {
                     if (Event.current.button != 0)
-                        return; 
+                        return;
                     if (Event.current.control)
                     {
                         water.TileIndices.Remove(index);

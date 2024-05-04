@@ -1,7 +1,5 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pinwheel.Poseidon;
 
 namespace Pinwheel.Poseidon
 {
@@ -56,7 +54,7 @@ namespace Pinwheel.Poseidon
             Vector4 bl = Vector4.zero;
             Vector4 tl = Vector4.zero;
             Vector4 tr = Vector4.zero;
-            Vector4 br = Vector4.zero; 
+            Vector4 br = Vector4.zero;
             Vector4 v0 = Vector4.zero;
             Vector4 v1 = Vector4.zero;
             Vector4 v2 = Vector4.zero;
@@ -124,7 +122,7 @@ namespace Pinwheel.Poseidon
             m.RecalculateNormals();
             //m.RecalculateTangents();
             m.name = "Water Mesh";
-            
+
 
             Bounds bounds = m.bounds;
             bounds.extents = new Vector3(bounds.extents.x, (bounds.extents.x + bounds.extents.z) * 0.5f, bounds.extents.z);

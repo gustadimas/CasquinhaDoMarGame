@@ -1,7 +1,5 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pinwheel.Poseidon;
 
 namespace Pinwheel.Poseidon
 {
@@ -90,8 +88,8 @@ namespace Pinwheel.Poseidon
                     triangles.Add(currentVertexCount + 4);
                     triangles.Add(currentVertexCount + 5);
 
-                    flow0 = matrix0.MultiplyVector(Vector3.forward*2);
-                    flow1 = matrix1.MultiplyVector(Vector3.forward*2);
+                    flow0 = matrix0.MultiplyVector(Vector3.forward * 2);
+                    flow1 = matrix1.MultiplyVector(Vector3.forward * 2);
 
                     if ((xIndex + yIndex) % 2 == 0)
                     {
@@ -129,7 +127,7 @@ namespace Pinwheel.Poseidon
 
         private void BakeData(
             List<Vector3> vertices, List<Vector4> uvs0, List<Color> colors, List<Vector4> uvs1,
-            Vector4 v0, Vector4 v1, Vector4 v2, 
+            Vector4 v0, Vector4 v1, Vector4 v2,
             Vector4 flow0, Vector4 flow1, Vector4 flow2)
         {
             Vector3 vertex = new Vector3(v0.x, v0.y, v0.z);
@@ -140,7 +138,7 @@ namespace Pinwheel.Poseidon
             vertices.Add(vertex);
             uvs0.Add(uv0);
             colors.Add(color);
-            uvs1.Add(uv1);            
+            uvs1.Add(uv1);
         }
     }
 }

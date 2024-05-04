@@ -1,14 +1,14 @@
 using UnityEngine;
 
-[RequireComponent (typeof(MeshFilter))]
-[RequireComponent (typeof(MeshRenderer))]
+[RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshRenderer))]
 public class ControladorAgua : MonoBehaviour
 {
     MeshFilter filtroMalha;
 
     private void Awake()
     {
-        filtroMalha = GetComponent<MeshFilter> ();
+        filtroMalha = GetComponent<MeshFilter>();
     }
 
     private void Update()

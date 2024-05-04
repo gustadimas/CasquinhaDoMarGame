@@ -24,6 +24,7 @@ public class GerenciadorDeIluminacao : MonoBehaviour
 
     private void Awake() => instance = this;
 
+
     private void Update() => ComeçarDia();
 
     void ComeçarDia()
@@ -57,6 +58,9 @@ public class GerenciadorDeIluminacao : MonoBehaviour
         HoraDoDia = 5;
         atingiu24Horas = false;
         AtualizarIluminacao(HoraDoDia / 24f);
+        foreach (Quest _missao in QuestController.instance.missoesDoDiaAtual.quests) _missao.Resetar();
+        QuestController.instance.diaAtual++;
+        QuestController.instance.MissoesDiaAtual_Set();
     }
 
     void AtualizarIluminacao(float _percentualDeTempo)

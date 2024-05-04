@@ -1,7 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Pinwheel.Poseidon;
 
 namespace Pinwheel.Poseidon
 {
@@ -13,10 +10,10 @@ namespace Pinwheel.Poseidon
         {
             get
             {
-                if (instance==null)
+                if (instance == null)
                 {
                     instance = Resources.Load<PSplineToolConfig>("SplineToolConfig");
-                    if (instance==null)
+                    if (instance == null)
                     {
                         instance = ScriptableObject.CreateInstance<PSplineToolConfig>();
                     }

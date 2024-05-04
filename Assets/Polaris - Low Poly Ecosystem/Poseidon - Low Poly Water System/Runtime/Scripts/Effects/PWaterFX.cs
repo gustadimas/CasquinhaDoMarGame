@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Rendering;
 using UnityEngine.Events;
 #if UNITY_POST_PROCESSING_STACK_V2

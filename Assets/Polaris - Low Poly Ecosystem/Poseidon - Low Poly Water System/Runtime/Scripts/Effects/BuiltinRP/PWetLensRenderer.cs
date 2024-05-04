@@ -1,7 +1,5 @@
 #if UNITY_POST_PROCESSING_STACK_V2
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Rendering.PostProcessing;
 
 namespace Pinwheel.Poseidon.FX.PostProcessing
@@ -13,7 +11,7 @@ namespace Pinwheel.Poseidon.FX.PostProcessing
         {
             get
             {
-                if (wetLensShader==null)
+                if (wetLensShader == null)
                 {
                     wetLensShader = Shader.Find(PWaterFX.WETLENS_SHADER_BRP);
                 }

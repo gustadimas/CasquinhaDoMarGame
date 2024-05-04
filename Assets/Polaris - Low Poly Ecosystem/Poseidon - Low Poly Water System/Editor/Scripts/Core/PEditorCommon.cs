@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using Type = System.Type;
-using System.Reflection;
 using Action = System.Action;
 using UnityEditor.AnimatedValues;
 
@@ -1451,7 +1450,7 @@ namespace Pinwheel.Poseidon
                     asset.name = string.Format("{0}-{1}", typeof(T).Name, PCommon.GetUniqueID());
                     AssetDatabase.CreateAsset(asset, string.Format("Assets/{0}.asset", asset.name));
                     AssetDatabase.SaveAssets();
-                    AssetDatabase.Refresh(); 
+                    AssetDatabase.Refresh();
                     EditorGUIUtility.PingObject(asset);
                 }
             }

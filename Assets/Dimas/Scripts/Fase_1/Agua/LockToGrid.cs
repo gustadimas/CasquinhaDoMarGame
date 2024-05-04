@@ -11,7 +11,7 @@ public class LockToGrid : MonoBehaviour
 
     void Update()
     {
-        if(!EditorApplication.isPlaying)
+        if (!EditorApplication.isPlaying)
         {
             Vector3 currentPosition = transform.position;
 

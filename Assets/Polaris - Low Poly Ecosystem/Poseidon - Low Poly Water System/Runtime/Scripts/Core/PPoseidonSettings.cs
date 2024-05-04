@@ -1,8 +1,5 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
 
 namespace Pinwheel.Poseidon
@@ -111,92 +108,92 @@ namespace Pinwheel.Poseidon
             }
         }
 
-//#if UNITY_POST_PROCESSING_STACK_V2
-//        [SerializeField]
-//        private Shader underwaterShader;
-//        public Shader UnderwaterShader
-//        {
-//            get
-//            {
-//                if (underwaterShader == null)
-//                {
-//                    underwaterShader = Shader.Find("Hidden/Poseidon/Underwater");
-//#if UNITY_EDITOR
-//                    EditorUtility.SetDirty(this);
-//#endif
-//                }
-//                return underwaterShader;
-//            }
-//            set
-//            {
-//                underwaterShader = value;
-//            }
-//        }
+        //#if UNITY_POST_PROCESSING_STACK_V2
+        //        [SerializeField]
+        //        private Shader underwaterShader;
+        //        public Shader UnderwaterShader
+        //        {
+        //            get
+        //            {
+        //                if (underwaterShader == null)
+        //                {
+        //                    underwaterShader = Shader.Find("Hidden/Poseidon/Underwater");
+        //#if UNITY_EDITOR
+        //                    EditorUtility.SetDirty(this);
+        //#endif
+        //                }
+        //                return underwaterShader;
+        //            }
+        //            set
+        //            {
+        //                underwaterShader = value;
+        //            }
+        //        }
 
-//        [SerializeField]
-//        private Shader wetLensShader;
-//        public Shader WetLensShader
-//        {
-//            get
-//            {
-//                if (wetLensShader == null)
-//                {
-//                    wetLensShader = Shader.Find("Hidden/Poseidon/WetLens");
-//#if UNITY_EDITOR
-//                    EditorUtility.SetDirty(this);
-//#endif
-//                }
-//                return wetLensShader;
-//            }
-//            set
-//            {
-//                wetLensShader = value;
-//            }
-//        }
-//#endif
-//#if POSEIDON_URP
-//        [SerializeField]
-//        private Shader underwaterShaderURP;
-//        public Shader UnderwaterShaderURP
-//        {
-//            get
-//            {
-//                if (underwaterShaderURP == null)
-//                {
-//                    underwaterShaderURP = Shader.Find("Hidden/Poseidon/UnderwaterURP");
-//#if UNITY_EDITOR
-//                    EditorUtility.SetDirty(this);
-//#endif
-//                }
-//                return underwaterShaderURP;
-//            }
-//            set
-//            {
-//                underwaterShaderURP = value;
-//            }
-//        }
+        //        [SerializeField]
+        //        private Shader wetLensShader;
+        //        public Shader WetLensShader
+        //        {
+        //            get
+        //            {
+        //                if (wetLensShader == null)
+        //                {
+        //                    wetLensShader = Shader.Find("Hidden/Poseidon/WetLens");
+        //#if UNITY_EDITOR
+        //                    EditorUtility.SetDirty(this);
+        //#endif
+        //                }
+        //                return wetLensShader;
+        //            }
+        //            set
+        //            {
+        //                wetLensShader = value;
+        //            }
+        //        }
+        //#endif
+        //#if POSEIDON_URP
+        //        [SerializeField]
+        //        private Shader underwaterShaderURP;
+        //        public Shader UnderwaterShaderURP
+        //        {
+        //            get
+        //            {
+        //                if (underwaterShaderURP == null)
+        //                {
+        //                    underwaterShaderURP = Shader.Find("Hidden/Poseidon/UnderwaterURP");
+        //#if UNITY_EDITOR
+        //                    EditorUtility.SetDirty(this);
+        //#endif
+        //                }
+        //                return underwaterShaderURP;
+        //            }
+        //            set
+        //            {
+        //                underwaterShaderURP = value;
+        //            }
+        //        }
 
-//        [SerializeField]
-//        private Shader wetLensShaderURP;
-//        public Shader WetLensShaderURP
-//        {
-//            get
-//            {
-//                if (wetLensShaderURP == null)
-//                {
-//                    wetLensShaderURP = Shader.Find("Hidden/Poseidon/WetLensURP");
-//#if UNITY_EDITOR
-//                    EditorUtility.SetDirty(this);
-//#endif
-//                }
-//                return wetLensShaderURP;
-//            }
-//            set
-//            {
-//                wetLensShaderURP = value;
-//            }
-//        }
-//#endif
+        //        [SerializeField]
+        //        private Shader wetLensShaderURP;
+        //        public Shader WetLensShaderURP
+        //        {
+        //            get
+        //            {
+        //                if (wetLensShaderURP == null)
+        //                {
+        //                    wetLensShaderURP = Shader.Find("Hidden/Poseidon/WetLensURP");
+        //#if UNITY_EDITOR
+        //                    EditorUtility.SetDirty(this);
+        //#endif
+        //                }
+        //                return wetLensShaderURP;
+        //            }
+        //            set
+        //            {
+        //                wetLensShaderURP = value;
+        //            }
+        //        }
+        //#endif
 
         [SerializeField]
         private PInternalShaderSettings internalShaders;

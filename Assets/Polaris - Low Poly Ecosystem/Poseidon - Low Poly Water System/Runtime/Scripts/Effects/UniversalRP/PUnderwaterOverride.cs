@@ -1,7 +1,5 @@
 #if POSEIDON_URP
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Rendering;
 
 namespace Pinwheel.Poseidon.FX.Universal
@@ -17,8 +15,8 @@ namespace Pinwheel.Poseidon.FX.Universal
         public FloatParameter surfaceColorBoost = new FloatParameter(1);
 
         [Header("Fog")]
-        public ColorParameter shallowFogColor = new ColorParameter(new Color(0,0,1,0.5f));
-        public ColorParameter deepFogColor = new ColorParameter(new Color(0,0,1,1));
+        public ColorParameter shallowFogColor = new ColorParameter(new Color(0, 0, 1, 0.5f));
+        public ColorParameter deepFogColor = new ColorParameter(new Color(0, 0, 1, 1));
         public FloatParameter viewDistance = new FloatParameter(40);
 
         [Header("Caustic")]

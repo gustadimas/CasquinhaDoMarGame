@@ -172,7 +172,7 @@ namespace cherrydev
         public void CheckNodeSize(float width, float height)
         {
             rect.width = width;
-            
+
             if (standartHeight == 0)
             {
                 standartHeight = height;

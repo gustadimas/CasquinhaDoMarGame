@@ -1,7 +1,5 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pinwheel.Poseidon;
 
 namespace Pinwheel.Poseidon
 {
@@ -243,7 +241,7 @@ namespace Pinwheel.Poseidon
                 }
             }
 
-            for (int i=0;i<vertices.Count;++i)
+            for (int i = 0; i < vertices.Count; ++i)
             {
                 vertices[i] = Remap(vertices[i]);
                 uvs0[i] = Remap(uvs0[i]);
@@ -260,8 +258,8 @@ namespace Pinwheel.Poseidon
             m.RecalculateBounds();
             m.RecalculateNormals();
             //m.RecalculateTangents();
-            m.name = "Water Mesh"; 
-            
+            m.name = "Water Mesh";
+
             Bounds bounds = m.bounds;
             bounds.extents = new Vector3(bounds.extents.x, 1, bounds.extents.z);
             m.bounds = bounds;

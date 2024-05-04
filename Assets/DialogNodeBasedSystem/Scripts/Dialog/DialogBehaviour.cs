@@ -349,7 +349,7 @@ namespace cherrydev
         private bool CheckNextSentenceKeyCodes()
         {
             for (int i = 0; i < nextSentenceKeyCodes.Count; i++)
-            { 
+            {
                 if (Input.GetKeyDown(nextSentenceKeyCodes[i]))
                 {
                     return true;

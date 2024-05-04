@@ -45,7 +45,7 @@ namespace SOG.CVDFilter
 
             visionTypeEnum.Init(VisionTypeNames.Normal);
             visionTypeEnum.BindProperty(serializedObject.FindProperty("currentType"));
-            
+
 
             visionTypeEnum.RegisterValueChangedCallback((e) =>
             {

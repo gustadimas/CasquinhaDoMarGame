@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ColetarLixos : MonoBehaviour
@@ -17,7 +13,7 @@ public class ColetarLixos : MonoBehaviour
     {
         if (EventController.eventoEmAndamento)
         {
-            
+
             if (eventSpawner.spawnedObjects.Count == 0)
             {
                 EventController.eventoEmAndamento = false;
