@@ -55,6 +55,7 @@ public class GerenciadorDeIluminacao : MonoBehaviour
 
     public void ReiniciarDia()
     {
+        HUDController.instance.missaoUI_img.gameObject.SetActive(false);
         HoraDoDia = 5;
         atingiu24Horas = false;
         AtualizarIluminacao(HoraDoDia / 24f);

@@ -21,6 +21,13 @@ public class QuestController : MonoBehaviour
     int missoesCompletas = 0;
     //bool faseCompleta = false;
 
+    private void Start()
+    {
+        instance = this;
+        
+        MissoesDiaAtual_Set();
+    }
+
     public void MissoesDiaAtual_Set()
     {
         missoesDoDiaAtual.quests = missoesDeCadaDia[diaAtual - 1].quests;
@@ -32,7 +39,6 @@ public class QuestController : MonoBehaviour
         foreach (Quest _missao in missoesDoDiaAtual.quests) _missao.Resetar();
 
         missoesCompletas = 0;
-
         missoesRestando = missoesDoDiaAtual.quests.Length;
 
         progressoMissoesUI.text = "Missões: " + missoesCompletas + "/" + missoesRestando;
@@ -53,13 +59,6 @@ public class QuestController : MonoBehaviour
             textoMissoes[i].fontStyle = FontStyles.Normal;
             textoMissoes[i].color = Color.black;
         }
-    }
-
-    private void Start()
-    {
-        instance = this;
-        
-        MissoesDiaAtual_Set();
     }
 
     public void AtualizarProgressoMissoes(int missaoID, int plus)

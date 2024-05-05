@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class HUDController : MonoBehaviour
 {
-    bool abrirMissoes = false;
+    public bool abrirMissoes = false;
+
+    public static HUDController instance;
 
     //[Header("Link Objects UI")]
     //[SerializeField] private Slider efeitosSonorosSlider;
     //[SerializeField] private Slider musicaSlider;
     //[SerializeField] private Slider sensibilidadeSlider;
-    [SerializeField] private GameObject missaoUI_img;
+    public GameObject missaoUI_img;
 
     //[Header("Mixers")]
     //[SerializeField] private AudioMixer mixerMusica;
@@ -25,6 +27,8 @@ public class HUDController : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
+
         //if (SceneManager.GetActiveScene().buildIndex == 0)
         //{
         //    contornoAtivo = PlayerPrefs.GetInt("Outline");

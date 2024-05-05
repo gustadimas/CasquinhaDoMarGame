@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idMissao: 2
   valorAtual: 0
-  quantidade: 1
+  quantidade: 3
   estadoMissao: 0
-  textoMissao: aaaaaaaaaaa
+  textoMissao: "Os pescadores voltaram, d\xEA um jeito nisso!"

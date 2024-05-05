@@ -15,5 +15,5 @@ MonoBehaviour:
   idMissao: 0
   valorAtual: 0
   quantidade: 3
-  estadoMissao: 1
-  textoMissao: 'Colete os lixos e mantenha a praia limpa. '
+  estadoMissao: 0
+  textoMissao: 'Recolha os lixos e mantenha a praia limpa. '
