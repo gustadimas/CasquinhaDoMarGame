@@ -37,7 +37,6 @@ public class GerenciadorDeIluminacao : MonoBehaviour
 
             if (Application.isPlaying)
             {
-                print("awdawdawd");
                 HoraDoDia += Time.deltaTime * 24f / (duracaoDiaMinutos * 60f);
                 if (HoraDoDia >= 24)
                 {
