@@ -183,7 +183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptDialogo: {fileID: 0}
-  graficoNos: {fileID: 11400000, guid: 2e62675dfe7bdfa46a874464a3905fa8, type: 2}
+  graficoNos:
+  - {fileID: 11400000, guid: 2e62675dfe7bdfa46a874464a3905fa8, type: 2}
+  - {fileID: 11400000, guid: b0e1f01fb405db8499cb6b545203b7ea, type: 2}
+  - {fileID: 11400000, guid: 6e24ef06947b19345a93de9f3d4693d2, type: 2}
   scriptMovimentacao: {fileID: 0}
   scriptCamera: {fileID: 0}
   analogico: {fileID: 0}

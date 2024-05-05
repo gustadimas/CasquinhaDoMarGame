@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idMissao: 2
   valorAtual: 0
-  quantidade: 5
+  quantidade: 1
   estadoMissao: 0
   textoMissao: "Eles ainda est\xE3o cavando os ninhos? Alerte os pescadores!"

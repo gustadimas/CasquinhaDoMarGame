@@ -56,7 +56,7 @@ public class ControleXP : MonoBehaviour
     void AtualizarInterface()
     {
         preenchimentoXP.fillAmount = xpAtual;
-        txtDia.text = "Dia " + numDia + "/5";
+        txtDia.text = "Dia " + numDia + "/3";
     }
 
     void AtualizarDia()

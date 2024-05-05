@@ -5,27 +5,17 @@ public class EventSpawner : MonoBehaviour
 {
     EventController eventController;
     [SerializeField] GameObject lixoPrefab;
-    GameObject turista, pescador, pesquisador;
+    [SerializeField] GameObject turista, pescador;
+    GameObject pesquisador;
 
     public List<GameObject> spawnedObjects = new List<GameObject>();
-    private float minDistance = 2f;
-
+    float minDistance = 2f;
     void Start()
     {
         eventController = FindObjectOfType<EventController>();
         eventController.OnRandomizedEvent += EventController_OnRandomizedEvent;
 
         pesquisador = GameObject.FindGameObjectWithTag("Player");
-        turista = GameObject.FindGameObjectWithTag("Turista");
-        pescador = GameObject.FindGameObjectWithTag("Pescador");
-
-        SumirNPCs();
-    }
-
-    public void SumirNPCs()
-    {
-        turista.SetActive(false);
-        pescador.SetActive(false);
     }
 
     private void EventController_OnRandomizedEvent(string randomizedEvent)
@@ -33,25 +23,46 @@ public class EventSpawner : MonoBehaviour
         if (randomizedEvent == "EventoLixo")
         {
             EventController.eventoEmAndamento = true;
-            for (int i = 0; i < 3; i++)
+            switch (QuestController.instance.diaAtual)
             {
-                GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
-                spawnedObjects.Add(lixoObj);
+                case 1:
+                    for (int i = 0; i < 3; i++)
+                    {
+                        GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
+                        spawnedObjects.Add(lixoObj);
+                    }
+                    break;
+
+                case 2:
+                    for (int i = 0; i < 10; i++)
+                    {
+                        GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
+                        spawnedObjects.Add(lixoObj);
+                    }
+                    break;
+
+                case 3:
+                    for (int i = 0; i < 20; i++)
+                    {
+                        GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
+                        spawnedObjects.Add(lixoObj);
+                    }
+                    break;
             }
+            
         }
 
         if (randomizedEvent == "EventoTurista")
         {
             EventController.eventoEmAndamento = true;
-            turista.transform.position = GetSpawnPosition();
-            turista.SetActive(true);
+            Instantiate(turista, GetSpawnPosition(), Quaternion.identity);
+
         }
 
         if (randomizedEvent == "EventoPescador")
         {
             EventController.eventoEmAndamento = true;
-            pescador.transform.position = GetSpawnPosition();
-            pescador.SetActive(true);
+            Instantiate(pescador, GetSpawnPosition(), Quaternion.identity);
         }
     }
 

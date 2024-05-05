@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using System.Collections;
 
 public class EventController : MonoBehaviour
 {
@@ -16,10 +17,10 @@ public class EventController : MonoBehaviour
 
         EmbaralharListinha();
 
-        InvokeRepeating(nameof(SortearEvento), 0f, 5f);
+        StartCoroutine(SortearEvento());
     }
 
-    void SortearEvento()
+    /*void SortearEvento()
     {
         if (OnRandomizedEvent != null && !eventoEmAndamento)
         {
@@ -32,6 +33,28 @@ public class EventController : MonoBehaviour
             string eventoSorteado = eventos[0];
             eventos.RemoveAt(0);
             OnRandomizedEvent(eventoSorteado);
+        }
+    }*/
+
+    IEnumerator SortearEvento()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => !eventoEmAndamento);
+            yield return new WaitForSeconds(10f);
+
+            if (OnRandomizedEvent != null)
+            {
+                if (eventos.Count == 0)
+                {
+                    eventos = new List<string> { "EventoLixo", "EventoPescador", "EventoTurista" };
+                    EmbaralharListinha();
+                }
+
+                string eventoSorteado = eventos[0];
+                eventos.RemoveAt(0);
+                OnRandomizedEvent(eventoSorteado);
+            }
         }
     }
 
