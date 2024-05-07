@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HUDController : MonoBehaviour
 {
@@ -48,11 +49,11 @@ public class HUDController : MonoBehaviour
         missaoUI_img.SetActive(abrirMissoes);
     }
 
-    //   public void JogarBT()
-    //   {
-    //       GameManager.levelsComplete = 0;
-    //       //GameManager.instance.LoadScene(9);
-    //   }
+    public void JogarBT()
+    {
+        //GameManager.levelsComplete = 0;
+        SceneManager.LoadScene(1);
+    }
 
     //   public void SairBT()
     //   {

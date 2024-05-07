@@ -20,28 +20,12 @@ public class EventController : MonoBehaviour
         StartCoroutine(SortearEvento());
     }
 
-    /*void SortearEvento()
-    {
-        if (OnRandomizedEvent != null && !eventoEmAndamento)
-        {
-            if (eventos.Count == 0)
-            {
-                eventos = new List<string> { "EventoLixo", "EventoPescador", "EventoTurista" };
-                EmbaralharListinha();
-            }
-
-            string eventoSorteado = eventos[0];
-            eventos.RemoveAt(0);
-            OnRandomizedEvent(eventoSorteado);
-        }
-    }*/
-
     IEnumerator SortearEvento()
     {
         while (true)
         {
             yield return new WaitUntil(() => !eventoEmAndamento);
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(5f);
 
             if (OnRandomizedEvent != null)
             {

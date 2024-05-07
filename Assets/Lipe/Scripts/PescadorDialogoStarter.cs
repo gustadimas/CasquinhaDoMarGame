@@ -7,7 +7,8 @@ public class PescadorDialogoStarter : MonoBehaviour
     [SerializeField] DialogNodeGraph[] graficoNos;
     [SerializeField] Player_Pesquisador scriptMovimentacao;
     [SerializeField] Cam_Primeira_Pessoa scriptCamera;
-    [SerializeField] GameObject analogico;
+    [SerializeField] GameObject analogico, btnInteragir;
+    [SerializeField] Transform posicaoJogador;
     [SerializeField] private int missaoID;
 
 
@@ -18,6 +19,8 @@ public class PescadorDialogoStarter : MonoBehaviour
         scriptMovimentacao = GameObject.FindObjectOfType<Player_Pesquisador>();
         scriptCamera = GameObject.FindObjectOfType<Cam_Primeira_Pessoa>();
         analogico = GameObject.Find("Analogico");
+        btnInteragir = GameObject.Find("Interface_Btn");
+        posicaoJogador = transform.Find("Pesquisador");
 
         switch (QuestController.instance.diaAtual)
         {
@@ -54,6 +57,7 @@ public class PescadorDialogoStarter : MonoBehaviour
         scriptMovimentacao.enabled = false;
         scriptCamera.enabled = false;
         analogico.SetActive(false);
+        btnInteragir.SetActive(false);
     }
 
     void ReativarPersonagem()
@@ -67,6 +71,7 @@ public class PescadorDialogoStarter : MonoBehaviour
         scriptMovimentacao.enabled = true;
         scriptCamera.enabled = true;
         analogico.SetActive(true);
+        btnInteragir.SetActive(true);
         Destroy(transform.parent.gameObject);
         QuestController.instance.AtualizarProgressoMissoes(missaoID, 1);
     }

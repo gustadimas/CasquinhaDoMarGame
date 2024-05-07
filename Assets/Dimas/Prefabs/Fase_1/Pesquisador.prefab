@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desativarEntradas: 0
-  velocidadeMovimento: 2.5
+  velocidadeMovimento: 5
   analogico: {fileID: 0}
   areaAnalogico: {fileID: 0}
   pontoAnalogico: {fileID: 0}

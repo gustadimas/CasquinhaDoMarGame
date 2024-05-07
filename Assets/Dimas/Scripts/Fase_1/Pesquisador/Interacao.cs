@@ -3,7 +3,7 @@ using UnityEngine;
 public class Interacao : MonoBehaviour
 {
     [SerializeField] TipoInteracao tipoInteracao;
-    [SerializeField] float distanciaRaio = 5f;
+    [SerializeField] float distanciaRaio = 2.5f;
 
     [Header("Missoes")]
     protected QuestController controladorMissao;

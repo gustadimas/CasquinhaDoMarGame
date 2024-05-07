@@ -9,7 +9,8 @@ public class EventSpawner : MonoBehaviour
     GameObject pesquisador;
 
     public List<GameObject> spawnedObjects = new List<GameObject>();
-    float minDistance = 2f;
+    float minDistance = 10f;
+
     void Start()
     {
         eventController = FindObjectOfType<EventController>();
@@ -42,7 +43,7 @@ public class EventSpawner : MonoBehaviour
                     break;
 
                 case 3:
-                    for (int i = 0; i < 20; i++)
+                    for (int i = 0; i < 15; i++)
                     {
                         GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
                         spawnedObjects.Add(lixoObj);
@@ -73,7 +74,7 @@ public class EventSpawner : MonoBehaviour
 
         while (!positionFound)
         {
-            spawnPosition = new Vector3(UnityEngine.Random.Range(-11, 5), 1, UnityEngine.Random.Range(-11, -3));
+            spawnPosition = new Vector3(UnityEngine.Random.Range(14, -24), -1, UnityEngine.Random.Range(35, -8));
             positionFound = true;
 
             foreach (GameObject obj in spawnedObjects)

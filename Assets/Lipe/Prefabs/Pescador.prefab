@@ -1168,6 +1168,8 @@ MonoBehaviour:
   scriptMovimentacao: {fileID: 0}
   scriptCamera: {fileID: 0}
   analogico: {fileID: 0}
+  btnInteragir: {fileID: 0}
+  posicaoJogador: {fileID: 0}
   missaoID: 2
 --- !u!54 &2636132111447874321
 Rigidbody:
