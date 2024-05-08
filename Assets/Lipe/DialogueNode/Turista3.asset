@@ -1,5 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8572341825311165908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -502
+    y: -55
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Ol\xE1! Foi voc\xEA que pediu para chamar um funcion\xE1rio do projeto,
+      certo? Qual a situa\xE7\xE3o?"
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: 0}
+  childNode: {fileID: -5124482594538780165}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-7852040499065317260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 380
+    y: -60
+    width: 190
+    height: 175
+  isDragging: 0
+  isSelected: 0
+  answers:
+  - "Com certeza! Voc\xEA fez bem ajudando a preservar o ninho at\xE9 chegarmos aqui."
+  - "Voc\xEA fez o poss\xEDvel, mas o mais indicado seria jogar um pouco de \xE1gua
+    ao redor para manter os ovos frescos."
+  - "A inten\xE7\xE3o foi boa, mas o melhor \xE9 n\xE3o interferir com os ovos. Eles
+    s\xE3o muito sens\xEDveis e podem ser danificados facilmente. Vou sinalizar o
+    local e contatar nossa equipe especializada para cuidar disso."
+  - Outra alternativa seria criar uma barreira com pedras e madeira ao redor do ninho
+    para alertar outros banhistas.
+  parentSentenceNode: {fileID: -4404230759562476154}
+  childSentenceNodes:
+  - {fileID: -1384722701909805468}
+  - {fileID: 8784689556776707095}
+  - {fileID: -4762420010300619755}
 --- !u!114 &-6286582065092255036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,10 +83,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 133
-    y: 180
+    x: 295
+    y: 268
     width: 190
-    height: 135
+    height: 0
   isDragging: 0
   isSelected: 0
   sentence:
@@ -28,6 +95,130 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
   parentNode: {fileID: 5747060659610876664}
   childNode: {fileID: 3871401140126612357}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-5701897076104838814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -57
+    y: -50
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Realmente, \xE9 um ninho de tartaruga. Algu\xE9m deve ter encontrado antes
+      de n\xF3s e mexido nele."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: -5124482594538780165}
+  childNode: {fileID: -4404230759562476154}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-5124482594538780165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -280
+    y: -51
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Turista
+    text: "Sim, ainda bem que voc\xEA veio. Veja, eu encontrei um ninho de tartaruga
+      marinha parcialmente desenterrado."
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: -8572341825311165908}
+  childNode: {fileID: -5701897076104838814}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-4762420010300619755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 430
+    y: 126
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta correta! \xC9 ideal frisar para os banhistas que apenas profissionais
+      qualificados devem interferir com o ninho. Bom trabalho!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7852040499065317260}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouTurista3
+--- !u!114 &-4404230759562476154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 165
+    y: -51
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Turista
+    text: "Eu n\xE3o sabia o que fazer enquanto voc\xEAs n\xE3o chegavam, ent\xE3o
+      eu joguei um pouco de areia por cima para cobrir. Fiz certo?"
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: -5701897076104838814}
+  childNode: {fileID: -7852040499065317260}
   isExternalFunc: 0
   externalFunctionName: 
 --- !u!114 &-3726779205344640272
@@ -46,10 +237,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 137
-    y: 326
+    x: 299
+    y: 414
     width: 190
-    height: 135
+    height: 0
   isDragging: 0
   isSelected: 0
   sentence:
@@ -60,6 +251,37 @@ MonoBehaviour:
   childNode: {fileID: 3871401140126612357}
   isExternalFunc: 0
   externalFunctionName: 
+--- !u!114 &-1384722701909805468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 615
+    y: -90
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta! N\xE3o \xE9 adequado incentivar que pessoas n\xE3o
+      especializadas interfiram com o ninho. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7852040499065317260}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,13 +295,15 @@ MonoBehaviour:
   m_Name: Turista3
   m_EditorClassIdentifier: 
   nodesList:
-  - {fileID: 9063939870640226680}
-  - {fileID: 5747060659610876664}
-  - {fileID: 1945133440112567264}
-  - {fileID: 3577467329120618037}
-  - {fileID: -6286582065092255036}
-  - {fileID: -3726779205344640272}
-  - {fileID: 3871401140126612357}
+  - {fileID: -8572341825311165908}
+  - {fileID: -5124482594538780165}
+  - {fileID: -5701897076104838814}
+  - {fileID: -4404230759562476154}
+  - {fileID: -7852040499065317260}
+  - {fileID: -1384722701909805468}
+  - {fileID: 8784689556776707095}
+  - {fileID: -4762420010300619755}
+  - {fileID: 4214357262374822150}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &1945133440112567264
@@ -98,10 +322,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 135
-    y: -94
+    x: 382
+    y: 43
     width: 190
-    height: 135
+    height: 0
   isDragging: 0
   isSelected: 0
   sentence:
@@ -128,10 +352,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 137
-    y: 48
+    x: 299
+    y: 136
     width: 190
-    height: 135
+    height: 0
   isDragging: 0
   isSelected: 0
   sentence:
@@ -158,8 +382,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 433
-    y: 56
+    x: 595
+    y: 144
     width: 190
     height: 155
   isDragging: 0
@@ -172,6 +396,37 @@ MonoBehaviour:
   childNode: {fileID: 0}
   isExternalFunc: 1
   externalFunctionName: AcabouTurista3
+--- !u!114 &4214357262374822150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 252
+    y: 132
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta! Demarca\xE7\xF5es improvisadas podem acabar danificando
+      os ovos. \xC9 ideal que apenas profissionais fa\xE7am. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 0}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista3
 --- !u!114 &5747060659610876664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,10 +443,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -145
-    y: -7
+    x: 102
+    y: 130
     width: 190
-    height: 175
+    height: 115
   isDragging: 0
   isSelected: 0
   answers:
@@ -205,6 +460,37 @@ MonoBehaviour:
   - {fileID: 3577467329120618037}
   - {fileID: -6286582065092255036}
   - {fileID: -3726779205344640272}
+--- !u!114 &8784689556776707095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 620
+    y: 67
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta! Mudan\xE7as na temperatura interferem diretamente
+      com as tartarugas marinhas no est\xE1gio de incuba\xE7\xE3o. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7852040499065317260}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista3
 --- !u!114 &9063939870640226680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,10 +507,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -416
-    y: 13
+    x: -169
+    y: 150
     width: 190
-    height: 135
+    height: 0
   isDragging: 0
   isSelected: 0
   sentence:

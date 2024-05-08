@@ -1,5 +1,196 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6720546888925605818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 525
+    y: 71
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 1
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta! Caminhar sobre as \xE1reas demarcadas? Nem pensar!
+      Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -2328654684886317615}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista
+--- !u!114 &-5444554230793866860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 535
+    y: 74
+    width: 190
+    height: 175
+  isDragging: 0
+  isSelected: 1
+  answers:
+  - "Aproveite a sua estadia, mas lembre-se que aqui \xE9 um local de desova das
+    tartarugas marinhas. Por favor, respeite a sinaliza\xE7\xE3o e evite as \xE1reas
+    demarcadas para proteger os ninhos."
+  - 
+  - 
+  - 
+  parentSentenceNode: {fileID: 0}
+  childSentenceNodes: []
+--- !u!114 &-5290735170596801017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 65
+    y: 91
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Seja bem-vindo \xE0 Praia dos Cocais! \xC9 um prazer receb\xEA-lo na sede
+      do Projeto Tamar."
+    characterSprite: {fileID: 1807086850, guid: a744e28d1bbfa5f489756cb55e22f8bc, type: 3}
+  parentNode: {fileID: 0}
+  childNode: {fileID: 7814409654617926150}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-2584647397135124240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 314
+    y: 196
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta! Um piquenique \xE9 uma boa pedida, mas nunca sobre
+      uma \xE1rea demarcada para a prote\xE7\xE3o da ninhada. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -2328654684886317615}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista
+--- !u!114 &-2328654684886317615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 208
+    y: -8
+    width: 190
+    height: 175
+  isDragging: 0
+  isSelected: 0
+  answers:
+  - "Aproveite ao m\xE1ximo o dia aqui, mas lembre-se de n\xE3o ultrapassar as \xE1reas
+    demarcadas para a prote\xE7\xE3o das desovas de tartarugas marinhas."
+  - "N\xE3o deixe de visitar as dunas ao norte, e pode caminhar pelas \xE1reas demarcadas,
+    elas s\xE3o seguras durante o dia."
+  - "Aproveite para fazer um piquenique na praia, inclusive nas \xE1reas demarcadas,
+    desde que mantenha o local limpo."
+  - "Recomendo o mergulho nos recifes de coral, e n\xE3o se preocupe com as \xE1reas
+    demarcadas, elas s\xE3o apenas uma medida preventiva."
+  parentSentenceNode: {fileID: -1893707293131608873}
+  childSentenceNodes:
+  - {fileID: -463162865122022156}
+  - {fileID: -6720546888925605818}
+  - {fileID: -2584647397135124240}
+  - {fileID: 8226956813863717126}
+--- !u!114 &-1893707293131608873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -32
+    y: 7
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Turista
+    text: "Parece incr\xEDvel! Alguma recomenda\xE7\xE3o especial?"
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 2223944886448784266}
+  childNode: {fileID: -2328654684886317615}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-659599680871220963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +221,37 @@ MonoBehaviour:
   childNode: {fileID: -173379055784216054}
   isExternalFunc: 0
   externalFunctionName: 
+--- !u!114 &-463162865122022156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 457
+    y: -83
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta correta! \xC9 importante conscientizar os turistas de que eles
+      precisam respeitar as \xE1reas demarcadas. Bom trabalho)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -2328654684886317615}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouTurista
 --- !u!114 &-173379055784216054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,13 +295,15 @@ MonoBehaviour:
   m_Name: Turista1
   m_EditorClassIdentifier: 
   nodesList:
-  - {fileID: 5880600812766784658}
-  - {fileID: 583258159279462141}
-  - {fileID: 3617010621546036195}
-  - {fileID: 8892100250494247667}
-  - {fileID: -659599680871220963}
-  - {fileID: 8868265694068934133}
-  - {fileID: -173379055784216054}
+  - {fileID: 4055765870847486746}
+  - {fileID: 2145627277287555996}
+  - {fileID: 2223944886448784266}
+  - {fileID: -1893707293131608873}
+  - {fileID: -2328654684886317615}
+  - {fileID: -463162865122022156}
+  - {fileID: -6720546888925605818}
+  - {fileID: -2584647397135124240}
+  - {fileID: 8226956813863717126}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &583258159279462141
@@ -115,6 +339,69 @@ MonoBehaviour:
   - {fileID: 8892100250494247667}
   - {fileID: -659599680871220963}
   - {fileID: 8868265694068934133}
+--- !u!114 &2145627277287555996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -510
+    y: 3
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Turista
+    text: "Oi, muito obrigada! \xC9 a minha primeira vez aqui. O que eu n\xE3o posso
+      perder?"
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 4055765870847486746}
+  childNode: {fileID: 2223944886448784266}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &2223944886448784266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -263
+    y: 5
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Ah, voc\xEA vai adorar explorar nossas belezas naturais. Temos trilhas
+      ecol\xF3gicas, mergulhos de batismo e, claro, a pr\xF3pria praia \xE9 um espet\xE1culo
+      por si s\xF3."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: 2145627277287555996}
+  childNode: {fileID: -1893707293131608873}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &3617010621546036195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +430,37 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
   parentNode: {fileID: 583258159279462141}
   childNode: {fileID: -173379055784216054}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &4055765870847486746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -757
+    y: 2
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Bem-vinda \xE0 Praia dos Cocais! \xC9 um prazer receb\xEA-la aqui no Projeto
+      Tamar. Como posso tornar sua visita mais agrad\xE1vel?"
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: 0}
+  childNode: {fileID: 2145627277287555996}
   isExternalFunc: 0
   externalFunctionName: 
 --- !u!114 &5880600812766784658
@@ -175,6 +493,68 @@ MonoBehaviour:
   childNode: {fileID: 583258159279462141}
   isExternalFunc: 0
   externalFunctionName: 
+--- !u!114 &7814409654617926150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 295
+    y: 93
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Turista
+    text: "Obrigado! Estou ansiosa para aproveitar a praia. Alguma recomenda\xE7\xE3o?"
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: -5290735170596801017}
+  childNode: {fileID: -5444554230793866860}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &8226956813863717126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 95
+    y: 179
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. \xC9 sempre bom dar um mergulho, mas as \xE1reas
+      demarcadas devem ser tratadas com a devida seriedade, e jamais devem ser invadidas.
+      Tente novamente)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -2328654684886317615}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista
 --- !u!114 &8868265694068934133
 MonoBehaviour:
   m_ObjectHideFlags: 0

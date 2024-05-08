@@ -8,6 +8,8 @@ namespace cherrydev
 {
     public class DialogBehaviour : MonoBehaviour
     {
+        public static DialogBehaviour instance;
+
         [SerializeField] private float dialogCharDelay;
         [SerializeField] private List<KeyCode> nextSentenceKeyCodes;
         [SerializeField] private bool isCanSkippingText = true;
@@ -59,6 +61,11 @@ namespace cherrydev
         private void Awake()
         {
             ExternalFunctionsHandler = new DialogExternalFunctionsHandler();
+        }
+
+        private void Start()
+        {
+            instance = this;
         }
 
         private void Update()

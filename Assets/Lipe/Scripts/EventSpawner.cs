@@ -9,6 +9,9 @@ public class EventSpawner : MonoBehaviour
     GameObject pesquisador;
 
     public List<GameObject> spawnedObjects = new List<GameObject>();
+
+    [SerializeField] GameObject[] pointsPescador, pointsTurista;
+
     float minDistance = 10f;
 
     void Start()
@@ -56,14 +59,43 @@ public class EventSpawner : MonoBehaviour
         if (randomizedEvent == "EventoTurista")
         {
             EventController.eventoEmAndamento = true;
-            Instantiate(turista, GetSpawnPosition(), Quaternion.identity);
+            switch (QuestController.instance.diaAtual)
+            {
+                case 1:
+                    Instantiate(turista, pointsTurista[0].transform.position, Quaternion.identity);
+                    break;
+
+                case 2:
+                    Instantiate(turista, pointsTurista[1].transform.position, Quaternion.identity);
+                    break;
+
+                case 3:
+                    Instantiate(turista, pointsTurista[2].transform.position, Quaternion.identity);
+                    break;
+            }
+            
+            
 
         }
 
         if (randomizedEvent == "EventoPescador")
         {
             EventController.eventoEmAndamento = true;
-            Instantiate(pescador, GetSpawnPosition(), Quaternion.identity);
+            switch (QuestController.instance.diaAtual)
+            {
+                case 1:
+                    Instantiate(pescador, pointsPescador[0].transform.position, Quaternion.identity);
+                    break;
+
+                case 2:
+                    Instantiate(pescador, pointsPescador[1].transform.position, Quaternion.identity);
+                    break;
+
+                case 3:
+                    Instantiate(pescador, pointsPescador[2].transform.position, Quaternion.identity);
+                    break;
+            }
+            
         }
     }
 

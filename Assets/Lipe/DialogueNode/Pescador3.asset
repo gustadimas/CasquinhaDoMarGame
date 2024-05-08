@@ -1,208 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7999877123547249497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: 175
-    y: -26
-    width: 190
-    height: 135
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: BB
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 8679228931860650152}
-  childNode: {fileID: 4609689426419619810}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &-5725221358137571939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: 173
-    y: -166
-    width: 190
-    height: 135
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: AA
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 8679228931860650152}
-  childNode: {fileID: 4609689426419619810}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &-5476680217309414076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: 195
-    y: 257
-    width: 190
-    height: 135
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: DD
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 8679228931860650152}
-  childNode: {fileID: 4609689426419619810}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
-  m_Name: Pescador3
-  m_EditorClassIdentifier: 
-  nodesList:
-  - {fileID: 1336072619915378267}
-  - {fileID: 8679228931860650152}
-  - {fileID: -5725221358137571939}
-  - {fileID: -7999877123547249497}
-  - {fileID: 7499223612118064095}
-  - {fileID: -5476680217309414076}
-  - {fileID: 4609689426419619810}
-  nodeToDrawLineFrom: {fileID: 0}
-  linePosition: {x: 0, y: 0}
---- !u!114 &1336072619915378267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: -328
-    y: -42
-    width: 190
-    height: 135
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: oiii
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 0}
-  childNode: {fileID: 8679228931860650152}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &4609689426419619810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: 435
-    y: 18
-    width: 190
-    height: 155
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: tchauu
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: -5476680217309414076}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: AcabouPescador3
---- !u!114 &7499223612118064095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: 182
-    y: 113
-    width: 190
-    height: 135
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: CC
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 8679228931860650152}
-  childNode: {fileID: 4609689426419619810}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &8679228931860650152
+--- !u!114 &-7249191384341190226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,20 +16,508 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -44
-    y: -73
+    x: 343
+    y: -4
     width: 190
     height: 175
   isDragging: 0
   isSelected: 0
   answers:
-  - A3
-  - B3
-  - C3
-  - D3
-  parentSentenceNode: {fileID: 1336072619915378267}
+  - "Nada disso. Voc\xEA est\xE1 cometendo um crime ambiental e ser\xE1 devidamente
+    punido."
+  - "Tudo bem. Acho que se voc\xEA pegar s\xF3 alguns ovos n\xE3o far\xE1 falta para
+    o ninho."
+  - "Eu posso deixar essa passar, mas meu sil\xEAncio n\xE3o \xE9 de gra\xE7a."
+  - "Eu entendo a sua situa\xE7\xE3o, mas este n\xE3o \xE9 o caminho. Venha, vamos
+    at\xE9 o projeto. Temos programas de apoio \xE0 comunidade que podem te ajudar
+    sem comprometer a vida marinha."
+  parentSentenceNode: {fileID: 7528986505297556089}
   childSentenceNodes:
-  - {fileID: -5725221358137571939}
-  - {fileID: -7999877123547249497}
-  - {fileID: 7499223612118064095}
-  - {fileID: -5476680217309414076}
+  - {fileID: -5810044298591197553}
+  - {fileID: 6081584407421024942}
+  - {fileID: -3865247126856591044}
+  - {fileID: 2028588200681421767}
+--- !u!114 &-6876963292240712648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -510
+    y: 6
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Ei! O que voc\xEA est\xE1 fazendo? Essa \xE9 uma \xE1rea de desova restrita
+      ao p\xFAblico!"
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: 0}
+  childNode: {fileID: -5006281147504802888}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-6250669528143269852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 273
+    y: -92
+    width: 190
+    height: 0
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: AA
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 7296963642967864919}
+  childNode: {fileID: 8158620236430468736}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-5810044298591197553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 562
+    y: -49
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. A atitude dele foi errada, mas existe uma forma mais
+      emp\xE1tica de resolver o problema. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7249191384341190226}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador2
+--- !u!114 &-5006281147504802888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -288
+    y: 9
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: "Essa n\xE3o, fui pego! N\xE3o \xE9 nada do que voc\xEA est\xE1 pensando..."
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: -6876963292240712648}
+  childNode: {fileID: 7241900327804027757}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-3865247126856591044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 365
+    y: 186
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: (Resposta incorreta. Vou fingir que nem li isso, jogador! Tente novamente.
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7249191384341190226}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador2
+--- !u!114 &-1503630003540969880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -221
+    y: -35
+    width: 190
+    height: 0
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: Oii
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 0}
+  childNode: {fileID: 7296963642967864919}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Pescador3
+  m_EditorClassIdentifier: 
+  nodesList:
+  - {fileID: -6876963292240712648}
+  - {fileID: -5006281147504802888}
+  - {fileID: 7241900327804027757}
+  - {fileID: 7528986505297556089}
+  - {fileID: -7249191384341190226}
+  - {fileID: -5810044298591197553}
+  - {fileID: 6081584407421024942}
+  - {fileID: -3865247126856591044}
+  - {fileID: 2028588200681421767}
+  nodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+--- !u!114 &2028588200681421767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 162
+    y: 172
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta correta. Uma das miss\xF5es do Projeto Tamar \xE9 integrar e
+      ajudar a comunidade local, al\xE9m de preservar a vida marinha. Bom trabalho!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7249191384341190226}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouPescador3
+--- !u!114 &3067639592380217537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 274
+    y: 42
+    width: 190
+    height: 0
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: BB
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 7296963642967864919}
+  childNode: {fileID: 8158620236430468736}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &4545631393175485796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 285
+    y: 316
+    width: 190
+    height: 0
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: DD
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 7296963642967864919}
+  childNode: {fileID: 8158620236430468736}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &5106703339006916505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 283
+    y: 179
+    width: 190
+    height: 0
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: CC
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 7296963642967864919}
+  childNode: {fileID: 8158620236430468736}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &6081584407421024942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 562
+    y: 109
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. N\xE3o \xE9 certo permitir esse tipo de ato, lembre
+      que tartarugas marinhas est\xE3o amea\xE7as de extin\xE7\xE3o! Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7249191384341190226}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador2
+--- !u!114 &7241900327804027757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -76
+    y: 13
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Como n\xE3o? Eu estou vendo voc\xEA escavando a areia atr\xE1s dos ovos
+      de tartaruga."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: -5006281147504802888}
+  childNode: {fileID: 7528986505297556089}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &7296963642967864919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 40
+    y: -38
+    width: 190
+    height: 115
+  isDragging: 0
+  isSelected: 0
+  answers:
+  - A2
+  - B2
+  - C2
+  - D2
+  parentSentenceNode: {fileID: -1503630003540969880}
+  childSentenceNodes:
+  - {fileID: -6250669528143269852}
+  - {fileID: 3067639592380217537}
+  - {fileID: 5106703339006916505}
+  - {fileID: 4545631393175485796}
+--- !u!114 &7528986505297556089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 132
+    y: 9
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: "Eu n\xE3o queria fazer isso, mas a situa\xE7\xE3o l\xE1 em casa n\xE3o
+      est\xE1 nada f\xE1cil. Pensei que poderia pegar alguns ovos para vender ou
+      colocar na mesa para minha fam\xEDlia. Por favor, deixe essa passar."
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 7241900327804027757}
+  childNode: {fileID: -7249191384341190226}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &8158620236430468736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 624
+    y: 87
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: tchauu
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 4545631393175485796}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcabouPescador2

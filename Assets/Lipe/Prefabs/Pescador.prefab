@@ -1162,9 +1162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptDialogo: {fileID: 0}
   graficoNos:
-  - {fileID: 11400000, guid: 58280c9a74d226645887bdaeda394984, type: 2}
-  - {fileID: 11400000, guid: 11af47d1c77b87d4daae9c3058e023af, type: 2}
+  - {fileID: 11400000, guid: 4abcc5c36a9850b479f2cb8dd3074c3d, type: 2}
   - {fileID: 11400000, guid: 853461cfccb60774aba7c1d66b0fd22f, type: 2}
+  - {fileID: 11400000, guid: 11af47d1c77b87d4daae9c3058e023af, type: 2}
   scriptMovimentacao: {fileID: 0}
   scriptCamera: {fileID: 0}
   analogico: {fileID: 0}
@@ -1414,7 +1414,7 @@ GameObject:
   - component: {fileID: 4107024403432827479}
   m_Layer: 0
   m_Name: Pescador
-  m_TagString: Untagged
+  m_TagString: Pescador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -15,5 +15,6 @@ MonoBehaviour:
   idMissao: 2
   valorAtual: 0
   quantidade: 1
-  estadoMissao: 1
-  textoMissao: "Conscientize os pescadores locais sobre a preserva\xE7\xE3o da ninhada."
+  estadoMissao: 0
+  textoMissao: "Um pescador est\xE1 pescando na costa com anz\xF3is. V\xE1 conversar
+    com ele!"

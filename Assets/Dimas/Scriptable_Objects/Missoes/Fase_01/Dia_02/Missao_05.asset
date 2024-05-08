@@ -16,4 +16,5 @@ MonoBehaviour:
   valorAtual: 0
   quantidade: 1
   estadoMissao: 0
-  textoMissao: "Os banhistas n\xE3o entenderam o recado. Converse novamente com eles! "
+  textoMissao: "A turista est\xE1 jogando bola perto de uma \xE1rea demarcada. Converse
+    com ela."

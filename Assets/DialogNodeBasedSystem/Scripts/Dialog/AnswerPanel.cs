@@ -24,6 +24,10 @@ namespace cherrydev
             {
                 Button answerButton = Instantiate(answerButtonPrefab, parentTransform);
 
+                answerButton.GetComponentInChildren<TextMeshProUGUI>().enableAutoSizing = true;
+
+                
+
                 buttons.Add(answerButton);
                 buttonTexts.Add(answerButton.GetComponentInChildren<TextMeshProUGUI>());
             }

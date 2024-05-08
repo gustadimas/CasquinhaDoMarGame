@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7171855064261592585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: -386
+    y: 60
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: "Voc\xEA"
+    text: "Bom dia! Notei que voc\xEA est\xE1 pescando nesta \xE1rea. Voc\xEA sabia
+      que esta praia \xE9 um local muito importante para as tartarugas marinhas?"
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: 0}
+  childNode: {fileID: 2689267356282071684}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-4469608985750173747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 645
+    y: 238
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. Nesta situa\xE7\xE3o, as tartarugas est\xE3o em estado
+      de vulnerabilidade e precisam da nossa ajuda. Tente novamente!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 6903454072928089230}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,16 +75,18 @@ MonoBehaviour:
   m_Name: Pescador1
   m_EditorClassIdentifier: 
   nodesList:
-  - {fileID: 8815381367612101638}
-  - {fileID: 2267769774283636519}
-  - {fileID: 653481889912037083}
-  - {fileID: 942555488911053292}
-  - {fileID: 3988437975429201921}
-  - {fileID: 2487402055173921896}
-  - {fileID: 8269237694917158231}
+  - {fileID: -7171855064261592585}
+  - {fileID: 2689267356282071684}
+  - {fileID: 7999243853080059027}
+  - {fileID: 4894351754907722471}
+  - {fileID: 6903454072928089230}
+  - {fileID: 2063949573491590136}
+  - {fileID: 5336629405534142261}
+  - {fileID: -4469608985750173747}
+  - {fileID: 5731476514044383364}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
---- !u!114 &653481889912037083
+--- !u!114 &2063949573491590136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,21 +102,23 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 180
-    y: -126
+    x: 827
+    y: 19
     width: 190
-    height: 135
+    height: 155
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pescador
-    text: AA
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 2267769774283636519}
-  childNode: {fileID: 8269237694917158231}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &942555488911053292
+    characterName: Narrador
+    text: "(Resposta incorreta. \xC9 durante a noite que as tartarugas-m\xE3es costumam
+      desovar a sua ninhada, e tamb\xE9m \xE9 o per\xEDodo que os filhotes de tartaruga
+      partem para o mar ap\xF3s o nascimento. Tente novamente!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 6903454072928089230}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador
+--- !u!114 &2689267356282071684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,21 +134,113 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 186
-    y: 20
+    x: -129
+    y: 58
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Pescador
-    text: BB
+    text: "N\xE3o tinha ideia. O que tem de t\xE3o especial aqui?"
     characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 2267769774283636519}
-  childNode: {fileID: 8269237694917158231}
+  parentNode: {fileID: -7171855064261592585}
+  childNode: {fileID: 7999243853080059027}
   isExternalFunc: 0
   externalFunctionName: 
---- !u!114 &2267769774283636519
+--- !u!114 &4894351754907722471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 333
+    y: 61
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pescador
+    text: Entendi. E o que eu posso fazer sobre isso?
+    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+  parentNode: {fileID: 7999243853080059027}
+  childNode: {fileID: 6903454072928089230}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &5336629405534142261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 827
+    y: 161
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta correta! Voc\xEA conscientizou o pescador e ofereceu uma alternativa
+      para que ele continue exercendo o seu trabalho. Bom trabalho!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 6903454072928089230}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouPescador
+--- !u!114 &5731476514044383364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 443
+    y: 233
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. Proibir o pescador de exercer o seu trabalho n\xE3o
+      \xE9 o caminho certo. Tente novamente!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 6903454072928089230}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador
+--- !u!114 &6903454072928089230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,24 +256,27 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -63
-    y: -52
+    x: 579
+    y: 52
     width: 190
     height: 175
   isDragging: 0
   isSelected: 0
   answers:
-  - A1
-  - B1
-  - C1
-  - D1
-  parentSentenceNode: {fileID: 8815381367612101638}
+  - "Que tal pescar apenas \xE0 noite? Assim, as tartarugas n\xE3o ser\xE3o capturadas."
+  - "Voc\xEA poderia tentar pescar um pouco mais longe da costa. H\xE1 \xE1reas onde
+    as tartarugas n\xE3o s\xE3o t\xE3o frequentes e voc\xEA ainda pode pescar sem
+    problemas."
+  - "N\xE3o se preocupe com as tartarugas, elas s\xE3o fortes o suficiente para lidar
+    com os anz\xF3is."
+  - "Voc\xEA deveria parar de pescar. \xC9 a \xFAnica maneira de proteger as tartarugas."
+  parentSentenceNode: {fileID: 4894351754907722471}
   childSentenceNodes:
-  - {fileID: 653481889912037083}
-  - {fileID: 942555488911053292}
-  - {fileID: 3988437975429201921}
-  - {fileID: 2487402055173921896}
---- !u!114 &2487402055173921896
+  - {fileID: 2063949573491590136}
+  - {fileID: 5336629405534142261}
+  - {fileID: -4469608985750173747}
+  - {fileID: 5731476514044383364}
+--- !u!114 &7999243853080059027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,107 +292,19 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 185
-    y: 288
+    x: 97
+    y: 59
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pescador
-    text: DD
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 2267769774283636519}
-  childNode: {fileID: 8269237694917158231}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &3988437975429201921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: 188
-    y: 153
-    width: 190
-    height: 135
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: CC
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 2267769774283636519}
-  childNode: {fileID: 8269237694917158231}
-  isExternalFunc: 0
-  externalFunctionName: 
---- !u!114 &8269237694917158231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: 508
-    y: 24
-    width: 190
-    height: 155
-  isDragging: 0
-  isSelected: 1
-  sentence:
-    characterName: Pescador
-    text: tchauu
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 2487402055173921896}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: AcabouPescador
---- !u!114 &8815381367612101638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: 
-  connectedNodesList: []
-  nodeGraph: {fileID: 11400000}
-  rect:
-    serializedVersion: 2
-    x: -358
-    y: -45
-    width: 190
-    height: 135
-  isDragging: 0
-  isSelected: 0
-  sentence:
-    characterName: Pescador
-    text: OII
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
-  parentNode: {fileID: 0}
-  childNode: {fileID: 2267769774283636519}
+    characterName: "Voc\xEA"
+    text: "Esta regi\xE3o \xE9 onde as tartarugas-m\xE3es v\xEAm desovar e os filhotes
+      retornam ao mar. Usar anz\xF3is aqui pode acidentalmente capturar essas criaturas
+      vulner\xE1veis."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: 2689267356282071684}
+  childNode: {fileID: 4894351754907722471}
   isExternalFunc: 0
   externalFunctionName: 

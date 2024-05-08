@@ -16,4 +16,5 @@ MonoBehaviour:
   valorAtual: 0
   quantidade: 1
   estadoMissao: 0
-  textoMissao: "Os pescadores voltaram, d\xEA um jeito nisso!"
+  textoMissao: "O pescador est\xE1 descartando restos de peixe na costa da praia.
+    Conscientize ele!"

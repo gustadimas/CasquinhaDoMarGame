@@ -16,4 +16,5 @@ MonoBehaviour:
   valorAtual: 0
   quantidade: 1
   estadoMissao: 0
-  textoMissao: "Eles ainda est\xE3o cavando os ninhos? Alerte os pescadores!"
+  textoMissao: "O pescador foi flagrado roubando os ovos de um ninho de tartaruga.
+    Corra at\xE9 l\xE1!"

@@ -1,4 +1,5 @@
 using cherrydev;
+using System.Collections;
 using UnityEngine;
 
 public class PescadorDialogoStarter : MonoBehaviour
@@ -11,8 +12,7 @@ public class PescadorDialogoStarter : MonoBehaviour
     [SerializeField] Transform posicaoJogador;
     [SerializeField] private int missaoID;
 
-
-
+    bool acertou;
     void Start()
     {
         scriptDialogo = GameObject.FindObjectOfType<DialogBehaviour>();
@@ -22,21 +22,29 @@ public class PescadorDialogoStarter : MonoBehaviour
         btnInteragir = GameObject.Find("Interface_Btn");
         posicaoJogador = transform.Find("Pesquisador");
 
+        acertou = false;
+
         switch (QuestController.instance.diaAtual)
         {
             case 1:
-                scriptDialogo.BindExternalFunction("AcabouPescador", ReativarPersonagem);
+                scriptDialogo.BindExternalFunction("AcertouPescador", Acertou);
+                scriptDialogo.BindExternalFunction("ErrouPescador", Errou);
                 break;
 
             case 2:
-                scriptDialogo.BindExternalFunction("AcabouPescador2", ReativarPersonagem);
+                scriptDialogo.BindExternalFunction("AcertouPescador2", Acertou);
+                scriptDialogo.BindExternalFunction("ErrouPescador2", Errou);
                 break;
 
             case 3:
-                scriptDialogo.BindExternalFunction("AcabouPescador3", ReativarPersonagem);
+                scriptDialogo.BindExternalFunction("AcertouPescador3", Acertou);
+                scriptDialogo.BindExternalFunction("ErrouPescador3", Errou);
                 break;
         }
-    } 
+
+        scriptDialogo.IsCanSkippingText = false;
+        DialogBehaviour.instance.SetCharDelay(0.01f);
+    }
 
     public void PescadorInteracao()
     {
@@ -60,19 +68,36 @@ public class PescadorDialogoStarter : MonoBehaviour
         btnInteragir.SetActive(false);
     }
 
-    void ReativarPersonagem()
+    void Acertou()
     {
-        GameObject.FindObjectOfType<Player_Pesquisador>().ReativarJogador();
-        Invoke(nameof(Mover), 1.5f);
+        acertou = true;
+        if (this != null)
+            StartCoroutine(Mover());
     }
 
-    void Mover()
+    void Errou()
     {
+        acertou = false;
+        if (this != null)
+            StartCoroutine(Mover());
+    }
+
+    IEnumerator Mover()
+    {
+        yield return new WaitForSeconds(4f);
+
+        GameObject.FindObjectOfType<Player_Pesquisador>().ReativarJogador();
         scriptMovimentacao.enabled = true;
         scriptCamera.enabled = true;
         analogico.SetActive(true);
         btnInteragir.SetActive(true);
-        Destroy(transform.parent.gameObject);
-        QuestController.instance.AtualizarProgressoMissoes(missaoID, 1);
+
+        if (acertou)
+        {
+           QuestController.instance.AtualizarProgressoMissoes(missaoID, 1);
+           acertou = false;
+           Destroy(transform.parent.gameObject);
+        }
+
     }
 }

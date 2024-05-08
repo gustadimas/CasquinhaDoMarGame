@@ -15,5 +15,6 @@ MonoBehaviour:
   idMissao: 1
   valorAtual: 0
   quantidade: 1
-  estadoMissao: 1
-  textoMissao: "Os banhistas est\xE3o perturbando o ninho. V\xE1 falar com eles! "
+  estadoMissao: 0
+  textoMissao: "Uma turista est\xE1 visitando a Praia dos Cocais pela primeira vez.
+    Fale com ela!"
