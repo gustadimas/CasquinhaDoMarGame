@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Missao_07
   m_EditorClassIdentifier: 
   idMissao: 0
-  valorAtual: 15
-  quantidade: 15
+  valorAtual: 1
+  quantidade: 12
   estadoMissao: 0
   textoMissao: "N\xE3o cansam de sujar a praia? Recolha mais lixos!"

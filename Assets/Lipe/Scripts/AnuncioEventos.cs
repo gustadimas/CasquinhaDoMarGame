@@ -35,7 +35,7 @@ public class AnuncioEventos : MonoBehaviour
                     break;
 
                 case 2:
-                    txtAnuncio.text = "Colete mais lixo pela praia. Dessa vez, mais do que antes!";
+                    txtAnuncio.text = "Os banhistas estão sujando a praia mais do que antes. Continue coletando todos os lixos!";
                     break;
 
                 case 3:

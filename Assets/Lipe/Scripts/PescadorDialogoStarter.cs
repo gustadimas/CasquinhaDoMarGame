@@ -96,8 +96,28 @@ public class PescadorDialogoStarter : MonoBehaviour
         {
            QuestController.instance.AtualizarProgressoMissoes(missaoID, 1);
            acertou = false;
-           Destroy(transform.parent.gameObject);
+           StartCoroutine(Desaparecer());
         }
 
+    }
+
+    IEnumerator Desaparecer()
+    {
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        float tempoPassado = 0;
+        float tempo = 1.0f;
+
+        while (tempoPassado < tempo)
+        {
+            tempoPassado += Time.deltaTime;
+            Color color = meshRenderer.material.color;
+            color.a = Mathf.Lerp(1, 0, tempoPassado / tempo);
+            meshRenderer.material.color = color;
+            yield return null;
+        }
+
+        meshRenderer.material.color = new Color(meshRenderer.material.color.r, meshRenderer.material.color.g, meshRenderer.material.color.b, 0);
+        yield return new WaitForSeconds(1);
+        Destroy(transform.parent.gameObject);
     }
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8190505767805849235}
   - component: {fileID: 8190505767805849232}
-  - component: {fileID: 908198312118044015}
   m_Layer: 0
   m_Name: Turista
   m_TagString: Turista
@@ -52,18 +51,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!225 &908198312118044015
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8190505767805849237}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &9021872266790871064
 GameObject:
   m_ObjectHideFlags: 0

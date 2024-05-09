@@ -46,7 +46,7 @@ public class EventSpawner : MonoBehaviour
                     break;
 
                 case 3:
-                    for (int i = 0; i < 15; i++)
+                    for (int i = 0; i < 12; i++)
                     {
                         GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
                         spawnedObjects.Add(lixoObj);
