@@ -16,21 +16,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 343
-    y: -4
+    x: 255
+    y: -152
     width: 190
     height: 175
   isDragging: 0
   isSelected: 0
   answers:
-  - "Nada disso. Voc\xEA est\xE1 cometendo um crime ambiental e ser\xE1 devidamente
-    punido."
-  - "Tudo bem. Acho que se voc\xEA pegar s\xF3 alguns ovos n\xE3o far\xE1 falta para
-    o ninho."
-  - "Eu posso deixar essa passar, mas meu sil\xEAncio n\xE3o \xE9 de gra\xE7a."
-  - "Eu entendo a sua situa\xE7\xE3o, mas este n\xE3o \xE9 o caminho. Venha, vamos
-    at\xE9 o projeto. Temos programas de apoio \xE0 comunidade que podem te ajudar
-    sem comprometer a vida marinha."
+  - "Nada disso, pare a\xED mesmo."
+  - Tudo bem.
+  - Eu posso deixar essa passar, mas...
+  - "Eu entendo a sua situa\xE7\xE3o, mas este n\xE3o \xE9 o caminho. "
   parentSentenceNode: {fileID: 7528986505297556089}
   childSentenceNodes:
   - {fileID: -5810044298591197553}
@@ -53,8 +49,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -510
-    y: 6
+    x: -587
+    y: -154
     width: 190
     height: 135
   isDragging: 0
@@ -114,21 +110,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 562
-    y: -49
+    x: 490
+    y: -192
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Narrador
-    text: "(Resposta incorreta. A atitude dele foi errada, mas existe uma forma mais
-      emp\xE1tica de resolver o problema. Tente novamente.)"
-    characterSprite: {fileID: 0}
+    characterName: Pesquisador
+    text: "Independente do motivo, voc\xEA est\xE1 cometendo um crime ambiental e
+      ser\xE1 devidamente punido."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
   parentNode: {fileID: -7249191384341190226}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouPescador2
+  childNode: {fileID: -3472119453041553928}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-5006281147504802888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +141,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -288
-    y: 9
+    x: -365
+    y: -151
     width: 190
     height: 135
   isDragging: 0
@@ -175,20 +171,83 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 365
-    y: 186
+    x: 288
+    y: 26
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pesquisador
+    text: "... voc\xEA sabe, o meu sil\xEAncio n\xE3o \xE9 gratuito. Voc\xEA vai
+      precisar pagar por ele."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: -7249191384341190226}
+  childNode: {fileID: 8653112959721498882}
+  isExternalFunc: 0
+  externalFunctionName: ErrouPescador2
+--- !u!114 &-3758034098535158012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 75
+    y: 165
     width: 190
     height: 155
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
-    text: (Resposta incorreta. Vou fingir que nem li isso, jogador! Tente novamente.
+    text: "(Resposta correta. Uma das miss\xF5es do Projeto Tamar \xE9 integrar e
+      ajudar a comunidade local, al\xE9m de preservar a vida marinha. Bom trabalho!)"
     characterSprite: {fileID: 0}
-  parentNode: {fileID: -7249191384341190226}
+  parentNode: {fileID: 2028588200681421767}
   childNode: {fileID: 0}
   isExternalFunc: 1
-  externalFunctionName: ErrouPescador2
+  externalFunctionName: AcertouPescador3
+--- !u!114 &-3472119453041553928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 702
+    y: -203
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. A atitude dele foi errada, mas existe uma forma mais
+      emp\xE1tica de resolver o problema. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -5810044298591197553}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador3
 --- !u!114 &-1503630003540969880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +300,10 @@ MonoBehaviour:
   - {fileID: 6081584407421024942}
   - {fileID: -3865247126856591044}
   - {fileID: 2028588200681421767}
+  - {fileID: -3472119453041553928}
+  - {fileID: 6237758386692985527}
+  - {fileID: 8653112959721498882}
+  - {fileID: -3758034098535158012}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &2028588200681421767
@@ -259,21 +322,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 162
-    y: 172
+    x: 85
+    y: 12
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Narrador
-    text: "(Resposta correta. Uma das miss\xF5es do Projeto Tamar \xE9 integrar e
-      ajudar a comunidade local, al\xE9m de preservar a vida marinha. Bom trabalho!)"
-    characterSprite: {fileID: 0}
+    characterName: Pesquisador
+    text: "Venha, vamos at\xE9 a sede do projeto. Temos programas de apoio \xE0 comunidade
+      que podem te ajudar sem comprometer a vida marinha."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
   parentNode: {fileID: -7249191384341190226}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: AcertouPescador3
+  childNode: {fileID: -3758034098535158012}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &3067639592380217537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,8 +443,39 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 562
-    y: 109
+    x: 485
+    y: -51
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pesquisador
+    text: "Acho que se voc\xEA pegar s\xF3 alguns ovos, n\xE3o far\xE1 falta para
+      o ninho."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: -7249191384341190226}
+  childNode: {fileID: 6237758386692985527}
+  isExternalFunc: 0
+  externalFunctionName: ErrouPescador2
+--- !u!114 &6237758386692985527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 713
+    y: -5
     width: 190
     height: 155
   isDragging: 0
@@ -391,10 +485,10 @@ MonoBehaviour:
     text: "(Resposta incorreta. N\xE3o \xE9 certo permitir esse tipo de ato, lembre
       que tartarugas marinhas est\xE3o amea\xE7as de extin\xE7\xE3o! Tente novamente.)"
     characterSprite: {fileID: 0}
-  parentNode: {fileID: -7249191384341190226}
+  parentNode: {fileID: 6081584407421024942}
   childNode: {fileID: 0}
   isExternalFunc: 1
-  externalFunctionName: ErrouPescador2
+  externalFunctionName: 
 --- !u!114 &7241900327804027757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,8 +505,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -76
-    y: 13
+    x: -153
+    y: -147
     width: 190
     height: 135
   isDragging: 0
@@ -475,8 +569,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 132
-    y: 9
+    x: 55
+    y: -151
     width: 190
     height: 135
   isDragging: 0
@@ -521,3 +615,35 @@ MonoBehaviour:
   childNode: {fileID: 0}
   isExternalFunc: 1
   externalFunctionName: AcabouPescador2
+--- !u!114 &8653112959721498882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 290
+    y: 173
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 1
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. Vou fingir que nem li isso, jogador! N\xE3o \xE9
+      papel de um pesquisador chantagear e nem aceitar suborno das pessoas.Tente
+      novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -3865247126856591044}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador3

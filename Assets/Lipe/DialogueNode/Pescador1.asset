@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -386
-    y: 60
+    x: -748
+    y: 17
     width: 190
     height: 135
   isDragging: 0
@@ -31,6 +31,38 @@ MonoBehaviour:
   childNode: {fileID: 2689267356282071684}
   isExternalFunc: 0
   externalFunctionName: 
+--- !u!114 &-4779176286471673988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 651
+    y: -35
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. \xC9 durante a noite que as tartarugas-m\xE3es costumam
+      desovar a sua ninhada, e tamb\xE9m \xE9 o per\xEDodo que os filhotes de tartaruga
+      partem para o mar ap\xF3s o nascimento. Tente novamente!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 2063949573491590136}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador
 --- !u!114 &-4469608985750173747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,18 +79,49 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 645
-    y: 238
+    x: 289
+    y: 185
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 1
+  sentence:
+    characterName: Pesquisador
+    text: "Elas n\xE3o s\xE3o t\xE3o fr\xE1geis, com certeza conseguem lidar com
+      os anz\xF3is."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: 6903454072928089230}
+  childNode: {fileID: 7826307526451658937}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-3996194289829202965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 105
+    y: 350
     width: 190
     height: 155
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
-    text: "(Resposta incorreta. Nesta situa\xE7\xE3o, as tartarugas est\xE3o em estado
-      de vulnerabilidade e precisam da nossa ajuda. Tente novamente!)"
+    text: "(Resposta incorreta. Proibir o pescador de exercer o seu trabalho n\xE3o
+      \xE9 o caminho certo. Tente novamente!)"
     characterSprite: {fileID: 0}
-  parentNode: {fileID: 6903454072928089230}
+  parentNode: {fileID: 5731476514044383364}
   childNode: {fileID: 0}
   isExternalFunc: 1
   externalFunctionName: ErrouPescador
@@ -84,6 +147,10 @@ MonoBehaviour:
   - {fileID: 5336629405534142261}
   - {fileID: -4469608985750173747}
   - {fileID: 5731476514044383364}
+  - {fileID: -4779176286471673988}
+  - {fileID: 7051389863161561296}
+  - {fileID: 7826307526451658937}
+  - {fileID: -3996194289829202965}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &2063949573491590136
@@ -102,22 +169,20 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 827
-    y: 19
+    x: 424
+    y: -39
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
-    characterName: Narrador
-    text: "(Resposta incorreta. \xC9 durante a noite que as tartarugas-m\xE3es costumam
-      desovar a sua ninhada, e tamb\xE9m \xE9 o per\xEDodo que os filhotes de tartaruga
-      partem para o mar ap\xF3s o nascimento. Tente novamente!)"
-    characterSprite: {fileID: 0}
+    characterName: Pesquisador
+    text: "Assim, as tartarugas n\xE3o ser\xE3o capturadas."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
   parentNode: {fileID: 6903454072928089230}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouPescador
+  childNode: {fileID: -4779176286471673988}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &2689267356282071684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +199,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -129
-    y: 58
+    x: -491
+    y: 15
     width: 190
     height: 135
   isDragging: 0
@@ -164,8 +229,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 333
-    y: 61
+    x: -29
+    y: 18
     width: 190
     height: 135
   isDragging: 0
@@ -194,21 +259,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 827
-    y: 161
+    x: 481
+    y: 110
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
-    characterName: Narrador
-    text: "(Resposta correta! Voc\xEA conscientizou o pescador e ofereceu uma alternativa
-      para que ele continue exercendo o seu trabalho. Bom trabalho!)"
-    characterSprite: {fileID: 0}
+    characterName: Pesquisador
+    text: "H\xE1 \xE1reas onde as tartarugas n\xE3o s\xE3o t\xE3o frequentes e voc\xEA
+      ainda pode pescar sem problemas."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
   parentNode: {fileID: 6903454072928089230}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: AcertouPescador
+  childNode: {fileID: 7051389863161561296}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &5731476514044383364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,21 +290,20 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 443
-    y: 233
+    x: 80
+    y: 189
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
-    characterName: Narrador
-    text: "(Resposta incorreta. Proibir o pescador de exercer o seu trabalho n\xE3o
-      \xE9 o caminho certo. Tente novamente!)"
-    characterSprite: {fileID: 0}
+    characterName: Pesquisador
+    text: "\xC9 a \xFAnica maneira de proteger as tartarugas."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
   parentNode: {fileID: 6903454072928089230}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouPescador
+  childNode: {fileID: -3996194289829202965}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &6903454072928089230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,26 +320,85 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 579
-    y: 52
+    x: 203
+    y: 6
     width: 190
     height: 175
   isDragging: 0
   isSelected: 0
   answers:
-  - "Que tal pescar apenas \xE0 noite? Assim, as tartarugas n\xE3o ser\xE3o capturadas."
-  - "Voc\xEA poderia tentar pescar um pouco mais longe da costa. H\xE1 \xE1reas onde
-    as tartarugas n\xE3o s\xE3o t\xE3o frequentes e voc\xEA ainda pode pescar sem
-    problemas."
-  - "N\xE3o se preocupe com as tartarugas, elas s\xE3o fortes o suficiente para lidar
-    com os anz\xF3is."
-  - "Voc\xEA deveria parar de pescar. \xC9 a \xFAnica maneira de proteger as tartarugas."
+  - Que tal pescar apenas a noite?
+  - "Voc\xEA poderia tentar pescar um pouco mais longe da costa."
+  - "N\xE3o se preocupe com as tartarugas."
+  - "Voc\xEA deveria parar de pescar."
   parentSentenceNode: {fileID: 4894351754907722471}
   childSentenceNodes:
   - {fileID: 2063949573491590136}
   - {fileID: 5336629405534142261}
   - {fileID: -4469608985750173747}
   - {fileID: 5731476514044383364}
+--- !u!114 &7051389863161561296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 674
+    y: 131
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta correta! Voc\xEA conscientizou o pescador e ofereceu uma alternativa
+      para que ele continue exercendo o seu trabalho. Bom trabalho!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 5336629405534142261}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouPescador
+--- !u!114 &7826307526451658937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 363
+    y: 349
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta. Nesta situa\xE7\xE3o, as tartarugas est\xE3o em estado
+      de vulnerabilidade e precisam da nossa ajuda. Tente novamente!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -4469608985750173747}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador
 --- !u!114 &7999243853080059027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,8 +415,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 97
-    y: 59
+    x: -265
+    y: 16
     width: 190
     height: 135
   isDragging: 0

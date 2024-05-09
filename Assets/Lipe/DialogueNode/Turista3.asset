@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -502
-    y: -55
+    x: -539
+    y: -183
     width: 190
     height: 135
   isDragging: 0
@@ -47,26 +47,116 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 380
-    y: -60
+    x: 343
+    y: -188
     width: 190
     height: 175
   isDragging: 0
   isSelected: 0
   answers:
-  - "Com certeza! Voc\xEA fez bem ajudando a preservar o ninho at\xE9 chegarmos aqui."
-  - "Voc\xEA fez o poss\xEDvel, mas o mais indicado seria jogar um pouco de \xE1gua
-    ao redor para manter os ovos frescos."
-  - "A inten\xE7\xE3o foi boa, mas o melhor \xE9 n\xE3o interferir com os ovos. Eles
-    s\xE3o muito sens\xEDveis e podem ser danificados facilmente. Vou sinalizar o
-    local e contatar nossa equipe especializada para cuidar disso."
-  - Outra alternativa seria criar uma barreira com pedras e madeira ao redor do ninho
-    para alertar outros banhistas.
+  - 'Com certeza! '
+  - "Voc\xEA fez o poss\xEDvel, mas esqueceu de uma coisa."
+  - "A inten\xE7\xE3o foi boa, mas n\xE3o fa\xE7a mais isso."
+  - "N\xE3o, voc\xEA poderia ter tomado uma decis\xE3o melhor."
   parentSentenceNode: {fileID: -4404230759562476154}
   childSentenceNodes:
   - {fileID: -1384722701909805468}
   - {fileID: 8784689556776707095}
   - {fileID: -4762420010300619755}
+  - {fileID: 4214357262374822150}
+--- !u!114 &-7013264175546259193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 434
+    y: 151
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta correta! \xC9 ideal frisar para os banhistas que apenas profissionais
+      qualificados devem interferir com o ninho. Bom trabalho!)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -4762420010300619755}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouTurista3
+--- !u!114 &-6770995352028320570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 794
+    y: -49
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta! Mudan\xE7as na temperatura interferem diretamente
+      com as tartarugas marinhas no est\xE1gio de incuba\xE7\xE3o. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 8784689556776707095}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista3
+--- !u!114 &-6625019001317741914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 787
+    y: -212
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: "(Resposta incorreta! N\xE3o \xE9 adequado incentivar que pessoas n\xE3o
+      especializadas interfiram com o ninho. Tente novamente.)"
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -1384722701909805468}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista3
 --- !u!114 &-6286582065092255036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +203,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -57
-    y: -50
+    x: -94
+    y: -178
     width: 190
     height: 135
   isDragging: 0
@@ -144,8 +234,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -280
-    y: -51
+    x: -317
+    y: -179
     width: 190
     height: 135
   isDragging: 0
@@ -175,21 +265,53 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 430
-    y: 126
+    x: 387
+    y: 5
+    width: 190
+    height: 135
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Pesquisador
+    text: "O melhor a se fazer \xE9 n\xE3o interferir com os ovos. Eles s\xE3o muito
+      sens\xEDveis e podem ser danificados facilmente. Vou sinalizar o local e contatar
+      nossa equipe especializada para cuidar disso."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: -7852040499065317260}
+  childNode: {fileID: -7013264175546259193}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-4488611847303232017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 153
+    y: 156
     width: 190
     height: 155
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
-    text: "(Resposta correta! \xC9 ideal frisar para os banhistas que apenas profissionais
-      qualificados devem interferir com o ninho. Bom trabalho!)"
+    text: "(Resposta incorreta! Demarca\xE7\xF5es improvisadas podem acabar danificando
+      os ovos. \xC9 ideal que apenas profissionais fa\xE7am. Tente novamente.)"
     characterSprite: {fileID: 0}
-  parentNode: {fileID: -7852040499065317260}
+  parentNode: {fileID: 4214357262374822150}
   childNode: {fileID: 0}
   isExternalFunc: 1
-  externalFunctionName: AcertouTurista3
+  externalFunctionName: ErrouTurista3
 --- !u!114 &-4404230759562476154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,8 +328,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 165
-    y: -51
+    x: 128
+    y: -179
     width: 190
     height: 135
   isDragging: 0
@@ -267,21 +389,20 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 615
-    y: -90
+    x: 578
+    y: -218
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Narrador
-    text: "(Resposta incorreta! N\xE3o \xE9 adequado incentivar que pessoas n\xE3o
-      especializadas interfiram com o ninho. Tente novamente.)"
-    characterSprite: {fileID: 0}
+    characterName: Pesquisador
+    text: "Voc\xEA fez bem ajudando a preservar o ninho at\xE9 chegarmos aqui."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
   parentNode: {fileID: -7852040499065317260}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista3
+  childNode: {fileID: -6625019001317741914}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +425,10 @@ MonoBehaviour:
   - {fileID: 8784689556776707095}
   - {fileID: -4762420010300619755}
   - {fileID: 4214357262374822150}
+  - {fileID: -6625019001317741914}
+  - {fileID: -6770995352028320570}
+  - {fileID: -7013264175546259193}
+  - {fileID: -4488611847303232017}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &1945133440112567264
@@ -412,21 +537,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 252
-    y: 132
+    x: 165
+    y: 3
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Narrador
-    text: "(Resposta incorreta! Demarca\xE7\xF5es improvisadas podem acabar danificando
-      os ovos. \xC9 ideal que apenas profissionais fa\xE7am. Tente novamente.)"
-    characterSprite: {fileID: 0}
-  parentNode: {fileID: 0}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista3
+    characterName: Pesquisador
+    text: "O certo seria voc\xEA criar uma barreira com pedras e madeira ao redor
+      do ninho para alertar outros banhistas."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+  parentNode: {fileID: -7852040499065317260}
+  childNode: {fileID: -4488611847303232017}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &5747060659610876664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,21 +601,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 620
-    y: 67
+    x: 583
+    y: -61
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Narrador
-    text: "(Resposta incorreta! Mudan\xE7as na temperatura interferem diretamente
-      com as tartarugas marinhas no est\xE1gio de incuba\xE7\xE3o. Tente novamente.)"
-    characterSprite: {fileID: 0}
+    characterName: Pesquisador
+    text: "Da pr\xF3xima, voc\xEA deve tamb\xE9m jogar um pouco de \xE1gua ao redor
+      para manter os ovos frescos."
+    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
   parentNode: {fileID: -7852040499065317260}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista3
+  childNode: {fileID: -6770995352028320570}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &9063939870640226680
 MonoBehaviour:
   m_ObjectHideFlags: 0
