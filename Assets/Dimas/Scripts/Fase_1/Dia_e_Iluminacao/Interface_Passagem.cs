@@ -20,7 +20,6 @@ public class Interface_Passagem : MonoBehaviour
         texto.text = "DIA 01";
         Instance = this;
         StartCoroutine(Desaparecer());
-        HUDController.instance.missaoUI_img.gameObject.SetActive(true);
     }
 
     IEnumerator Desaparecer()
@@ -49,7 +48,6 @@ public class Interface_Passagem : MonoBehaviour
 
             painelDias.alpha = 0;
             GerenciadorDeIluminacao.atualizarDia = true;
-            HUDController.instance.missaoUI_img.gameObject.SetActive(true);
         }
     }
 

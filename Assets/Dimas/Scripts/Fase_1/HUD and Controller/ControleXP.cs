@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
 using System.Reflection;
+using System.Collections;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -19,11 +20,14 @@ public class ControleXP : MonoBehaviour
     [SerializeField] TextMeshProUGUI txtDia;
     [SerializeField] Image preenchimentoXP, fotinha;
     [SerializeField] Sprite[] icones;
+    CanvasGroup barraXP; // Adicione isto
+
     private void Start()
     {
         xpAtual = 0;
         numDia = 1;
         fotinha.sprite = icones[0];
+        barraXP = GetComponent<CanvasGroup>(); // Adicione isto
         AtualizarInterface();
     }
 
@@ -38,8 +42,46 @@ public class ControleXP : MonoBehaviour
     [ContextMenu("Adiantar")]
     public void AdicionarXP()
     {
-        xpAtual += 0.35f;
+        StartCoroutine(AjustarOpacidade(barraXP, 1f, 0.5f)); // Aparecer rapidamente
+        StartCoroutine(AdicionarXPGradualmente(0.35f));
+        StartCoroutine(FazerBarraDesaparecer());
+    }
+
+    IEnumerator AdicionarXPGradualmente(float valorXP)
+    {
+        float tempoInicio = Time.time;
+        float tempoDuracao = 1f; // Ajuste para controlar a velocidade de carregamento do XP
+        float xpInicial = xpAtual;
+
+        while (Time.time - tempoInicio < tempoDuracao)
+        {
+            xpAtual = Mathf.Lerp(xpInicial, xpInicial + valorXP, (Time.time - tempoInicio) / tempoDuracao);
+            yield return null;
+        }
+
+        xpAtual = xpInicial + valorXP;
         VerificarLevelUp();
+    }
+
+    IEnumerator AjustarOpacidade(CanvasGroup grupo, float valorFinal, float duracao)
+    {
+        float tempoInicio = Time.time;
+        float opacidadeInicial = grupo.alpha;
+
+        while (Time.time - tempoInicio < duracao)
+        {
+            float novaOpacidade = Mathf.Lerp(opacidadeInicial, valorFinal, (Time.time - tempoInicio) / duracao);
+            grupo.alpha = novaOpacidade;
+            yield return null;
+        }
+
+        grupo.alpha = valorFinal;
+    }
+
+    IEnumerator FazerBarraDesaparecer()
+    {
+        yield return new WaitForSeconds(2f); // Esperar 1 segundo
+        StartCoroutine(AjustarOpacidade(barraXP, 0f, 0.5f)); // Desaparecer gradualmente
     }
 
     void VerificarLevelUp()
@@ -68,12 +110,12 @@ public class ControleXP : MonoBehaviour
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(ControleXP))]
-    public class ContextMenuButton : Editor 
+    public class ContextMenuButton : Editor
     {
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
-            ControleXP _componente = (ControleXP) target;
+            ControleXP _componente = (ControleXP)target;
             MethodInfo[] _metodos = typeof(ControleXP).GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
             foreach (MethodInfo _metodo in _metodos)
