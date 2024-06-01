@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -578
-    y: -107
+    x: 83
+    y: 35
     width: 190
     height: 135
   isDragging: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   sentence:
     characterName: Turista
     text: "\xC1rea demarcada? Onde? N\xE3o estou vendo."
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
   parentNode: {fileID: 6906570790906791226}
   childNode: {fileID: -2470487883741896219}
   isExternalFunc: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 380
-    y: -63
+    x: 1041
+    y: 79
     width: 190
     height: 135
   isDragging: 0
@@ -76,8 +76,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 621
-    y: -35
+    x: 1282
+    y: 107
     width: 190
     height: 155
   isDragging: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 56
-    y: 256
+    x: 717
+    y: 398
     width: 190
     height: 155
   isDragging: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 281
-    y: 267
+    x: 942
+    y: 409
     width: 190
     height: 155
   isDragging: 0
@@ -229,8 +229,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -343
-    y: -109
+    x: 318
+    y: 33
     width: 190
     height: 135
   isDragging: 0
@@ -319,8 +319,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 584
-    y: -207
+    x: 1245
+    y: -65
     width: 190
     height: 155
   isDragging: 0
@@ -378,8 +378,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -116
-    y: -111
+    x: 545
+    y: 31
     width: 190
     height: 135
   isDragging: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   sentence:
     characterName: Turista
     text: Ah, aquilo ali. Tem problema encostar naquilo? Por que?
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
   parentNode: {fileID: -2470487883741896219}
   childNode: {fileID: 5795129742361876085}
   isExternalFunc: 0
@@ -438,8 +438,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 322
-    y: -200
+    x: 983
+    y: -58
     width: 190
     height: 135
   isDragging: 0
@@ -498,8 +498,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 100
-    y: -131
+    x: 802
+    y: 32
     width: 190
     height: 175
   isDragging: 0
@@ -531,8 +531,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 284
-    y: 90
+    x: 983
+    y: 235
     width: 190
     height: 135
   isDragging: 0
@@ -561,8 +561,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 52
-    y: 76
+    x: 713
+    y: 218
     width: 190
     height: 135
   isDragging: 0
@@ -593,8 +593,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -801
-    y: -108
+    x: -140
+    y: 34
     width: 190
     height: 135
   isDragging: 0

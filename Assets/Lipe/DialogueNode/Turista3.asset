@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -539
-    y: -183
+    x: -141
+    y: 39
     width: 190
     height: 135
   isDragging: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 343
-    y: -188
+    x: 741
+    y: 34
     width: 190
     height: 175
   isDragging: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 434
-    y: 151
+    x: 832
+    y: 373
     width: 190
     height: 155
   isDragging: 0
@@ -111,8 +111,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 794
-    y: -49
+    x: 1192
+    y: 173
     width: 190
     height: 155
   isDragging: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 787
-    y: -212
+    x: 1185
+    y: 10
     width: 190
     height: 155
   isDragging: 0
@@ -203,8 +203,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -94
-    y: -178
+    x: 304
+    y: 44
     width: 190
     height: 135
   isDragging: 0
@@ -234,8 +234,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -317
-    y: -179
+    x: 81
+    y: 43
     width: 190
     height: 135
   isDragging: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
     characterName: Turista
     text: "Sim, ainda bem que voc\xEA veio. Veja, eu encontrei um ninho de tartaruga
       marinha parcialmente desenterrado."
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
   parentNode: {fileID: -8572341825311165908}
   childNode: {fileID: -5701897076104838814}
   isExternalFunc: 0
@@ -265,8 +265,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 387
-    y: 5
+    x: 785
+    y: 227
     width: 190
     height: 135
   isDragging: 0
@@ -297,8 +297,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 153
-    y: 156
+    x: 551
+    y: 378
     width: 190
     height: 155
   isDragging: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 128
-    y: -179
+    x: 526
+    y: 43
     width: 190
     height: 135
   isDragging: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
     characterName: Turista
     text: "Eu n\xE3o sabia o que fazer enquanto voc\xEAs n\xE3o chegavam, ent\xE3o
       eu joguei um pouco de areia por cima para cobrir. Fiz certo?"
-    characterSprite: {fileID: 21300000, guid: c03d0e70107745d48b9cc5f2abe74fe5, type: 3}
+    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
   parentNode: {fileID: -5701897076104838814}
   childNode: {fileID: -7852040499065317260}
   isExternalFunc: 0
@@ -389,8 +389,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 578
-    y: -218
+    x: 976
+    y: 4
     width: 190
     height: 135
   isDragging: 0
@@ -537,8 +537,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 165
-    y: 3
+    x: 563
+    y: 225
     width: 190
     height: 135
   isDragging: 0
@@ -601,8 +601,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 583
-    y: -61
+    x: 981
+    y: 161
     width: 190
     height: 135
   isDragging: 0

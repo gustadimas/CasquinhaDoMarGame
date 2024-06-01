@@ -97,12 +97,12 @@ public class TuristaDialogoStarter : MonoBehaviour
         {
            QuestController.instance.AtualizarProgressoMissoes(missaoID, 1);
            acertou = false;
-           StartCoroutine(Desaparecer());
+           Destroy(transform.parent.gameObject);
         }
         
     }
 
-    IEnumerator Desaparecer()
+    /*IEnumerator Desaparecer()
     {
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         float tempoPassado = 0;
@@ -120,5 +120,5 @@ public class TuristaDialogoStarter : MonoBehaviour
         meshRenderer.material.color = new Color(meshRenderer.material.color.r, meshRenderer.material.color.g, meshRenderer.material.color.b, 0);
         yield return new WaitForSeconds(1);
         Destroy(transform.parent.gameObject);
-    }
+    }*/
 }

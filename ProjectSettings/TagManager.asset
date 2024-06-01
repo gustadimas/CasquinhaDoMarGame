@@ -8,6 +8,7 @@ TagManager:
   - Turista
   - Pescador
   - Areia
+  - Filhote
   layers:
   - Default
   - TransparentFX
