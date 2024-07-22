@@ -655,6 +655,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5118172223327687877, guid: a17247f9fd7abb6419f23a5eb0f56136, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 68.53
+      objectReference: {fileID: 0}
     - target: {fileID: 5118172223904258028, guid: a17247f9fd7abb6419f23a5eb0f56136, type: 3}
       propertyPath: m_Name
       value: Conjunto Tamar
