@@ -19,7 +19,7 @@ public class QuestController : MonoBehaviour
 
     int missoesRestando;
     int missoesCompletas = 0;
-    //bool faseCompleta = false;
+    bool faseCompleta = false;
 
     private void Start()
     {
@@ -90,11 +90,11 @@ public class QuestController : MonoBehaviour
             _i++;
         }
 
-        //if(missoesCompletas >= missoesDoDiaAtual.quests.Length && !faseCompleta)
-        //{
-        //    faseCompleta = true;
-        //    EstagioCompleto();
-        //}
+        if (missoesCompletas >= missoesDoDiaAtual.quests.Length && !faseCompleta)
+        {
+            faseCompleta = true;
+            EstagioCompleto();
+        }
     }
 
     public bool ChecarEstadoMissao(int missaoID)
@@ -109,15 +109,15 @@ public class QuestController : MonoBehaviour
         return _estado;
     }
 
-    //   public void EstagioCompleto()
-    //   {
-    //       GameManager.levelsComplete += 1;
+    public void EstagioCompleto()
+    {
+        GameManager.diasCompletos += 1;
 
-    //	if (GameManager.levelsComplete >= 7) 
-    //       {
-    //           proximaFase = 10;
-    //	}
+        if (GameManager.diasCompletos >= 4)
+        {
+            // proximaFase = ;  Chamar o numero da cena seguinte.
+        }
 
-    //	GameManager.instance.LoadScene(proximaFase);
-    //}
+        GameManager.instance.LoadScene(proximaFase);
+    }
 }

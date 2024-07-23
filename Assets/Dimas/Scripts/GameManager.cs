@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public static int levelsComplete = 0;
+    public static int diasCompletos = 0;
 
     private void Awake()
     {
@@ -31,10 +31,5 @@ public class GameManager : MonoBehaviour
     public int CheckSceneIndex()
     {
         return SceneManager.GetActiveScene().buildIndex;
-    }
-
-    public void UpdateHouseState(string houseNumber, int state)
-    {
-        PlayerPrefs.SetInt(houseNumber, state);
     }
 }
