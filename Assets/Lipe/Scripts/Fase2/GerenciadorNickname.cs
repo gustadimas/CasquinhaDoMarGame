@@ -10,7 +10,7 @@ public class GerenciadorNickname : MonoBehaviour
     [SerializeField] TMP_InputField inputName;
     [SerializeField] TMP_Text txtNickname;
     [SerializeField] GameObject panelNickname;
-    string nickname;
+    public string nickname;
     public static GerenciadorNickname instance;
 
     private void Awake()
