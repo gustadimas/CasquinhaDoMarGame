@@ -9,6 +9,7 @@ TagManager:
   - Pescador
   - Areia
   - Filhote
+  - Tartaruga
   layers:
   - Default
   - TransparentFX
