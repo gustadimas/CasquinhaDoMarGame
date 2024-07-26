@@ -17,6 +17,11 @@ public class StatusTartaruga : MonoBehaviour
         AtualizarBarra(vidaAtual);
     }
 
+    private void Update()
+    {
+        GetComponent<Rigidbody>().velocity = Vector3.forward;
+    }
+
     void AtualizarBarra(float vida)
     {
         healthBar.fillAmount = vida;

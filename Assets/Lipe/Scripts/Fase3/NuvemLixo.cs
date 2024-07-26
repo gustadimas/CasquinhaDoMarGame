@@ -5,30 +5,24 @@ using UnityEngine;
 public class NuvemLixo : MonoBehaviour
 {
     bool dentroDaNuvem = false;
+    [SerializeField] float danoCausado;
     IEnumerator DanoContinuo()
     {
         while (dentroDaNuvem)
         {
-            yield return new WaitForSeconds(1);
             StatusTartaruga status = FindObjectOfType<StatusTartaruga>();
-            status.ReceberDano(0.1f);
+            status.ReceberDano(danoCausado);
+            yield return new WaitForSeconds(1);
         }
-        yield return null;
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Tartaruga"))
         {
-            StartCoroutine(DanoContinuo());
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Tartaruga"))
-        {
             dentroDaNuvem = true;
+            StartCoroutine(DanoContinuo());
         }
     }
 
