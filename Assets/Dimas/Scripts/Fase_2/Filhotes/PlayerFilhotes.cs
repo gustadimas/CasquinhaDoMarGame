@@ -3,19 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerFilhotes : MonoBehaviour
 {
-    [SerializeField] float velocidadeMovimento;
-    Rigidbody rb;
+    public Transform destino;
+    public float velocidade = 2f;
 
-    void Start()
+    private void Update()
     {
-        rb = GetComponent<Rigidbody>();
-    }
-
-    void FixedUpdate()
-    {
-        if (rb != null && velocidadeMovimento != 0)
-        {
-            rb.MovePosition(transform.position + velocidadeMovimento * Time.deltaTime * Vector3.forward);
-        }
+        Vector3 direcao = (destino.position - transform.position).normalized;
+        transform.position += direcao * velocidade * Time.deltaTime;
     }
 }
