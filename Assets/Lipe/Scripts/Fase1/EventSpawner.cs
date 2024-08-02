@@ -106,7 +106,7 @@ public class EventSpawner : MonoBehaviour
 
         while (!positionFound)
         {
-            spawnPosition = new Vector3(UnityEngine.Random.Range(14, -24), -1, UnityEngine.Random.Range(35, -8));
+            spawnPosition = new Vector3(UnityEngine.Random.Range(-19, 19), -1, UnityEngine.Random.Range(-23, -6));
             positionFound = true;
 
             foreach (GameObject obj in spawnedObjects)
