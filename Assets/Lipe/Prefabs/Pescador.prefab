@@ -124,6 +124,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42622f6302619e74a8c1682c07bdf0e4, type: 3}
+--- !u!137 &744547077291829597 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3189079610853768049, guid: 42622f6302619e74a8c1682c07bdf0e4, type: 3}
+  m_PrefabInstance: {fileID: 6479331186980564434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5243132246358470793 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7987013417653133989, guid: 42622f6302619e74a8c1682c07bdf0e4, type: 3}
+  m_PrefabInstance: {fileID: 6479331186980564434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6136819367492128899 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 42622f6302619e74a8c1682c07bdf0e4, type: 3}
@@ -182,6 +192,21 @@ MonoBehaviour:
   btnInteragir: {fileID: 0}
   posicaoJogador: {fileID: 0}
   missaoID: 2
+--- !u!114 &8031959648319424176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136819367492128899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cb567e5795ab4cafc3cf309428205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer:
+  - {fileID: 5243132246358470793}
+  - {fileID: 744547077291829597}
 --- !u!4 &6800870980444703289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 42622f6302619e74a8c1682c07bdf0e4, type: 3}
