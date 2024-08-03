@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idMissao: 0
   valorAtual: 3
-  quantidade: 10
+  quantidade: 5
   estadoMissao: 0
   textoMissao: "Mais lixos apareceram, fa\xE7a alguma coisa!"

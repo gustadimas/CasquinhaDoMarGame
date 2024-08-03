@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
 #if !UNITY_EDITOR
 		Application.targetFrameRate = 31;
 #endif
-
         if (instance == null)
         {
             instance = this;
