@@ -112,11 +112,11 @@ public class QuestController : MonoBehaviour
     public void EstagioCompleto()
     {
         GameManager.diasCompletos += 1;
-        Debug.Log("cuu");
         if (GameManager.diasCompletos >= 4)
         {
-            GameManager.instance.LoadScene(proximaFase);
+
             // proximaFase = ;  Chamar o numero da cena seguinte.
+            GameManager.instance.LoadScene(proximaFase);
         }
     }
 
