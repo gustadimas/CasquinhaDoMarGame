@@ -16,9 +16,14 @@ public class PlayerFilhotes : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Quadriciclo"))
         {
-            Debug.Log("bateuu");
             Destroy(collision.gameObject);
             VidaTartarugas.instance.PerdeuVida();
+        }
+
+        if (collision.gameObject.CompareTag("DestinoFilhote"))
+        {
+            GameManager.proximaEtapa++;
+            GameManager.instance.LoadScene(GameManager.proximaEtapa);
         }
     }
 }

@@ -80,7 +80,16 @@ public class Quadriciclo : MonoBehaviour
             if (filhoteMaisProximo != null)
             {
                 Vector3 direcao = (filhoteMaisProximo.transform.position - transform.position).normalized;
-                transform.position += new Vector3(direcao.x, 0, direcao.z) * velocidade * Time.deltaTime;
+                Vector3 novaDirecao = new Vector3(direcao.x, 0, direcao.z);
+
+                
+                Quaternion novaRotacao = Quaternion.LookRotation(-novaDirecao);
+
+                
+                transform.rotation = Quaternion.Slerp(transform.rotation, novaRotacao, Time.deltaTime * velocidade);
+
+                
+                transform.position += novaDirecao * velocidade * Time.deltaTime;
             }
         }
     }

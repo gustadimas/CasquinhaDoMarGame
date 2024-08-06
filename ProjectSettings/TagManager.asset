@@ -11,6 +11,7 @@ TagManager:
   - Filhote
   - Tartaruga
   - Quadriciclo
+  - DestinoFilhote
   layers:
   - Default
   - TransparentFX
