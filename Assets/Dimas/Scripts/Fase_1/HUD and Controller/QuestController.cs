@@ -13,7 +13,7 @@ public class QuestController : MonoBehaviour
     [SerializeField] MissoesDia[] missoesDeCadaDia;
     public MissoesDia missoesDoDiaAtual;
 
-    [HideInInspector] public int diaAtual = 1;
+    [HideInInspector] public int diaAtual;
 
     [SerializeField] ControleXP controleXP;
 
@@ -26,7 +26,6 @@ public class QuestController : MonoBehaviour
         instance = this;
 
         MissoesDiaAtual_Set();
-        GameManager.diasCompletos = 0;
     }
 
     public void MissoesDiaAtual_Set()
@@ -109,14 +108,12 @@ public class QuestController : MonoBehaviour
         }
         return _estado;
     }
-
     public void EstagioCompleto()
     {
         GameManager.diasCompletos += 1;
 
-        if (GameManager.diasCompletos >= 3)
+        if (GameManager.diasCompletos >= 4)
         {
-
             GameManager.proximaEtapa++;
             GameManager.instance.LoadScene(GameManager.proximaEtapa);
         }

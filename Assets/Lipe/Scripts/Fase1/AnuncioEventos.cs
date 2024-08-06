@@ -28,17 +28,17 @@ public class AnuncioEventos : MonoBehaviour
         StartCoroutine(VerificarPainelDias());
         if (evento == "EventoLixo")
         {
-            switch (GameManager.diasCompletos)
+            switch (QuestController.instance.diaAtual)
             {
-                case 0:
+                case 1:
                     txtAnuncio.text = "Existem alguns lixos espalhados pela praia. Vá coletar!";
                     break;
 
-                case 1:
+                case 2:
                     txtAnuncio.text = "Os banhistas estão sujando a praia mais do que antes. Continue coletando todos os lixos!";
                     break;
 
-                case 2:
+                case 3:
                     txtAnuncio.text = "Quanta sujeira! Tem mais lixos do que nunca espalhados pela praia. Colete todos!";
                     break;
             }
@@ -46,17 +46,17 @@ public class AnuncioEventos : MonoBehaviour
 
         if (evento == "EventoTurista")
         {
-            switch (GameManager.diasCompletos)
+            switch (QuestController.instance.diaAtual)
             {
-                case 0:
+                case 1:
                     txtAnuncio.text = "Uma turista recém-chegada está visitando o Projeto Tamar. Sorria e vá dar as boas-vindas!";
                     break;
 
-                case 1:
+                case 2:
                     txtAnuncio.text = "A turista está jogando bola bem ao lado de uma área de desova demarcada. Vá falar com ela!";
                     break;
 
-                case 2:
+                case 3:
                     txtAnuncio.text = "Emergência! A turista acaba de encontrar um ninho de tartaruga marinha revirado. Vá verificar imediatamente!";
                     break;
             }
@@ -64,17 +64,17 @@ public class AnuncioEventos : MonoBehaviour
 
         if (evento == "EventoPescador")
         {
-            switch (GameManager.diasCompletos)
+            switch (QuestController.instance.diaAtual)
             {
-                case 0:
+                case 1:
                     txtAnuncio.text = "O pescador está pescando com anzóis bem próximo a costa. Vá falar com ele antes que um filhote de tartaruga seja pego!";
                     break;
 
-                case 1:
+                case 2:
                     txtAnuncio.text = "O pescador acaba de voltar da pescaria e está jogando os restos dos peixes na costa. Vá conversar com ele!";
                     break;
 
-                case 2:
+                case 3:
                     txtAnuncio.text = "Alerta! Alerta! O pescador foi flagrado roubando ovos de tartaruga direto do ninho. Cuide da situação!";
                     break;
             }

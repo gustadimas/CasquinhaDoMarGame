@@ -25,7 +25,7 @@ public class EventController : MonoBehaviour
         while (true)
         {
             yield return new WaitUntil(() => !eventoEmAndamento);
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(7f);
 
             if (OnRandomizedEvent != null)
             {
