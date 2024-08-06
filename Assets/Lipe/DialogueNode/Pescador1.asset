@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -967
-    y: -216
+    x: -805
+    y: -96
     width: 190
     height: 135
   isDragging: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     characterName: "Voc\xEA"
     text: "Bom dia! Notei que voc\xEA est\xE1 pescando nesta \xE1rea. Voc\xEA sabia
       que esta praia \xE9 um local muito importante para as tartarugas marinhas?"
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: 2689267356282071684}
   isExternalFunc: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 721
-    y: -137
+    x: 883
+    y: -17
     width: 190
     height: 135
   isDragging: 0
@@ -79,21 +79,51 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 70
-    y: -48
+    x: 232
+    y: 72
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "Elas n\xE3o s\xE3o t\xE3o fr\xE1geis, com certeza conseguem lidar com
       os anz\xF3is."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 6903454072928089230}
   childNode: {fileID: 7826307526451658937}
   isExternalFunc: 0
   externalFunctionName: 
+--- !u!114 &-4387782756242381872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 918
+    y: 182
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: (Fechar.)
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 7051389863161561296}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouPescador
 --- !u!114 &-3996194289829202965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +140,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -45
-    y: 261
+    x: 117
+    y: 381
     width: 190
     height: 135
   isDragging: 0
@@ -152,6 +182,7 @@ MonoBehaviour:
   - {fileID: 7826307526451658937}
   - {fileID: -3996194289829202965}
   - {fileID: 1264018000334189016}
+  - {fileID: -4387782756242381872}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &1264018000334189016
@@ -170,8 +201,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 482
-    y: 180
+    x: 644
+    y: 300
     width: 190
     height: 155
   isDragging: 0
@@ -200,16 +231,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 205
-    y: -272
+    x: 367
+    y: -152
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "Assim, as tartarugas n\xE3o ser\xE3o capturadas."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 6903454072928089230}
   childNode: {fileID: -4779176286471673988}
   isExternalFunc: 0
@@ -230,8 +261,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -710
-    y: -218
+    x: -548
+    y: -98
     width: 190
     height: 135
   isDragging: 0
@@ -239,7 +270,7 @@ MonoBehaviour:
   sentence:
     characterName: Pescador
     text: "N\xE3o tinha ideia. O que tem de t\xE3o especial aqui?"
-    characterSprite: {fileID: 209128205, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -1720460603, guid: 349e9b95e42a2f8439e5b405b581e07c, type: 3}
   parentNode: {fileID: -7171855064261592585}
   childNode: {fileID: 7999243853080059027}
   isExternalFunc: 0
@@ -260,8 +291,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -248
-    y: -215
+    x: -86
+    y: -95
     width: 190
     height: 135
   isDragging: 0
@@ -269,7 +300,7 @@ MonoBehaviour:
   sentence:
     characterName: Pescador
     text: Entendi. E o que eu posso fazer sobre isso?
-    characterSprite: {fileID: 209128205, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -1720460603, guid: 349e9b95e42a2f8439e5b405b581e07c, type: 3}
   parentNode: {fileID: 7999243853080059027}
   childNode: {fileID: 6903454072928089230}
   isExternalFunc: 0
@@ -290,17 +321,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 262
-    y: -123
+    x: 424
+    y: -3
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "H\xE1 \xE1reas onde as tartarugas n\xE3o s\xE3o t\xE3o frequentes e voc\xEA
       ainda pode pescar sem problemas."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 6903454072928089230}
   childNode: {fileID: 7051389863161561296}
   isExternalFunc: 0
@@ -321,16 +352,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -139
-    y: -44
+    x: 23
+    y: 76
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "\xC9 a \xFAnica maneira de proteger as tartarugas."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 6903454072928089230}
   childNode: {fileID: -3996194289829202965}
   isExternalFunc: 0
@@ -351,8 +382,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -16
-    y: -227
+    x: 146
+    y: -107
     width: 190
     height: 175
   isDragging: 0
@@ -384,10 +415,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 455
-    y: -102
+    x: 628
+    y: 91
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
@@ -396,9 +427,9 @@ MonoBehaviour:
       para que ele continue exercendo o seu trabalho. Bom trabalho!)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: 5336629405534142261}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: AcertouPescador
+  childNode: {fileID: -4387782756242381872}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &7826307526451658937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,8 +446,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 144
-    y: 116
+    x: 306
+    y: 236
     width: 190
     height: 135
   isDragging: 0
@@ -446,8 +477,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -484
-    y: -217
+    x: -322
+    y: -97
     width: 190
     height: 135
   isDragging: 0
@@ -457,7 +488,7 @@ MonoBehaviour:
     text: "Esta regi\xE3o \xE9 onde as tartarugas-m\xE3es v\xEAm desovar e os filhotes
       retornam ao mar. Usar anz\xF3is aqui pode acidentalmente capturar essas criaturas
       vulner\xE1veis."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 2689267356282071684}
   childNode: {fileID: 4894351754907722471}
   isExternalFunc: 0

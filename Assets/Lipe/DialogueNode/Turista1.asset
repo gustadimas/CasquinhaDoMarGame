@@ -16,17 +16,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 311
-    y: -239
+    x: 517
+    y: 2
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "E pode caminhar pelas \xE1reas demarcadas, elas s\xE3o seguras durante
       o dia."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -2328654684886317615}
   childNode: {fileID: -616196166516090876}
   isExternalFunc: 0
@@ -47,12 +47,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -105
-    y: 40
+    x: 67
+    y: 291
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 1
+  isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta. \xC9 sempre bom dar um mergulho, mas as \xE1reas
@@ -140,17 +140,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 152
-    y: -92
+    x: 324
+    y: 159
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "Inclusive, pode fazer nas \xE1reas demarcadas, desde que mantenha o local
       limpo."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -2328654684886317615}
   childNode: {fileID: 9095284106931819932}
   isExternalFunc: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 61
-    y: -320
+    x: 233
+    y: -69
     width: 190
     height: 175
   isDragging: 0
@@ -204,8 +204,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -179
-    y: -305
+    x: -7
+    y: -54
     width: 190
     height: 135
   isDragging: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   sentence:
     characterName: Turista
     text: "Parece incr\xEDvel! Alguma recomenda\xE7\xE3o especial?"
-    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -354664439, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 2223944886448784266}
   childNode: {fileID: -2328654684886317615}
   isExternalFunc: 0
@@ -264,12 +264,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 495
-    y: -73
+    x: 667
+    y: 178
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 1
+  isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta! Caminhar sobre as \xE1reas demarcadas? Nem pensar!)"
@@ -294,17 +294,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 300
-    y: -395
+    x: 472
+    y: -144
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "... lembre-se de n\xE3o ultrapassar as \xE1reas demarcadas para a prote\xE7\xE3o
       das desovas de tartarugas marinhas."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -2328654684886317615}
   childNode: {fileID: 669690177507595449}
   isExternalFunc: 0
@@ -366,6 +366,7 @@ MonoBehaviour:
   - {fileID: 9095284106931819932}
   - {fileID: -6266506785932752562}
   - {fileID: 4426160268429930734}
+  - {fileID: 4948412753509022412}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &583258159279462141
@@ -417,10 +418,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 536
-    y: -397
+    x: 708
+    y: -146
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
@@ -429,9 +430,9 @@ MonoBehaviour:
       precisam respeitar as \xE1reas demarcadas. Bom trabalho)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: -463162865122022156}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: AcertouTurista
+  childNode: {fileID: 4948412753509022412}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &2145627277287555996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,8 +449,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -657
-    y: -309
+    x: -485
+    y: -58
     width: 190
     height: 135
   isDragging: 0
@@ -458,7 +459,7 @@ MonoBehaviour:
     characterName: Turista
     text: "Oi, muito obrigada! \xC9 a minha primeira vez aqui. O que eu n\xE3o posso
       perder?"
-    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -354664439, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 4055765870847486746}
   childNode: {fileID: 2223944886448784266}
   isExternalFunc: 0
@@ -479,8 +480,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -410
-    y: -307
+    x: -238
+    y: -56
     width: 190
     height: 135
   isDragging: 0
@@ -490,7 +491,7 @@ MonoBehaviour:
     text: "Ah, voc\xEA vai adorar explorar nossas belezas naturais. Temos trilhas
       ecol\xF3gicas, mergulhos de batismo e, claro, a pr\xF3pria praia \xE9 um espet\xE1culo
       por si s\xF3."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 2145627277287555996}
   childNode: {fileID: -1893707293131608873}
   isExternalFunc: 0
@@ -541,8 +542,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -904
-    y: -310
+    x: -732
+    y: -59
     width: 190
     height: 135
   isDragging: 0
@@ -551,7 +552,7 @@ MonoBehaviour:
     characterName: "Voc\xEA"
     text: "Bem-vinda \xE0 Praia dos Cocais! \xC9 um prazer receb\xEA-la aqui no Projeto
       Tamar. Como posso tornar sua visita mais agrad\xE1vel?"
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: 2145627277287555996}
   isExternalFunc: 0
@@ -572,12 +573,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 438
-    y: 241
+    x: 610
+    y: 492
     width: 190
     height: 155
   isDragging: 0
-  isSelected: 1
+  isSelected: 0
   sentence:
     characterName: Narrador
     text: (Tente novamente.)
@@ -586,6 +587,36 @@ MonoBehaviour:
   childNode: {fileID: 0}
   isExternalFunc: 1
   externalFunctionName: ErrouTurista
+--- !u!114 &4948412753509022412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 945
+    y: -158
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: (Fechar.)
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: 669690177507595449}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouTurista
 --- !u!114 &5880600812766784658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,17 +693,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -50
-    y: -133
+    x: 122
+    y: 118
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "E tamb\xE9m, n\xE3o precisa se preocupar com as \xE1reas demarcadas, elas
       s\xE3o apenas uma medida preventiva."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -2328654684886317615}
   childNode: {fileID: -6266506785932752562}
   isExternalFunc: 0
@@ -753,8 +784,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 243
-    y: 58
+    x: 415
+    y: 309
     width: 190
     height: 135
   isDragging: 0

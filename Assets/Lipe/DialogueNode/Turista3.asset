@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -903
-    y: -100
+    x: -746
+    y: -92
     width: 190
     height: 135
   isDragging: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     characterName: "Voc\xEA"
     text: "Ol\xE1! Foi voc\xEA que pediu para chamar um funcion\xE1rio do projeto,
       certo? Qual a situa\xE7\xE3o?"
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: -5124482594538780165}
   isExternalFunc: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -21
-    y: -105
+    x: 136
+    y: -97
     width: 190
     height: 175
   isDragging: 0
@@ -80,10 +80,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 70
-    y: 234
+    x: 227
+    y: 242
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
@@ -92,9 +92,9 @@ MonoBehaviour:
       qualificados devem interferir com o ninho. Bom trabalho!)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: -4488611847303232017}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: AcertouTurista3
+  childNode: {fileID: 1816013561273966521}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-6770995352028320570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,12 +111,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 430
-    y: 34
+    x: 587
+    y: 42
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 1
+  isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta! Mudan\xE7as na temperatura interferem diretamente
@@ -142,12 +142,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 637
-    y: -46
+    x: 794
+    y: -38
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 1
+  isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta! N\xE3o \xE9 adequado incentivar que pessoas n\xE3o
@@ -203,8 +203,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -458
-    y: -95
+    x: -301
+    y: -87
     width: 190
     height: 135
   isDragging: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
     characterName: "Voc\xEA"
     text: "Realmente, \xE9 um ninho de tartaruga. Algu\xE9m deve ter encontrado antes
       de n\xF3s e mexido nele."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -5124482594538780165}
   childNode: {fileID: -4404230759562476154}
   isExternalFunc: 0
@@ -234,8 +234,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -681
-    y: -96
+    x: -524
+    y: -88
     width: 190
     height: 135
   isDragging: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
     characterName: Turista
     text: "Sim, ainda bem que voc\xEA veio. Veja, eu encontrei um ninho de tartaruga
       marinha parcialmente desenterrado."
-    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -354664439, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -8572341825311165908}
   childNode: {fileID: -5701897076104838814}
   isExternalFunc: 0
@@ -265,18 +265,18 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 23
-    y: 88
+    x: 180
+    y: 96
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "O melhor a se fazer \xE9 n\xE3o interferir com os ovos. Eles s\xE3o muito
       sens\xEDveis e podem ser danificados facilmente. Vou sinalizar o local e contatar
       nossa equipe especializada para cuidar disso."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7852040499065317260}
   childNode: {fileID: -7013264175546259193}
   isExternalFunc: 0
@@ -297,8 +297,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -180
-    y: 342
+    x: -23
+    y: 350
     width: 190
     height: 135
   isDragging: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -236
-    y: -96
+    x: -79
+    y: -88
     width: 190
     height: 135
   isDragging: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
     characterName: Turista
     text: "Eu n\xE3o sabia o que fazer enquanto voc\xEAs n\xE3o chegavam, ent\xE3o
       eu joguei um pouco de areia por cima para cobrir. Fiz certo?"
-    characterSprite: {fileID: -2046594245, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -354664439, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -5701897076104838814}
   childNode: {fileID: -7852040499065317260}
   isExternalFunc: 0
@@ -389,16 +389,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 214
-    y: -135
+    x: 371
+    y: -127
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "Voc\xEA fez bem ajudando a preservar o ninho at\xE9 chegarmos aqui."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7852040499065317260}
   childNode: {fileID: -6625019001317741914}
   isExternalFunc: 0
@@ -430,8 +430,39 @@ MonoBehaviour:
   - {fileID: -7013264175546259193}
   - {fileID: -4488611847303232017}
   - {fileID: 7934830234737902905}
+  - {fileID: 1816013561273966521}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
+--- !u!114 &1816013561273966521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 228
+    y: 418
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: (Fechar.)
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -7013264175546259193}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: AcertouTurista3
 --- !u!114 &1945133440112567264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,17 +569,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -199
-    y: 86
+    x: -42
+    y: 94
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "O certo seria voc\xEA criar uma barreira com pedras e madeira ao redor
       do ninho para alertar outros banhistas."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7852040499065317260}
   childNode: {fileID: -4488611847303232017}
   isExternalFunc: 0
@@ -602,8 +633,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 331
-    y: 329
+    x: 488
+    y: 337
     width: 190
     height: 155
   isDragging: 0
@@ -632,17 +663,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 219
-    y: 22
+    x: 376
+    y: 30
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "Da pr\xF3xima, voc\xEA deve tamb\xE9m jogar um pouco de \xE1gua ao redor
       para manter os ovos frescos."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7852040499065317260}
   childNode: {fileID: -6770995352028320570}
   isExternalFunc: 0

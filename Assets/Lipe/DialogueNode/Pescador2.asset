@@ -46,8 +46,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 126
-    y: -332
+    x: 262
+    y: -99
     width: 190
     height: 175
   isDragging: 0
@@ -79,16 +79,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 152
-    y: -147
+    x: 288
+    y: 86
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "N\xE3o tem problema, eles se decomp\xF5em naturalmente mesmo."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7770592025735453106}
   childNode: {fileID: 6701525169685207703}
   isExternalFunc: 0
@@ -109,8 +109,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 348
-    y: -337
+    x: 484
+    y: -104
     width: 190
     height: 135
   isDragging: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   sentence:
     characterName: Pesquisador
     text: "Assim, n\xE3o vai afetar tanto a praia"
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7770592025735453106}
   childNode: {fileID: 4304820200644658279}
   isExternalFunc: 0
@@ -199,8 +199,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -723
-    y: -297
+    x: -587
+    y: -64
     width: 190
     height: 135
   isDragging: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
     characterName: "Voc\xEA"
     text: "Ol\xE1! A pescaria foi boa, n\xE9? Vi que pegou v\xE1rios. Voc\xEA joga
       fora os restos de peixe na \xE1gua mesmo?"
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 0}
   childNode: {fileID: 8402957956956572289}
   isExternalFunc: 0
@@ -230,10 +230,10 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 584
-    y: -153
+    x: 730
+    y: 11
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
@@ -243,6 +243,36 @@ MonoBehaviour:
       al\xE9m de poluir a \xE1gua. Bom trabalho!)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: 3413606628569291140}
+  childNode: {fileID: -624237150596488372}
+  isExternalFunc: 0
+  externalFunctionName: 
+--- !u!114 &-624237150596488372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 961
+    y: -35
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: (Fechar.)
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -2362289893957335704}
   childNode: {fileID: 0}
   isExternalFunc: 1
   externalFunctionName: AcertouPescador2
@@ -273,6 +303,7 @@ MonoBehaviour:
   - {fileID: 6701525169685207703}
   - {fileID: 3323531449740096162}
   - {fileID: 1816813677555430092}
+  - {fileID: -624237150596488372}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &1336072619915378267
@@ -321,8 +352,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 605
-    y: 150
+    x: 741
+    y: 383
     width: 190
     height: 155
   isDragging: 0
@@ -351,8 +382,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 76
-    y: 182
+    x: 212
+    y: 415
     width: 190
     height: 135
   isDragging: 0
@@ -383,17 +414,17 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 346
-    y: -148
+    x: 499
+    y: 60
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "Que tal usarmos recipientes de coleta para depois descartarmos esses res\xEDduos
       em um local apropriado?"
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7770592025735453106}
   childNode: {fileID: -2362289893957335704}
   isExternalFunc: 0
@@ -414,8 +445,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -87
-    y: -337
+    x: 56
+    y: -104
     width: 190
     height: 135
   isDragging: 0
@@ -423,7 +454,7 @@ MonoBehaviour:
   sentence:
     characterName: Pescador
     text: "Eu n\xE3o fazia ideia. Como posso me livrar dos restos corretamente, ent\xE3o?"
-    characterSprite: {fileID: 209128205, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -1720460603, guid: 349e9b95e42a2f8439e5b405b581e07c, type: 3}
   parentNode: {fileID: 7639303632320366955}
   childNode: {fileID: -7770592025735453106}
   isExternalFunc: 0
@@ -444,8 +475,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 831
-    y: -114
+    x: 967
+    y: 119
     width: 190
     height: 135
   isDragging: 0
@@ -506,12 +537,12 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 154
-    y: 20
+    x: 290
+    y: 253
     width: 190
     height: 135
   isDragging: 0
-  isSelected: 1
+  isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta. Enterrar na areia n\xE3o \xE9 a solu\xE7\xE3o adequada,
@@ -568,16 +599,16 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -74
-    y: -150
+    x: 62
+    y: 83
     width: 190
     height: 135
   isDragging: 0
   isSelected: 0
   sentence:
-    characterName: Pesquisador
+    characterName: "Voc\xEA"
     text: "Veio do mar mesmo, n\xE9? Est\xE1 tudo bem s\xF3 jogar de volta, ent\xE3o."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: -7770592025735453106}
   childNode: {fileID: 3323531449740096162}
   isExternalFunc: 0
@@ -598,8 +629,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -293
-    y: -298
+    x: -157
+    y: -65
     width: 190
     height: 135
   isDragging: 0
@@ -610,7 +641,7 @@ MonoBehaviour:
       a sa\xFAde dos filhotes e das tartarugas-m\xE3es que vierem desovar aqui na
       praia? Al\xE9m disso, podem atrair predadores que n\xE3o s\xE3o desej\xE1veis
       para a \xE1rea."
-    characterSprite: {fileID: 1807086850, guid: 25177aa5e6970d14b92bb8d1a00e0533, type: 3}
+    characterSprite: {fileID: 2143907834, guid: 01f536cac423a3a4a848d824b7e15c7a, type: 3}
   parentNode: {fileID: 8402957956956572289}
   childNode: {fileID: 4275522713463450563}
   isExternalFunc: 0
@@ -631,8 +662,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -508
-    y: -298
+    x: -372
+    y: -65
     width: 190
     height: 135
   isDragging: 0
@@ -641,7 +672,7 @@ MonoBehaviour:
     characterName: Pescador
     text: "Opa, ol\xE1! Jogo sim, sempre fiz assim. Ajuda a atrair mais para a pr\xF3xima
       pescaria."
-    characterSprite: {fileID: 209128205, guid: 718814e8149fba34fab923e3892906f8, type: 3}
+    characterSprite: {fileID: -1720460603, guid: 349e9b95e42a2f8439e5b405b581e07c, type: 3}
   parentNode: {fileID: -4489037906418520269}
   childNode: {fileID: 7639303632320366955}
   isExternalFunc: 0
