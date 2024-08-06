@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CutsceneNascimento.unity
     guid: d806e2a8f83ef9c438a456dcd61a4e35
+  - enabled: 1
+    path: Assets/Scenes/Fase_2.unity
+    guid: 799b09b14ea1610429e2479a2eb86ca1
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c7b8cee172dc0cd40b0719550bda7a81, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b377d89e660aa0f47a4fb4929be2e0d1, type: 2}
