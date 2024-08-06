@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 2644270801219450869}
   - component: {fileID: 4318374693394011031}
   - component: {fileID: 5800435180543978549}
-  - component: {fileID: 6606233064212773105}
+  - component: {fileID: 4973654521341837107}
   m_Layer: 0
   m_Name: FilhotesPrefab
   m_TagString: Filhote
@@ -231,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 2828684472687922149}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 6.2, y: 0.6, z: -25.6}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8992334455441002451}
@@ -321,8 +321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destino: {fileID: 0}
-  velocidade: 2
---- !u!65 &6606233064212773105
+  velocidade: 0.5
+--- !u!65 &4973654521341837107
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

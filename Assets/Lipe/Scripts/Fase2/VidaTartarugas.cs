@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class VidaTartarugas : MonoBehaviour
 {
     [SerializeField] GameObject[] tartarugas;
     int contagemTartarugas;
+    public static VidaTartarugas instance;
 
     private void Start()
     {
-        contagemTartarugas = tartarugas.Length-1;
+        instance = this;
         tartarugas = GameObject.FindGameObjectsWithTag("Filhote");
+        contagemTartarugas = tartarugas.Length-1;
+        
     }
 
     public void PerdeuVida()
@@ -21,7 +23,8 @@ public class VidaTartarugas : MonoBehaviour
 
         if (contagemTartarugas < 0)
         {
-            SceneManager.LoadScene("LipeFase2");
+            GameManager.instance.LoadScene(GameManager.proximaEtapa);
         }
     }
+    
 }

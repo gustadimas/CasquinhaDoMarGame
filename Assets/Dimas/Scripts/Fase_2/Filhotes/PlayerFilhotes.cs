@@ -11,4 +11,14 @@ public class PlayerFilhotes : MonoBehaviour
         Vector3 direcao = (destino.position - transform.position).normalized;
         transform.position += direcao * velocidade * Time.deltaTime;
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Quadriciclo"))
+        {
+            Debug.Log("bateuu");
+            Destroy(collision.gameObject);
+            VidaTartarugas.instance.PerdeuVida();
+        }
+    }
 }
