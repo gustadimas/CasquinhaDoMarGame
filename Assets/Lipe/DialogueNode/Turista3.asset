@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -141
-    y: 39
+    x: -903
+    y: -100
     width: 190
     height: 135
   isDragging: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 741
-    y: 34
+    x: -21
+    y: -105
     width: 190
     height: 175
   isDragging: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 832
-    y: 373
+    x: 70
+    y: 234
     width: 190
     height: 155
   isDragging: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     text: "(Resposta correta! \xC9 ideal frisar para os banhistas que apenas profissionais
       qualificados devem interferir com o ninho. Bom trabalho!)"
     characterSprite: {fileID: 0}
-  parentNode: {fileID: -4762420010300619755}
+  parentNode: {fileID: -4488611847303232017}
   childNode: {fileID: 0}
   isExternalFunc: 1
   externalFunctionName: AcertouTurista3
@@ -111,21 +111,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1192
-    y: 173
+    x: 430
+    y: 34
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta! Mudan\xE7as na temperatura interferem diretamente
-      com as tartarugas marinhas no est\xE1gio de incuba\xE7\xE3o. Tente novamente.)"
+      com as tartarugas marinhas no est\xE1gio de incuba\xE7\xE3o.)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: 8784689556776707095}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista3
+  childNode: {fileID: 7934830234737902905}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-6625019001317741914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,21 +142,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1185
-    y: 10
+    x: 637
+    y: -46
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta! N\xE3o \xE9 adequado incentivar que pessoas n\xE3o
-      especializadas interfiram com o ninho. Tente novamente.)"
+      especializadas interfiram com o ninho.)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: -1384722701909805468}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista3
+  childNode: {fileID: 7934830234737902905}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-6286582065092255036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,8 +203,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 304
-    y: 44
+    x: -458
+    y: -95
     width: 190
     height: 135
   isDragging: 0
@@ -234,8 +234,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 81
-    y: 43
+    x: -681
+    y: -96
     width: 190
     height: 135
   isDragging: 0
@@ -265,8 +265,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 785
-    y: 227
+    x: 23
+    y: 88
     width: 190
     height: 135
   isDragging: 0
@@ -297,21 +297,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 551
-    y: 378
+    x: -180
+    y: 342
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta! Demarca\xE7\xF5es improvisadas podem acabar danificando
-      os ovos. \xC9 ideal que apenas profissionais fa\xE7am. Tente novamente.)"
+      os ovos. \xC9 ideal que apenas profissionais fa\xE7am.)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: 4214357262374822150}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista3
+  childNode: {fileID: 7934830234737902905}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-4404230759562476154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 526
-    y: 43
+    x: -236
+    y: -96
     width: 190
     height: 135
   isDragging: 0
@@ -389,8 +389,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 976
-    y: 4
+    x: 214
+    y: -135
     width: 190
     height: 135
   isDragging: 0
@@ -429,6 +429,7 @@ MonoBehaviour:
   - {fileID: -6770995352028320570}
   - {fileID: -7013264175546259193}
   - {fileID: -4488611847303232017}
+  - {fileID: 7934830234737902905}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &1945133440112567264
@@ -537,8 +538,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 563
-    y: 225
+    x: -199
+    y: 86
     width: 190
     height: 135
   isDragging: 0
@@ -585,6 +586,36 @@ MonoBehaviour:
   - {fileID: 3577467329120618037}
   - {fileID: -6286582065092255036}
   - {fileID: -3726779205344640272}
+--- !u!114 &7934830234737902905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 331
+    y: 329
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: (Tente novamente.)
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -6625019001317741914}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista3
 --- !u!114 &8784689556776707095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,8 +632,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 981
-    y: 161
+    x: 219
+    y: 22
     width: 190
     height: 135
   isDragging: 0

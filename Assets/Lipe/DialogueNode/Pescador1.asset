@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -232
-    y: 31
+    x: -967
+    y: -216
     width: 190
     height: 135
   isDragging: 0
@@ -47,22 +47,22 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1167
-    y: -21
+    x: 721
+    y: -137
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta. \xC9 durante a noite que as tartarugas-m\xE3es costumam
       desovar a sua ninhada, e tamb\xE9m \xE9 o per\xEDodo que os filhotes de tartaruga
-      partem para o mar ap\xF3s o nascimento. Tente novamente!)"
+      partem para o mar ap\xF3s o nascimento.)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: 2063949573491590136}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouPescador
+  childNode: {fileID: 1264018000334189016}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-4469608985750173747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,8 +79,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 805
-    y: 199
+    x: 70
+    y: -48
     width: 190
     height: 135
   isDragging: 0
@@ -110,21 +110,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 621
-    y: 364
+    x: -45
+    y: 261
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta. Proibir o pescador de exercer o seu trabalho n\xE3o
-      \xE9 o caminho certo. Tente novamente!)"
+      \xE9 o caminho certo.)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: 5731476514044383364}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouPescador
+  childNode: {fileID: 1264018000334189016}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,8 +151,39 @@ MonoBehaviour:
   - {fileID: 7051389863161561296}
   - {fileID: 7826307526451658937}
   - {fileID: -3996194289829202965}
+  - {fileID: 1264018000334189016}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
+--- !u!114 &1264018000334189016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 482
+    y: 180
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 0
+  sentence:
+    characterName: Narrador
+    text: (Tente novamente.)
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -4779176286471673988}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouPescador
 --- !u!114 &2063949573491590136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,8 +200,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 940
-    y: -25
+    x: 205
+    y: -272
     width: 190
     height: 135
   isDragging: 0
@@ -199,8 +230,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 25
-    y: 29
+    x: -710
+    y: -218
     width: 190
     height: 135
   isDragging: 0
@@ -229,8 +260,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 487
-    y: 32
+    x: -248
+    y: -215
     width: 190
     height: 135
   isDragging: 0
@@ -259,8 +290,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 997
-    y: 124
+    x: 262
+    y: -123
     width: 190
     height: 135
   isDragging: 0
@@ -290,8 +321,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 596
-    y: 203
+    x: -139
+    y: -44
     width: 190
     height: 135
   isDragging: 0
@@ -320,8 +351,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 719
-    y: 20
+    x: -16
+    y: -227
     width: 190
     height: 175
   isDragging: 0
@@ -353,8 +384,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1190
-    y: 145
+    x: 455
+    y: -102
     width: 190
     height: 155
   isDragging: 0
@@ -384,21 +415,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 879
-    y: 363
+    x: 144
+    y: 116
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta. Nesta situa\xE7\xE3o, as tartarugas est\xE3o em estado
-      de vulnerabilidade e precisam da nossa ajuda. Tente novamente!)"
+      de vulnerabilidade e precisam da nossa ajuda.)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: -4469608985750173747}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouPescador
+  childNode: {fileID: 1264018000334189016}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &7999243853080059027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,8 +446,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 251
-    y: 30
+    x: -484
+    y: -217
     width: 190
     height: 135
   isDragging: 0

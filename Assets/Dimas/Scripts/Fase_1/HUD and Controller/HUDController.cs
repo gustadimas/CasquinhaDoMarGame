@@ -29,7 +29,6 @@ public class HUDController : MonoBehaviour
     private void Start()
     {
         instance = this;
-
         //if (SceneManager.GetActiveScene().buildIndex == 0)
         //{
         //    contornoAtivo = PlayerPrefs.GetInt("Outline");

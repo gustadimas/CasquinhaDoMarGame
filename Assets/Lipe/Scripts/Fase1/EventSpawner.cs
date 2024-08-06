@@ -27,9 +27,9 @@ public class EventSpawner : MonoBehaviour
         if (randomizedEvent == "EventoLixo")
         {
             EventController.eventoEmAndamento = true;
-            switch (QuestController.instance.diaAtual)
+            switch (GameManager.diasCompletos)
             {
-                case 1:
+                case 0:
                     for (int i = 0; i < 3; i++)
                     {
                         GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
@@ -37,7 +37,7 @@ public class EventSpawner : MonoBehaviour
                     }
                     break;
 
-                case 2:
+                case 1:
                     for (int i = 0; i < 5; i++)
                     {
                         GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
@@ -45,7 +45,7 @@ public class EventSpawner : MonoBehaviour
                     }
                     break;
 
-                case 3:
+                case 2:
                     for (int i = 0; i < 5; i++)
                     {
                         GameObject lixoObj = Instantiate(lixoPrefab, GetSpawnPosition(), Quaternion.identity);
@@ -59,17 +59,17 @@ public class EventSpawner : MonoBehaviour
         if (randomizedEvent == "EventoTurista")
         {
             EventController.eventoEmAndamento = true;
-            switch (QuestController.instance.diaAtual)
+            switch (GameManager.diasCompletos)
             {
-                case 1:
+                case 0:
                     Instantiate(turista, pointsTurista[0].transform.position, Quaternion.identity);
                     break;
 
-                case 2:
+                case 1:
                     Instantiate(turista, pointsTurista[1].transform.position, Quaternion.identity);
                     break;
 
-                case 3:
+                case 2:
                     Instantiate(turista, pointsTurista[2].transform.position, Quaternion.identity);
                     break;
             }
@@ -81,17 +81,17 @@ public class EventSpawner : MonoBehaviour
         if (randomizedEvent == "EventoPescador")
         {
             EventController.eventoEmAndamento = true;
-            switch (QuestController.instance.diaAtual)
+            switch (GameManager.diasCompletos)
             {
-                case 1:
+                case 0:
                     Instantiate(pescador, pointsPescador[0].transform.position, Quaternion.identity);
                     break;
 
-                case 2:
+                case 1:
                     Instantiate(pescador, pointsPescador[1].transform.position, Quaternion.identity);
                     break;
 
-                case 3:
+                case 2:
                     Instantiate(pescador, pointsPescador[2].transform.position, Quaternion.identity);
                     break;
             }

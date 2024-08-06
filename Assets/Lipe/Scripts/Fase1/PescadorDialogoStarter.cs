@@ -23,20 +23,19 @@ public class PescadorDialogoStarter : MonoBehaviour
         posicaoJogador = transform.Find("Pesquisador");
 
         acertou = false;
-
-        switch (QuestController.instance.diaAtual)
+        switch (GameManager.diasCompletos)
         {
-            case 1:
+            case 0:
                 scriptDialogo.BindExternalFunction("AcertouPescador", Acertou);
                 scriptDialogo.BindExternalFunction("ErrouPescador", Errou);
                 break;
 
-            case 2:
+            case 1:
                 scriptDialogo.BindExternalFunction("AcertouPescador2", Acertou);
                 scriptDialogo.BindExternalFunction("ErrouPescador2", Errou);
                 break;
 
-            case 3:
+            case 2:
                 scriptDialogo.BindExternalFunction("AcertouPescador3", Acertou);
                 scriptDialogo.BindExternalFunction("ErrouPescador3", Errou);
                 break;
@@ -48,17 +47,17 @@ public class PescadorDialogoStarter : MonoBehaviour
 
     public void PescadorInteracao()
     {
-        switch (QuestController.instance.diaAtual)
+        switch (GameManager.diasCompletos)
         {
-            case 1:
+            case 0:
                 scriptDialogo.StartDialog(graficoNos[0]);
                 break;
 
-            case 2:
+            case 1:
                 scriptDialogo.StartDialog(graficoNos[1]);
                 break;
 
-            case 3:
+            case 2:
                 scriptDialogo.StartDialog(graficoNos[2]);
                 break;
         }

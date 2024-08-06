@@ -9,13 +9,13 @@ public class FadeIn : MonoBehaviour
     CanvasGroup canvasGroup;
     [SerializeField] float timeFade;
     [SerializeField] VideoPlayer videoPlayer;
-    int proximaFase;
 
     private void Start()
     {
         videoPlayer.loopPointReached += VideoPlayer_loopPointReached;
         canvasGroup = GetComponent<CanvasGroup>();
         fadeIn = false;
+        GameManager.proximaEtapa = 1;
     }
 
     private void VideoPlayer_loopPointReached(VideoPlayer source)
@@ -32,18 +32,10 @@ public class FadeIn : MonoBehaviour
                 canvasGroup.alpha += timeFade * Time.deltaTime;
                 if (canvasGroup.alpha == 1)
                 {
-                    proximaFase = 2;
-                    GameManager.instance.LoadScene(proximaFase);
+                    GameManager.proximaEtapa++;
+                    GameManager.instance.LoadScene(GameManager.proximaEtapa);
                 }
             }
         }
-        else
-        {
-            if (canvasGroup.alpha >= 0)
-            {
-                canvasGroup.alpha -= timeFade * Time.deltaTime;
-            }
-        }
-
     }
 }

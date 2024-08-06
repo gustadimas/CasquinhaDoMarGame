@@ -23,20 +23,19 @@ public class TuristaDialogoStarter : MonoBehaviour
         posicaoJogador = transform.Find("Pesquisador");
 
         acertou = false;
-
-        switch (QuestController.instance.diaAtual)
+        switch (GameManager.diasCompletos)
         {
-            case 1:
+            case 0:
                 scriptDialogo.BindExternalFunction("AcertouTurista", Acertou);
                 scriptDialogo.BindExternalFunction("ErrouTurista", Errou);
                 break;
 
-            case 2:
+            case 1:
                 scriptDialogo.BindExternalFunction("AcertouTurista2", Acertou);
                 scriptDialogo.BindExternalFunction("ErrouTurista2", Errou);
                 break;
 
-            case 3:
+            case 2:
                 scriptDialogo.BindExternalFunction("AcertouTurista3", Acertou);
                 scriptDialogo.BindExternalFunction("ErrouTurista3", Errou);
                 break;
@@ -48,17 +47,17 @@ public class TuristaDialogoStarter : MonoBehaviour
 
     public void TuristaInteracao()
     {
-        switch (QuestController.instance.diaAtual)
+        switch (GameManager.diasCompletos)
         {
-            case 1:
+            case 0:
                 scriptDialogo.StartDialog(graficoNos[0]);
                 break;
 
-            case 2:
+            case 1:
                 scriptDialogo.StartDialog(graficoNos[1]);
                 break;
 
-            case 3:
+            case 2:
                 scriptDialogo.StartDialog(graficoNos[2]);
                 break;
         }

@@ -24,8 +24,9 @@ public class QuestController : MonoBehaviour
     private void Start()
     {
         instance = this;
-        
+
         MissoesDiaAtual_Set();
+        GameManager.diasCompletos = 0;
     }
 
     public void MissoesDiaAtual_Set()
@@ -108,15 +109,16 @@ public class QuestController : MonoBehaviour
         }
         return _estado;
     }
-    [ContextMenu("Sacola")]
+
     public void EstagioCompleto()
     {
         GameManager.diasCompletos += 1;
-        if (GameManager.diasCompletos >= 4)
+
+        if (GameManager.diasCompletos >= 3)
         {
 
-            // proximaFase = ;  Chamar o numero da cena seguinte.
-            GameManager.instance.LoadScene(proximaFase);
+            GameManager.proximaEtapa++;
+            GameManager.instance.LoadScene(GameManager.proximaEtapa);
         }
     }
 

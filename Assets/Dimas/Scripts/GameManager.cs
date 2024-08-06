@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public static int diasCompletos = 0;
+    public static int diasCompletos;
+    public static int proximaEtapa;
 
     private void Awake()
     {

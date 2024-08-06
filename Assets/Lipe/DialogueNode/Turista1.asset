@@ -16,8 +16,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1024
-    y: 130
+    x: 311
+    y: -239
     width: 190
     height: 135
   isDragging: 0
@@ -47,22 +47,21 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 618
-    y: 391
+    x: -105
+    y: 40
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta. \xC9 sempre bom dar um mergulho, mas as \xE1reas
-      demarcadas devem ser tratadas com a devida seriedade, e jamais devem ser invadidas.
-      Tente novamente)"
+      demarcadas devem ser tratadas com a devida seriedade, e jamais devem ser invadidas.)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: 8226956813863717126}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista
+  childNode: {fileID: 4426160268429930734}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-5444554230793866860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,8 +140,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 837
-    y: 286
+    x: 152
+    y: -92
     width: 190
     height: 135
   isDragging: 0
@@ -172,8 +171,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 746
-    y: 58
+    x: 61
+    y: -320
     width: 190
     height: 175
   isDragging: 0
@@ -205,8 +204,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 506
-    y: 73
+    x: -179
+    y: -305
     width: 190
     height: 135
   isDragging: 0
@@ -265,21 +264,20 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1238
-    y: 139
+    x: 495
+    y: -73
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
-  isSelected: 0
+  isSelected: 1
   sentence:
     characterName: Narrador
-    text: "(Resposta incorreta! Caminhar sobre as \xE1reas demarcadas? Nem pensar!
-      Tente novamente.)"
+    text: "(Resposta incorreta! Caminhar sobre as \xE1reas demarcadas? Nem pensar!)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: -6720546888925605818}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista
+  childNode: {fileID: 4426160268429930734}
+  isExternalFunc: 0
+  externalFunctionName: 
 --- !u!114 &-463162865122022156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,8 +294,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 985
-    y: -17
+    x: 300
+    y: -395
     width: 190
     height: 135
   isDragging: 0
@@ -367,6 +365,7 @@ MonoBehaviour:
   - {fileID: -616196166516090876}
   - {fileID: 9095284106931819932}
   - {fileID: -6266506785932752562}
+  - {fileID: 4426160268429930734}
   nodeToDrawLineFrom: {fileID: 0}
   linePosition: {x: 0, y: 0}
 --- !u!114 &583258159279462141
@@ -418,8 +417,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 1221
-    y: -19
+    x: 536
+    y: -397
     width: 190
     height: 155
   isDragging: 0
@@ -449,8 +448,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 28
-    y: 69
+    x: -657
+    y: -309
     width: 190
     height: 135
   isDragging: 0
@@ -480,8 +479,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 275
-    y: 71
+    x: -410
+    y: -307
     width: 190
     height: 135
   isDragging: 0
@@ -542,8 +541,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: -219
-    y: 68
+    x: -904
+    y: -310
     width: 190
     height: 135
   isDragging: 0
@@ -557,6 +556,36 @@ MonoBehaviour:
   childNode: {fileID: 2145627277287555996}
   isExternalFunc: 0
   externalFunctionName: 
+--- !u!114 &4426160268429930734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  connectedNodesList: []
+  nodeGraph: {fileID: 11400000}
+  rect:
+    serializedVersion: 2
+    x: 438
+    y: 241
+    width: 190
+    height: 155
+  isDragging: 0
+  isSelected: 1
+  sentence:
+    characterName: Narrador
+    text: (Tente novamente.)
+    characterSprite: {fileID: 0}
+  parentNode: {fileID: -6266506785932752562}
+  childNode: {fileID: 0}
+  isExternalFunc: 1
+  externalFunctionName: ErrouTurista
 --- !u!114 &5880600812766784658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,8 +662,8 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 635
-    y: 245
+    x: -50
+    y: -133
     width: 190
     height: 135
   isDragging: 0
@@ -724,18 +753,18 @@ MonoBehaviour:
   nodeGraph: {fileID: 11400000}
   rect:
     serializedVersion: 2
-    x: 856
-    y: 446
+    x: 243
+    y: 58
     width: 190
-    height: 155
+    height: 135
   isDragging: 0
   isSelected: 0
   sentence:
     characterName: Narrador
     text: "(Resposta incorreta! Um piquenique \xE9 uma boa pedida, mas nunca sobre
-      uma \xE1rea demarcada para a prote\xE7\xE3o da ninhada. Tente novamente.)"
+      uma \xE1rea demarcada para a prote\xE7\xE3o da ninhada)"
     characterSprite: {fileID: 0}
   parentNode: {fileID: -2584647397135124240}
-  childNode: {fileID: 0}
-  isExternalFunc: 1
-  externalFunctionName: ErrouTurista
+  childNode: {fileID: 4426160268429930734}
+  isExternalFunc: 0
+  externalFunctionName: 
