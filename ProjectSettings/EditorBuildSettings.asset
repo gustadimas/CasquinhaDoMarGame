@@ -24,8 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/CutsceneIndoProMar.unity
     guid: 565a6b10efa2d7541a1c8409518c3c19
   - enabled: 1
+    path: Assets/Scenes/Fase_3.unity
+    guid: 4be6ca478170cac4d9bb62157a023a65
+  - enabled: 1
     path: Assets/Scenes/CutsceneFinal.unity
     guid: 7c1b4c0a940507f4a98307943e07b953
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c7b8cee172dc0cd40b0719550bda7a81, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 9e5e3c04c229815408a7741342fbbf1b, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b377d89e660aa0f47a4fb4929be2e0d1, type: 2}
