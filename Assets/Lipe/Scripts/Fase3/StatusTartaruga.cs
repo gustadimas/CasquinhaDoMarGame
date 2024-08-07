@@ -8,18 +8,29 @@ public class StatusTartaruga : MonoBehaviour
 {
     [SerializeField] Image healthBar;
     [SerializeField] TextMeshProUGUI nickname;
+    [SerializeField] Slider healCooldownSlider;
 
-    float vidaAtual;
+    public float vidaAtual;
+    public bool podeCurar;
+    float plasticosComidos;
+
+    public static StatusTartaruga instance;
     void Start()
     {
-        //nickname.text = GerenciadorNickname.instance.nickname;
+        instance = this;
+        podeCurar = true;
         vidaAtual = 1;
+        plasticosComidos = 0;
         AtualizarBarra(vidaAtual);
     }
 
-    private void Update()
+    IEnumerator CuraBloqueada()
     {
-        //GetComponent<Rigidbody>().velocity = Vector3.forward;
+        podeCurar = false;
+        yield return new WaitForSeconds(30f);
+        plasticosComidos = 0;
+        healCooldownSlider.value = plasticosComidos;
+        podeCurar = true;
     }
 
     void AtualizarBarra(float vida)
@@ -37,5 +48,20 @@ public class StatusTartaruga : MonoBehaviour
     {
         vidaAtual += cura;
         AtualizarBarra(vidaAtual);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("BlockCura"))
+        {
+            Destroy(other.gameObject);
+            plasticosComidos += 0.35f;
+            healCooldownSlider.value = plasticosComidos;
+
+            if (healCooldownSlider.value >= 1)
+            {
+                StartCoroutine(CuraBloqueada());
+            }
+        }
     }
 }

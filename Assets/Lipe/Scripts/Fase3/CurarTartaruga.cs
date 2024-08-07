@@ -7,13 +7,17 @@ using UnityEngine;
 public class CurarTartaruga : MonoBehaviour
 {
     [SerializeField] float danoCurado;
-    [SerializeField] Rigidbody rbTartaruga;
+    [SerializeField] Tartaruga scriptMovimentacao;
+    [SerializeField] GameObject analogicoMov;
+    [SerializeField] GameObject analogicoRot;
     IEnumerator CuraContinua()
     {
         float tempoAlimentacao = 3f;
         float intervaloEntreCuras = 0f;
 
-        rbTartaruga.constraints = RigidbodyConstraints.FreezePosition;
+        scriptMovimentacao.enabled = false;
+        analogicoMov.SetActive(false);
+        analogicoRot.SetActive(false);
 
         while (intervaloEntreCuras < tempoAlimentacao)
         {
@@ -24,8 +28,10 @@ public class CurarTartaruga : MonoBehaviour
             intervaloEntreCuras += 1f;
         }
 
-        rbTartaruga.constraints = RigidbodyConstraints.None;
-        rbTartaruga.constraints = RigidbodyConstraints.FreezeRotation;
+        scriptMovimentacao.ReativarJogador();
+        scriptMovimentacao.enabled = true;
+        analogicoMov.SetActive(true);
+        analogicoRot.SetActive(true);
         Destroy(gameObject);
     }
 
@@ -33,7 +39,8 @@ public class CurarTartaruga : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Tartaruga"))
         {
-            StartCoroutine(CuraContinua());
+            if (StatusTartaruga.instance.vidaAtual != 1 && StatusTartaruga.instance.podeCurar)
+                StartCoroutine(CuraContinua());
         }
     }
 }
