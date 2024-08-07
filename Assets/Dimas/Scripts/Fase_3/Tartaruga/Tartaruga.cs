@@ -5,75 +5,133 @@ public class Tartaruga : MonoBehaviour
     [Header("Configuracoes:")]
     [SerializeField] bool desativarEntradas = false;
     [SerializeField] float velocidadeMovimento;
+    [SerializeField] float sensibilidadeRotacao = 2f;
+    [SerializeField] float suavidadeRotacao = 5f;
+    [SerializeField] float fatorEscalaRotacao = 1f;
 
     [Header("Atribuicoes:")]
-    [SerializeField] RectTransform analogico;
-    public RectTransform areaAnalogico;
-    [SerializeField] RectTransform pontoAnalogico;
+    [SerializeField] RectTransform analogicoMovimento;
+    [SerializeField] RectTransform analogicoRotacao;
+    public RectTransform areaAnalogicoMovimento;
+    public RectTransform areaAnalogicoRotacao;
+    [SerializeField] RectTransform pontoAnalogicoMovimento;
+    [SerializeField] RectTransform pontoAnalogicoRotacao;
     [SerializeField] Transform cameraTransform;
 
     Vector3 direcaoMovimento;
-    Vector2 posicaoPonto, posicaoInicialPonto;
+    Vector2 posicaoPontoMovimento, posicaoInicialPontoMovimento;
+    Vector2 posicaoPontoRotacao, posicaoInicialPontoRotacao;
+    Vector2 velocidadeRotacao, velocidadeFrameRotacao;
 
     Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        posicaoInicialPonto = pontoAnalogico.position;
+        posicaoInicialPontoMovimento = pontoAnalogicoMovimento.position;
+        posicaoInicialPontoRotacao = pontoAnalogicoRotacao.position;
     }
 
-    void Update()
+    private void Update()
     {
-        if (!desativarEntradas) Joystick();
+        if (!desativarEntradas)
+        {
+            JoystickMovimento();
+            JoystickRotacao();
+        }
     }
 
     void FixedUpdate()
     {
         if (direcaoMovimento != Vector3.zero)
         {
-            Vector3 _movimentoHorizontal = cameraTransform.TransformDirection(new Vector3(direcaoMovimento.x, 0, direcaoMovimento.y));
+            Vector3 _movimentoHorizontal = transform.TransformDirection(new Vector3(direcaoMovimento.x, 0, direcaoMovimento.y));
             rb.MovePosition(transform.position + velocidadeMovimento * Time.deltaTime * _movimentoHorizontal);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_movimentoHorizontal), 0.15f);
         }
     }
 
-    void Joystick()
+    void JoystickMovimento()
     {
-        if (Input.touchCount > 0)
+        foreach (Touch _toque in Input.touches)
         {
-            Touch _toque = Input.GetTouch(0);
             Vector2 _posicaoToque = _toque.position;
 
-            if (RectTransformUtility.RectangleContainsScreenPoint(areaAnalogico, _posicaoToque))
+            if (RectTransformUtility.RectangleContainsScreenPoint(areaAnalogicoMovimento, _posicaoToque))
             {
-                if (_toque.phase == TouchPhase.Moved)
+                if (_toque.phase == TouchPhase.Moved || _toque.phase == TouchPhase.Stationary)
                 {
-                    posicaoPonto = _toque.position - (Vector2)analogico.position;
-                    posicaoPonto = Vector2.ClampMagnitude(posicaoPonto, 50f);
+                    posicaoPontoMovimento = _toque.position - (Vector2)analogicoMovimento.position;
+                    posicaoPontoMovimento = Vector2.ClampMagnitude(posicaoPontoMovimento, 50f);
 
-                    pontoAnalogico.position = (Vector2)analogico.position + posicaoPonto;
+                    pontoAnalogicoMovimento.position = (Vector2)analogicoMovimento.position + posicaoPontoMovimento;
 
-                    direcaoMovimento = (pontoAnalogico.position - analogico.position).normalized;
+                    direcaoMovimento = (pontoAnalogicoMovimento.position - analogicoMovimento.position).normalized;
                 }
 
                 if (_toque.phase == TouchPhase.Ended || _toque.phase == TouchPhase.Canceled)
                 {
-                    ResetarPosicaoJoystick();
+                    ResetarPosicaoJoystickMovimento();
                     direcaoMovimento = Vector3.zero;
                 }
-            }
-            else
-            {
-                ResetarPosicaoJoystick();
-                direcaoMovimento = Vector3.zero;
             }
         }
     }
 
-    void ResetarPosicaoJoystick()
+    void JoystickRotacao()
     {
-        posicaoPonto = Vector2.zero;
-        pontoAnalogico.position = posicaoInicialPonto;
+        foreach (Touch _toque in Input.touches)
+        {
+            Vector2 _posicaoToque = _toque.position;
+
+            if (RectTransformUtility.RectangleContainsScreenPoint(areaAnalogicoRotacao, _posicaoToque))
+            {
+                if (_toque.phase == TouchPhase.Moved || _toque.phase == TouchPhase.Stationary)
+                {
+                    posicaoPontoRotacao = _toque.position - (Vector2)analogicoRotacao.position;
+                    posicaoPontoRotacao = Vector2.ClampMagnitude(posicaoPontoRotacao, 50f);
+
+                    pontoAnalogicoRotacao.position = (Vector2)analogicoRotacao.position + posicaoPontoRotacao;
+
+                    Vector2 direcaoRotacao = (pontoAnalogicoRotacao.position - analogicoRotacao.position).normalized;
+                    RotacionarTartaruga(direcaoRotacao);
+                }
+
+                if (_toque.phase == TouchPhase.Ended || _toque.phase == TouchPhase.Canceled)
+                {
+                    ResetarPosicaoJoystickRotacao();
+                }
+            }
+        }
+    }
+
+    void RotacionarTartaruga(Vector2 direcaoRotacao)
+    {
+        Vector2 _toqueDelta = direcaoRotacao * fatorEscalaRotacao;
+        Vector2 _velBrutaFrame = Vector2.Scale(_toqueDelta, Vector2.one * sensibilidadeRotacao);
+        velocidadeFrameRotacao = Vector2.Lerp(velocidadeFrameRotacao, _velBrutaFrame, Time.deltaTime * suavidadeRotacao);
+        velocidadeRotacao += velocidadeFrameRotacao * Time.deltaTime;
+
+        velocidadeRotacao.y = Mathf.Clamp(velocidadeRotacao.y, -90, 90);
+
+        transform.localRotation = Quaternion.Euler(-velocidadeRotacao.y, velocidadeRotacao.x, 0);
+    }
+
+    void ResetarPosicaoJoystickMovimento()
+    {
+        posicaoPontoMovimento = Vector2.zero;
+        pontoAnalogicoMovimento.position = posicaoInicialPontoMovimento;
+    }
+
+    void ResetarPosicaoJoystickRotacao()
+    {
+        posicaoPontoRotacao = Vector2.zero;
+        pontoAnalogicoRotacao.position = posicaoInicialPontoRotacao;
+    }
+
+    public void ReativarJogador()
+    {
+        direcaoMovimento = Vector3.zero;
+        ResetarPosicaoJoystickMovimento();
+        ResetarPosicaoJoystickRotacao();
     }
 }
