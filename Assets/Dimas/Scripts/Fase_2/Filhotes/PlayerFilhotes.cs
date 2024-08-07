@@ -26,4 +26,13 @@ public class PlayerFilhotes : MonoBehaviour
             GameManager.instance.LoadScene(GameManager.proximaEtapa);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Lixo"))
+        {
+            Destroy(collision.gameObject);
+            VidaTartarugas.instance.PerdeuVida();
+        }
+    }
 }
