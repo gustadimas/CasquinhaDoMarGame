@@ -20,7 +20,7 @@ public class TuristaDialogoStarter : MonoBehaviour
         scriptCamera = GameObject.FindObjectOfType<Cam_Primeira_Pessoa>();
         analogico = GameObject.Find("Analogico");
         btnInteragir = GameObject.Find("Interface_Btn");
-        posicaoJogador = transform.Find("Pesquisador");
+        posicaoJogador = GameObject.Find("Pesquisador").transform;
 
         acertou = false;
         switch (QuestController.instance.diaAtual)
@@ -47,6 +47,12 @@ public class TuristaDialogoStarter : MonoBehaviour
 
     public void TuristaInteracao()
     {
+        if (posicaoJogador != null)
+        {
+            Vector3 lookAtTarget = new Vector3(posicaoJogador.position.x, transform.position.y, posicaoJogador.position.z);
+            transform.LookAt(lookAtTarget);
+        }
+
         switch (QuestController.instance.diaAtual)
         {
             case 1:
