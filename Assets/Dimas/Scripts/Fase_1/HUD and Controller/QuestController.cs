@@ -13,7 +13,7 @@ public class QuestController : MonoBehaviour
     [SerializeField] MissoesDia[] missoesDeCadaDia;
     public MissoesDia missoesDoDiaAtual;
 
-    [HideInInspector] public int diaAtual;
+    public int diaAtual;
 
     [SerializeField] ControleXP controleXP;
 
@@ -28,10 +28,23 @@ public class QuestController : MonoBehaviour
         MissoesDiaAtual_Set();
     }
 
+    private void Update()
+    {
+        if (GameManager.diasCompletos == 3 && faseCompleta == false)
+        {
+            Debug.LogError("A fase foi completa: " + faseCompleta);
+            faseCompleta = true;
+            Invoke(nameof(EstagioCompleto), 5f);
+        }
+    }
+
     public void MissoesDiaAtual_Set()
     {
-        missoesDoDiaAtual.quests = missoesDeCadaDia[diaAtual - 1].quests;
-        TextoDasMissoes_Set();
+        if (diaAtual < 4)
+        {
+            missoesDoDiaAtual.quests = missoesDeCadaDia[diaAtual - 1].quests;
+            TextoDasMissoes_Set();
+        }
     }
 
     void TextoDasMissoes_Set()
@@ -89,12 +102,6 @@ public class QuestController : MonoBehaviour
             }
             _i++;
         }
-
-        if (missoesCompletas >= missoesDoDiaAtual.quests.Length && !faseCompleta)
-        {
-            faseCompleta = true;
-            EstagioCompleto();
-        }
     }
 
     public bool ChecarEstadoMissao(int missaoID)
@@ -108,15 +115,10 @@ public class QuestController : MonoBehaviour
         }
         return _estado;
     }
+
     public void EstagioCompleto()
     {
-        GameManager.diasCompletos += 1;
-
-        if (GameManager.diasCompletos >= 4)
-        {
-            GameManager.proximaEtapa++;
-            GameManager.instance.LoadScene(GameManager.proximaEtapa);
-        }
+        GameManager.proximaEtapa++;
+        GameManager.instance.LoadScene(GameManager.proximaEtapa);
     }
-
 }

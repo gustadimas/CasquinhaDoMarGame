@@ -9,9 +9,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-#if !UNITY_EDITOR
+        #if !UNITY_EDITOR
 		Application.targetFrameRate = 31;
-#endif
+        #endif
+
         if (instance == null)
         {
             instance = this;
