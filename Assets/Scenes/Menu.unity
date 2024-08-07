@@ -329,90 +329,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_Pivot.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -106
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922170878320496, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922171870430615, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 160c95348439f7844a5fed02e1b0220d, type: 3}
-    - target: {fileID: 6821922172102688736, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688736, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688736, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4541869456840210318}
-    - target: {fileID: 6821922172102688736, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688736, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: JogarBT
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688736, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HUDController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688736, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688739, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688739, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172102688739, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -339
-      objectReference: {fileID: 0}
     - target: {fileID: 6821922172321722662, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -497,40 +413,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6821922172321722664, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172321722664, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 6821922172321722664, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
     - target: {fileID: 6821922172321722666, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
       propertyPath: m_Name
       value: Canvas_Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
---- !u!1 &4541869456840210317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6821922172321722666, guid: 0cbd16481c23aaf43bff75ed7daaf1ff, type: 3}
-  m_PrefabInstance: {fileID: 4541869456840210316}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4541869456840210318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4541869456840210317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf695f38cca68b4193c956d2b2d3335, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abrirMissoes: 0
-  missaoUI_img: {fileID: 0}
