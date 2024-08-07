@@ -628,6 +628,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 437319090731121106, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
+      propertyPath: destino
+      value: 
+      objectReference: {fileID: 779529034}
+    - target: {fileID: 1946713034211535015, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.477
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946713034211535015, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946713034211535015, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 1949789987443085475, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -676,11 +692,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FilhotesPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 2958914089593313937, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
+      propertyPath: destino
+      value: 
+      objectReference: {fileID: 779529034}
     - target: {fileID: 5800435180543978549, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
       propertyPath: destino
       value: 
       objectReference: {fileID: 779529034}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 437319090731121106, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
+    - {fileID: 2958914089593313937, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
 --- !u!1 &717199362
 GameObject:
@@ -1510,24 +1532,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120288469}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1182336593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9152875729597091164, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
-  m_PrefabInstance: {fileID: 694435250}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1182336595
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182336593}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.40298966, y: 0.29193762, z: 0.09364697}
-  m_Center: {x: 0, y: -0.012528434, z: 0.012043109}
 --- !u!1 &1202972467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,24 +1629,6 @@ Transform:
   m_Father: {fileID: 869963509}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
---- !u!1 &1203543792 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6320120986688334441, guid: 98e2ccf7081d9f54388869f2076431a0, type: 3}
-  m_PrefabInstance: {fileID: 694435250}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1203543794
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203543792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.40298966, y: 0.29193762, z: 0.09364697}
-  m_Center: {x: 0, y: -0.012528434, z: 0.012043109}
 --- !u!1 &1238269676
 GameObject:
   m_ObjectHideFlags: 0

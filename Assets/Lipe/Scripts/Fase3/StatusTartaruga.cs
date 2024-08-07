@@ -19,7 +19,7 @@ public class StatusTartaruga : MonoBehaviour
 
     private void Update()
     {
-        GetComponent<Rigidbody>().velocity = Vector3.forward;
+        //GetComponent<Rigidbody>().velocity = Vector3.forward;
     }
 
     void AtualizarBarra(float vida)
