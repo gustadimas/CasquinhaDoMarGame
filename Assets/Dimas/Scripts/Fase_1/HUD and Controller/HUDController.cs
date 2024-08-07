@@ -54,10 +54,10 @@ public class HUDController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    //   public void SairBT()
-    //   {
-    //       Application.Quit();
-    //   }
+    public void SairBT()
+    {
+        Application.Quit();
+    }
 
     //   public void SetarVolumeMusica(float volumeMusica)
     //   {
