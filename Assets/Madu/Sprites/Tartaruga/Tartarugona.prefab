@@ -1032,6 +1032,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3666481054617806463}
   nickname: {fileID: 16820619763826485}
+  healCooldownSlider: {fileID: 0}
+  vidaAtual: 0
+  podeCurar: 0
 --- !u!1 &7452708039783935825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,10 +1245,10 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

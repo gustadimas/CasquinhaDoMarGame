@@ -50,7 +50,7 @@ public class Player_Pesquisador : MonoBehaviour
                 if (_toque.phase == TouchPhase.Moved)
                 {
                     posicaoPonto = _toque.position - (Vector2)analogico.position;
-                    posicaoPonto = Vector2.ClampMagnitude(posicaoPonto, 50f);
+                    posicaoPonto = Vector2.ClampMagnitude(posicaoPonto, 120f);
 
                     pontoAnalogico.position = (Vector2)analogico.position + posicaoPonto;
 

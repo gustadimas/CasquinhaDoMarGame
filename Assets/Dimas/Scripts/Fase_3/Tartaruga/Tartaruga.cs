@@ -61,7 +61,7 @@ public class Tartaruga : MonoBehaviour
                 if (_toque.phase == TouchPhase.Moved || _toque.phase == TouchPhase.Stationary)
                 {
                     posicaoPontoMovimento = _toque.position - (Vector2)analogicoMovimento.position;
-                    posicaoPontoMovimento = Vector2.ClampMagnitude(posicaoPontoMovimento, 50f);
+                    posicaoPontoMovimento = Vector2.ClampMagnitude(posicaoPontoMovimento, 120f);
 
                     pontoAnalogicoMovimento.position = (Vector2)analogicoMovimento.position + posicaoPontoMovimento;
 
@@ -88,7 +88,7 @@ public class Tartaruga : MonoBehaviour
                 if (_toque.phase == TouchPhase.Moved || _toque.phase == TouchPhase.Stationary)
                 {
                     posicaoPontoRotacao = _toque.position - (Vector2)analogicoRotacao.position;
-                    posicaoPontoRotacao = Vector2.ClampMagnitude(posicaoPontoRotacao, 50f);
+                    posicaoPontoRotacao = Vector2.ClampMagnitude(posicaoPontoRotacao, 120f);
 
                     pontoAnalogicoRotacao.position = (Vector2)analogicoRotacao.position + posicaoPontoRotacao;
 
