@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VidaTartarugas : MonoBehaviour
 {
-    [SerializeField] GameObject[] tartarugas;
+    [SerializeField] GameObject[] tartarugas, iconesTartaruga;
     int contagemTartarugas;
     public static VidaTartarugas instance;
 
@@ -13,12 +13,12 @@ public class VidaTartarugas : MonoBehaviour
         instance = this;
         tartarugas = GameObject.FindGameObjectsWithTag("Filhote");
         contagemTartarugas = tartarugas.Length-1;
-        
     }
 
     public void PerdeuVida()
     {
         Destroy(tartarugas[contagemTartarugas]);
+        Destroy(iconesTartaruga[contagemTartarugas]);
         contagemTartarugas--;
 
         if (contagemTartarugas < 0)

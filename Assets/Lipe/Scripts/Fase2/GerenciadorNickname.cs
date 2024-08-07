@@ -20,7 +20,7 @@ public class GerenciadorNickname : MonoBehaviour
     }
     public void Nomear()
     {
-        if (inputName != null)
+        if (inputName != null && !string.IsNullOrEmpty(inputName.text.Trim()))
         {
             nickname = inputName.text;
             txtNickname.text = nickname;
