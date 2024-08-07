@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 826990498348331897}
   m_Layer: 0
   m_Name: LIXOS
-  m_TagString: Untagged
+  m_TagString: Lixo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

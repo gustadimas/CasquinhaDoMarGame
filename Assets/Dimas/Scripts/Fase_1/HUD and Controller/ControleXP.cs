@@ -20,14 +20,14 @@ public class ControleXP : MonoBehaviour
     [SerializeField] TextMeshProUGUI txtDia;
     [SerializeField] Image preenchimentoXP, fotinha;
     [SerializeField] Sprite[] icones;
-    CanvasGroup barraXP; // Adicione isto
+    CanvasGroup barraXP;
 
     private void Start()
     {
         xpAtual = 0;
         numDia = 1;
         fotinha.sprite = icones[0];
-        barraXP = GetComponent<CanvasGroup>(); // Adicione isto
+        barraXP = GetComponent<CanvasGroup>();
         AtualizarInterface();
     }
 
@@ -35,14 +35,14 @@ public class ControleXP : MonoBehaviour
     {
         AtualizarInterface();
 
-        if (GerenciadorDeIluminacao.atingiu24Horas == true && xpAtual < xpNecessario)
+        if (GerenciadorDeIluminacao.atingiu14Horas == true && xpAtual < xpNecessario)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     [ContextMenu("Adiantar")]
     public void AdicionarXP()
     {
-        StartCoroutine(AjustarOpacidade(barraXP, 1f, 0.5f)); // Aparecer rapidamente
+        StartCoroutine(AjustarOpacidade(barraXP, 1f, 0.5f));
         StartCoroutine(AdicionarXPGradualmente(0.35f));
         StartCoroutine(FazerBarraDesaparecer());
     }
@@ -50,7 +50,7 @@ public class ControleXP : MonoBehaviour
     IEnumerator AdicionarXPGradualmente(float valorXP)
     {
         float tempoInicio = Time.time;
-        float tempoDuracao = 1f; // Ajuste para controlar a velocidade de carregamento do XP
+        float tempoDuracao = 1f;
         float xpInicial = xpAtual;
 
         while (Time.time - tempoInicio < tempoDuracao)
@@ -80,8 +80,8 @@ public class ControleXP : MonoBehaviour
 
     IEnumerator FazerBarraDesaparecer()
     {
-        yield return new WaitForSeconds(2f); // Esperar 1 segundo
-        StartCoroutine(AjustarOpacidade(barraXP, 0f, 0.5f)); // Desaparecer gradualmente
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(AjustarOpacidade(barraXP, 0f, 0.5f));
     }
 
     void VerificarLevelUp()
