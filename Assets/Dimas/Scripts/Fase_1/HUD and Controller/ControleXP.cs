@@ -35,7 +35,7 @@ public class ControleXP : MonoBehaviour
     {
         AtualizarInterface();
 
-        if (GerenciadorDeIluminacao.atingiu14Horas == true && xpAtual < xpNecessario)
+        if (GerenciadorDeIluminacao.atingiu24Horas == true && xpAtual < xpNecessario)
             GameManager.instance.LoadScene(0);
     }
 

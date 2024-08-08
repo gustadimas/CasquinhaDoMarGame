@@ -9,17 +9,14 @@ public class GerenciadorDeIluminacao : MonoBehaviour
     [SerializeField] PresetDeIluminacao Preset;
 
     [Header("Definir a Hora Manual:")]
-    [SerializeField, Range(7, 14)] float HoraDoDia;
+    [SerializeField, Range(6, 24)] float HoraDoDia;
 
     [Header("Definir a Hora Automatica:")]
     [SerializeField] float duracaoDiaMinutos;
 
-    [Header("Intensidade da Luz Direcional:")]
-    [SerializeField] float intensidadeLuzDirecional = 1f;
-
     [SerializeField] float totalXP;
 
-    public static bool atingiu14Horas = false;
+    public static bool atingiu24Horas = false;
     public static bool atualizarDia = false;
 
     public Action novoDia;
@@ -27,27 +24,29 @@ public class GerenciadorDeIluminacao : MonoBehaviour
 
     private void Awake() => instance = this;
 
+
     private void Update() => ComeçarDia();
 
     void ComeçarDia()
     {
         if (atualizarDia == true)
         {
-            AtualizarIluminacao((HoraDoDia - 7f) / 7f);
+            AtualizarIluminacao(HoraDoDia / 24f);
+
             if (Preset == null) return;
 
             if (Application.isPlaying)
             {
-                HoraDoDia += Time.deltaTime * 7f / (duracaoDiaMinutos * 60f);
-                if (HoraDoDia >= 14)
+                HoraDoDia += Time.deltaTime * 24f / (duracaoDiaMinutos * 60f);
+                if (HoraDoDia >= 24)
                 {
-                    HoraDoDia = 14;
-                    if (!atingiu14Horas) atingiu14Horas = true;
+                    HoraDoDia = 24;
+                    if (!atingiu24Horas) atingiu24Horas = true;
                 }
                 else
                 {
-                    atingiu14Horas = false;
-                    AtualizarIluminacao((HoraDoDia - 7f) / 7f);
+                    atingiu24Horas = false;
+                    AtualizarIluminacao(HoraDoDia / 24f);
                 }
             }
         }
@@ -56,9 +55,9 @@ public class GerenciadorDeIluminacao : MonoBehaviour
     public void ReiniciarDia()
     {
         HUDController.instance.missaoUI_img.gameObject.SetActive(false);
-        HoraDoDia = 7;
-        atingiu14Horas = false;
-        AtualizarIluminacao((HoraDoDia - 7f) / 7f);
+        HoraDoDia = 6;
+        atingiu24Horas = false;
+        AtualizarIluminacao(HoraDoDia / 24f);
         foreach (Quest _missao in QuestController.instance.missoesDoDiaAtual.quests) _missao.Resetar();
         QuestController.instance.diaAtual++;
         QuestController.instance.MissoesDiaAtual_Set();
@@ -66,10 +65,13 @@ public class GerenciadorDeIluminacao : MonoBehaviour
 
     void AtualizarIluminacao(float _percentualDeTempo)
     {
+        RenderSettings.ambientLight = Preset.CorAmbiente.Evaluate(_percentualDeTempo);
+        RenderSettings.fogColor = Preset.CorNeblina.Evaluate(_percentualDeTempo);
+
         if (LuzDirecional != null)
         {
+            LuzDirecional.color = Preset.CorDirecional.Evaluate(_percentualDeTempo);
             LuzDirecional.transform.localRotation = Quaternion.Euler(new Vector3((_percentualDeTempo * 360f) - 90f, 170f, 0));
-            LuzDirecional.intensity = intensidadeLuzDirecional;
         }
     }
 

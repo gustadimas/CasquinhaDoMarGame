@@ -34,7 +34,6 @@ public class QuestController : MonoBehaviour
         {
             Debug.LogError("A fase foi completa: " + faseCompleta);
             faseCompleta = true;
-            Invoke(nameof(EstagioCompleto), 5f);
         }
     }
 
@@ -114,11 +113,5 @@ public class QuestController : MonoBehaviour
                 _estado = _missao.estadoMissao;
         }
         return _estado;
-    }
-
-    public void EstagioCompleto()
-    {
-        GameManager.proximaEtapa++;
-        GameManager.instance.LoadScene(GameManager.proximaEtapa);
     }
 }

@@ -92,6 +92,13 @@ public class Interface_Passagem : MonoBehaviour
             textoDias.text = "";
             textoCompleto.text = "PERÍODO DE INCUBAÇÃO COMPLETO";
             textoCompleto.color = Color.green;
+            Invoke(nameof(EstagioCompleto), 5f);
         }
+    }
+
+    public void EstagioCompleto()
+    {
+        GameManager.proximaEtapa++;
+        GameManager.instance.LoadScene(GameManager.proximaEtapa);
     }
 }
