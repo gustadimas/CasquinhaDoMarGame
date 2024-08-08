@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 5577493273750827404}
   - component: {fileID: 5577493273750827407}
   - component: {fileID: 5577493273750827406}
+  - component: {fileID: 5577493273750827408}
   m_Layer: 5
   m_Name: BTvoltar
   m_TagString: Untagged
@@ -627,13 +628,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1426350834363178672}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 5577493273750827408}
+        m_TargetAssemblyTypeName: HUDController, Assembly-CSharp
+        m_MethodName: VotarMenuBT
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -669,6 +670,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5577493273750827408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577493273750827400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf695f38cca68b4193c956d2b2d3335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abrirMissoes: 0
+  missaoUI_img: {fileID: 0}
 --- !u!114 &8241810113191237652
 MonoBehaviour:
   m_ObjectHideFlags: 0

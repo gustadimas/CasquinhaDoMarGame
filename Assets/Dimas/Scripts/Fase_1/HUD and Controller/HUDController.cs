@@ -13,6 +13,8 @@ public class HUDController : MonoBehaviour
 
     public void SairBT() => Application.Quit();
 
+    public void VotarMenuBT() => SceneManager.LoadScene(0);
+
     public void MissaoUIAtiva()
     {
         abrirMissoes = !abrirMissoes;
