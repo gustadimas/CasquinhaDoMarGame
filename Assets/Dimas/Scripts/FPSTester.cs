@@ -12,7 +12,10 @@ public class FPSTester : MonoBehaviour
 
         GUIStyle style = new GUIStyle();
 
-        Rect rect = new Rect(0, 0, w, h * 2 / 100);
+        float offsetX = 40f;
+        float offsetY = 20f;
+
+        Rect rect = new Rect(offsetX, h * 2 / 100 + offsetY, w, h * 2 / 100);
         style.alignment = TextAnchor.UpperLeft;
         style.fontSize = h * 2 / 100;
         style.normal.textColor = new Color(0.0f, 0.0f, 0.5f, 1.0f);

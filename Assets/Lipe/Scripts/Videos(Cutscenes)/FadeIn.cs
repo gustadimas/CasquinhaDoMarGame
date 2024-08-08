@@ -10,6 +10,9 @@ public class FadeIn : MonoBehaviour
     [SerializeField] float timeFade;
     [SerializeField] VideoPlayer videoPlayer;
 
+    float tempoUltimoToque = 0f;
+    const float tempoDuplotoque = 0.3f;
+
     private void Start()
     {
         videoPlayer.loopPointReached += VideoPlayer_loopPointReached;
@@ -17,13 +20,10 @@ public class FadeIn : MonoBehaviour
         fadeIn = false;
     }
 
-    private void VideoPlayer_loopPointReached(VideoPlayer source)
-    {
-        fadeIn = true;
-    }
-
     private void Update()
     {
+        DuploToque();
+
         if (fadeIn)
         {
             if (canvasGroup.alpha < 1)
@@ -36,6 +36,30 @@ public class FadeIn : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void VideoPlayer_loopPointReached(VideoPlayer source)
+    {
+        fadeIn = true;
+    }
+
+    private void DuploToque()
+    {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            if (Time.time - tempoUltimoToque < tempoDuplotoque)
+            {
+                PularVideo();
+            }
+            tempoUltimoToque = Time.time;
+        }
+    }
+
+    private void PularVideo()
+    {
+        fadeIn = true;
+        canvasGroup.alpha = 1;
+        CarregarProximaCena();
     }
 
     private void CarregarProximaCena()
@@ -57,7 +81,6 @@ public class FadeIn : MonoBehaviour
             proximaCena = 0;
             GameManager.proximaEtapa = proximaCena;
         }
-        
 
         if (proximaCena < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(proximaCena);
