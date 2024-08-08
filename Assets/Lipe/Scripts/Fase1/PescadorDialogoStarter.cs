@@ -41,7 +41,6 @@ public class PescadorDialogoStarter : MonoBehaviour
                 break;
         }
 
-        scriptDialogo.IsCanSkippingText = false;
         DialogBehaviour.instance.SetCharDelay(0.01f);
     }
 
