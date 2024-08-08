@@ -11,7 +11,14 @@ public class Lixo : MonoBehaviour
     Vector2 posicaoToqueAnterior;
     bool estaSendoArrastado = false;
 
-    private void Start() => cam = Camera.main;
+    GameObject audioObj;
+    AudioSource varrerSom;
+    private void Start()
+    {
+        cam = Camera.main;
+        audioObj = GameObject.Find("AudioVarrer");
+        varrerSom = audioObj.GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -57,6 +64,7 @@ public class Lixo : MonoBehaviour
 
     private void LimparLixo()
     {
+        varrerSom.Play();
         Debug.Log("Lixo limpo após " + contadorToques + " toques.");
         Destroy(gameObject);
     }

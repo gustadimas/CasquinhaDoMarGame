@@ -12,11 +12,13 @@ public class GerenciadorNickname : MonoBehaviour
     [SerializeField] GameObject panelNickname;
     public string nickname;
     public static GerenciadorNickname instance;
+    public bool comecou;
 
     private void Awake()
     {
         instance = this;
         Time.timeScale = 0;
+        comecou = false;
     }
     public void Nomear()
     {
@@ -26,6 +28,7 @@ public class GerenciadorNickname : MonoBehaviour
             txtNickname.text = nickname;
             panelNickname.SetActive(false);
             Time.timeScale = 1f;
+            comecou = true;
         }
     }
 }

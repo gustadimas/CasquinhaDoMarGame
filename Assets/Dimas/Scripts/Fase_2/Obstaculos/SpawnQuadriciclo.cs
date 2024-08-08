@@ -5,12 +5,12 @@ public class SpawnQuadriciclo : MonoBehaviour
     public GameObject quadricicloPrefab;
     public Transform[] spawnPoints;
     public float spawnInterval = 5f;
-
+    [SerializeField] AudioSource spawnSound;
     private float nextSpawnTime;
 
     private void Update()
     {
-        if (Time.time >= nextSpawnTime && !QuadricicloExists())
+        if (Time.time >= nextSpawnTime && !QuadricicloExists() && GerenciadorNickname.instance.comecou)
         {
             SpawnarQuadriciclo();
             nextSpawnTime = Time.time + spawnInterval;
@@ -27,6 +27,7 @@ public class SpawnQuadriciclo : MonoBehaviour
         Transform spawnPointEscolhido = EscolherSpawnAleatorio();
         GameObject quadriciclo = Instantiate(quadricicloPrefab, spawnPointEscolhido.position, spawnPointEscolhido.rotation);
         quadriciclo.GetComponent<Quadriciclo>().SetSpawnPoint(spawnPointEscolhido.position);
+        spawnSound.Play();
     }
 
     private Transform EscolherSpawnAleatorio()
