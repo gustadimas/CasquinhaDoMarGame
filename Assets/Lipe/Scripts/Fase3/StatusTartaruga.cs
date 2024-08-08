@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class StatusTartaruga : MonoBehaviour
     [SerializeField] Image healthBar;
     [SerializeField] TextMeshProUGUI nickname;
     [SerializeField] Slider healCooldownSlider;
+    [SerializeField] GameObject confetes;
 
     public float vidaAtual;
     public bool podeCurar;
@@ -24,8 +26,16 @@ public class StatusTartaruga : MonoBehaviour
         vidaAtual = 1;
         plasticosComidos = 0;
         AtualizarBarra(vidaAtual);
+        confetes.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (vidaAtual <= 0)
+        {
+            GameManager.instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
     IEnumerator CuraBloqueada()
     {
         podeCurar = false;
@@ -63,21 +73,27 @@ public class StatusTartaruga : MonoBehaviour
 
         if (other.gameObject.CompareTag("DestinoMar"))
         {
-            int cenaAtual = SceneManager.GetActiveScene().buildIndex;
-            int proximaCena = GameManager.proximaEtapa;
-
-            Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
-
-            if (proximaCena <= cenaAtual)
-            {
-                proximaCena = cenaAtual + 1;
-                GameManager.proximaEtapa = proximaCena;
-            }
-
-            if (proximaCena < SceneManager.sceneCountInBuildSettings)
-                SceneManager.LoadScene(proximaCena);
-            else
-                Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
+            confetes.SetActive(true);
+            Invoke(nameof(Concluir), 7f);
         }
+    }
+
+    void Concluir()
+    {
+        int cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        int proximaCena = GameManager.proximaEtapa;
+
+        Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
+
+        if (proximaCena <= cenaAtual)
+        {
+            proximaCena = cenaAtual + 1;
+            GameManager.proximaEtapa = proximaCena;
+        }
+
+        if (proximaCena < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(proximaCena);
+        else
+            Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
     }
 }
