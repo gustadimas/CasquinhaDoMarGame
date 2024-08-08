@@ -25,8 +25,33 @@ public class Player_Pesquisador : MonoBehaviour
 
     void Update()
     {
-        if (!desativarEntradas) 
-            Joystick();
+        if (!desativarEntradas)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Touch _toque = Input.GetTouch(i);
+                Vector2 _posicaoToque = _toque.position;
+
+                if (RectTransformUtility.RectangleContainsScreenPoint(areaAnalogico, _posicaoToque))
+                {
+                    if (_toque.phase == TouchPhase.Moved || _toque.phase == TouchPhase.Stationary)
+                    {
+                        posicaoPonto = _toque.position - (Vector2)analogico.position;
+                        posicaoPonto = Vector2.ClampMagnitude(posicaoPonto, 120f);
+
+                        pontoAnalogico.position = (Vector2)analogico.position + posicaoPonto;
+
+                        direcaoMovimento = (pontoAnalogico.position - analogico.position).normalized;
+                    }
+
+                    if (_toque.phase == TouchPhase.Ended || _toque.phase == TouchPhase.Canceled)
+                    {
+                        ResetarPosicaoJoystick();
+                        direcaoMovimento = Vector3.zero;
+                    }
+                }
+            }
+        }
     }
 
     void FixedUpdate()
@@ -36,39 +61,6 @@ public class Player_Pesquisador : MonoBehaviour
             Vector3 _movimentoHorizontal = cameraTransform.TransformDirection(new Vector3(direcaoMovimento.x, 0, direcaoMovimento.y));
             rb.MovePosition(transform.position + velocidadeMovimento * Time.deltaTime * _movimentoHorizontal);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_movimentoHorizontal), 0.15f);
-        }
-    }
-
-    void Joystick()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch _toque = Input.GetTouch(0);
-            Vector2 _posicaoToque = _toque.position;
-
-            if (RectTransformUtility.RectangleContainsScreenPoint(areaAnalogico, _posicaoToque))
-            {
-                if (_toque.phase == TouchPhase.Moved)
-                {
-                    posicaoPonto = _toque.position - (Vector2)analogico.position;
-                    posicaoPonto = Vector2.ClampMagnitude(posicaoPonto, 120f);
-
-                    pontoAnalogico.position = (Vector2)analogico.position + posicaoPonto;
-
-                    direcaoMovimento = (pontoAnalogico.position - analogico.position).normalized;
-                }
-
-                if (_toque.phase == TouchPhase.Ended || _toque.phase == TouchPhase.Canceled)
-                {
-                    ResetarPosicaoJoystick();
-                    direcaoMovimento = Vector3.zero;
-                }
-            }
-            else
-            {
-                ResetarPosicaoJoystick();
-                direcaoMovimento = Vector3.zero;
-            }
         }
     }
 
