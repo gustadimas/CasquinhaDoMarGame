@@ -15,9 +15,9 @@ MonoBehaviour:
   enableUnderwater: 1
   underwaterMaxDepth: 10
   underwaterSurfaceColorBoost: 2
-  underwaterShallowFogColor: {r: 0, g: 0.31705594, b: 1, a: 0.05490196}
-  underwaterDeepFogColor: {r: 0, g: 0.5467396, b: 1, a: 0.12156863}
-  underwaterViewDistance: 30
+  underwaterShallowFogColor: {r: 0, g: 0.8275554, b: 1, a: 0.019607844}
+  underwaterDeepFogColor: {r: 0, g: 0.5009607, b: 0.5294118, a: 0.3764706}
+  underwaterViewDistance: 1
   underwaterEnableCaustic: 1
   underwaterCausticTexture: {fileID: 2800000, guid: eeacbffe8eb46d343b0d7a9189130772, type: 3}
   underwaterCausticSize: 10
