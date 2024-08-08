@@ -15,8 +15,17 @@ public class Interface_Passagem : MonoBehaviour
 
     public static Interface_Passagem Instance { get; private set; }
 
+    [SerializeField] Player_Pesquisador scriptMovimentacao;
+    [SerializeField] Transform posicaoInicialJogador;
+
     void Awake()
     {
+        scriptMovimentacao = GameObject.FindObjectOfType<Player_Pesquisador>();
+        if (scriptMovimentacao != null)
+        {
+            posicaoInicialJogador = scriptMovimentacao.transform;
+        }
+
         textoDias.text = "DIA 01";
         Instance = this;
         StartCoroutine(Desaparecer());
@@ -37,6 +46,8 @@ public class Interface_Passagem : MonoBehaviour
             }
             textoDias.alpha = 0;
 
+            GerenciadorDeIluminacao.atualizarDia = true;
+
             _tempoPassado = 0f;
 
             while (_tempoPassado < tempoDesaparecerPainel)
@@ -47,7 +58,6 @@ public class Interface_Passagem : MonoBehaviour
             }
 
             painelDias.alpha = 0;
-            GerenciadorDeIluminacao.atualizarDia = true;
         }
     }
 
@@ -65,6 +75,8 @@ public class Interface_Passagem : MonoBehaviour
             yield return null;
         }
         textoDias.alpha = 1;
+
+        scriptMovimentacao.transform.position = posicaoInicialJogador.position;
 
         _tempoPassado = 0f;
 
