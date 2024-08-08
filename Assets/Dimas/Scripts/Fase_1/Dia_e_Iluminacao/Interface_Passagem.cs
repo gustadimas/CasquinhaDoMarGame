@@ -15,23 +15,24 @@ public class Interface_Passagem : MonoBehaviour
 
     public static Interface_Passagem Instance { get; private set; }
 
-    [SerializeField] Player_Pesquisador scriptMovimentacao;
+    [SerializeField] Transform jogador;
     [SerializeField] Transform posicaoInicialJogador;
 
-    void Awake()
+    private void Awake()
     {
-        scriptMovimentacao = GameObject.FindObjectOfType<Player_Pesquisador>();
-        if (scriptMovimentacao != null)
+        Instance = this;
+
+        jogador = GameObject.FindObjectOfType<Player_Pesquisador>().transform;
+        if (jogador != null)
         {
-            posicaoInicialJogador = scriptMovimentacao.transform;
+            posicaoInicialJogador.position = jogador.position;
         }
 
         textoDias.text = "DIA 01";
-        Instance = this;
         StartCoroutine(Desaparecer());
     }
 
-    IEnumerator Desaparecer()
+    private IEnumerator Desaparecer()
     {
         if (GerenciadorDeIluminacao.atualizarDia == false)
         {
@@ -49,18 +50,15 @@ public class Interface_Passagem : MonoBehaviour
             GerenciadorDeIluminacao.atualizarDia = true;
 
             _tempoPassado = 0f;
-
             while (_tempoPassado < tempoDesaparecerPainel)
             {
                 _tempoPassado += Time.deltaTime;
                 painelDias.alpha = Mathf.Lerp(1, 0, _tempoPassado / tempoDesaparecerPainel);
                 yield return null;
             }
-
             painelDias.alpha = 0;
         }
     }
-
 
     public IEnumerator Aparecer()
     {
@@ -76,16 +74,16 @@ public class Interface_Passagem : MonoBehaviour
         }
         textoDias.alpha = 1;
 
-        scriptMovimentacao.transform.position = posicaoInicialJogador.position;
-
         _tempoPassado = 0f;
-
         while (_tempoPassado < tempoDesaparecerPainel)
         {
             _tempoPassado += Time.deltaTime;
             painelDias.alpha = Mathf.Lerp(0, 1, _tempoPassado / tempoDesaparecerPainel);
             yield return null;
         }
+
+        jogador.position = posicaoInicialJogador.position;
+
         painelDias.alpha = 1;
 
         GameManager.diasCompletos += 1;

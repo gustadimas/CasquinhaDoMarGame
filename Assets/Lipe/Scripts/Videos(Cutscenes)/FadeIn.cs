@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -15,7 +14,6 @@ public class FadeIn : MonoBehaviour
         videoPlayer.loopPointReached += VideoPlayer_loopPointReached;
         canvasGroup = GetComponent<CanvasGroup>();
         fadeIn = false;
-        GameManager.proximaEtapa = 1;
     }
 
     private void VideoPlayer_loopPointReached(VideoPlayer source)
@@ -30,8 +28,9 @@ public class FadeIn : MonoBehaviour
             if (canvasGroup.alpha < 1)
             {
                 canvasGroup.alpha += timeFade * Time.deltaTime;
-                if (canvasGroup.alpha == 1)
+                if (canvasGroup.alpha >= 1)
                 {
+                    canvasGroup.alpha = 1;
                     GameManager.proximaEtapa++;
                     GameManager.instance.LoadScene(GameManager.proximaEtapa);
                 }

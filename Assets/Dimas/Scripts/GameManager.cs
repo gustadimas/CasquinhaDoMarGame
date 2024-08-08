@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        #if !UNITY_EDITOR
-		Application.targetFrameRate = 31;
-        #endif
+#if !UNITY_EDITOR
+		Application.targetFrameRate = 60;
+#endif
 
         if (instance == null)
         {
@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int sceneId)
     {
+        if (sceneId >= SceneManager.sceneCountInBuildSettings)
+        {
+            Debug.LogError("Scene ID out of range. Please check your scene configuration.");
+            return;
+        }
         SceneManager.LoadScene(sceneId);
     }
 
