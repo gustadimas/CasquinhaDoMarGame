@@ -44,7 +44,7 @@ public class FadeIn : MonoBehaviour
         int proximaCena = GameManager.proximaEtapa;
 
         Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
-        if (cenaAtual != 7)
+        if (cenaAtual != 8)
         {
             if (proximaCena <= cenaAtual)
             {

@@ -101,7 +101,7 @@ public class Interface_Passagem : MonoBehaviour
         {
             textoDias.text = "";
             textoCompleto.text = "PERÍODO DE INCUBAÇÃO COMPLETO";
-            textoCompleto.color = Color.green;
+            //textoCompleto.color = Color.green;
             Invoke(nameof(CarregarProximaCena), 5f);
         }
     }

@@ -1,0 +1,981 @@
+fileFormatVersion: 2
+guid: 56a107772abdb124491591618237b8c4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_0
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 2089
+        width: 1448
+        height: 674
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0977aafbf99486f488ceff4ff5411b44
+      internalID: -357957680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_1
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2742
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b81c45df30e48d4fae68f66396b9d9b
+      internalID: -300194923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_2
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 2742
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02e6e43904b80a4bbe0f17200497d86
+      internalID: 653616863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_3
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 2725
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f277174e6b4bdd4b82bc513089b7b3f
+      internalID: -1933648151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_4
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 2725
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38993d096aaf883488a2a112db9d87c5
+      internalID: -337274884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_5
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 2654
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd79832ca464a647b253e9e23c374d3
+      internalID: 1092709143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_6
+      rect:
+        serializedVersion: 2
+        x: 4083
+        y: 2282
+        width: 1381
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a24ebda296d00d498abcdcfc342349a
+      internalID: -736547737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_7
+      rect:
+        serializedVersion: 2
+        x: 4055
+        y: 2619
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41ef59613debde4884cb2a778d56dc4
+      internalID: -1920566060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_8
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2602
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8775b0453bec793448e6ffa03ae4cd20
+      internalID: 1570367884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_9
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2584
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bf91f4440d3844ebf45bc6970f7253
+      internalID: 712867357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_10
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2566
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b026a158f01df498d309af5df85c97
+      internalID: -1627213910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_11
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2549
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa045e93d4b603148ba8fd927e9cfaa6
+      internalID: -1039169551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_12
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2531
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd457951214e1834d901d250fa6892bb
+      internalID: 469839952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_13
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2514
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1213e47f7a17e1640be1d1d6098bb316
+      internalID: 653890970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_14
+      rect:
+        serializedVersion: 2
+        x: 4055
+        y: 2461
+        width: 23
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4caa729a5be5dfa4e86166707ea8ae9b
+      internalID: -840110592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_15
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2443
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bbc5f15dc87774b92cc419ee6a82d3
+      internalID: -2004930818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_16
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2426
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9236e00a6cd9c488d55c48df3dfafc
+      internalID: -211603362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_17
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 2408
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c494bb21f3c607248b99274b1bcd5a34
+      internalID: 380366722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_18
+      rect:
+        serializedVersion: 2
+        x: 4055
+        y: 2353
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ef5be59ae121344b684b03c52cfcf5
+      internalID: 1316204176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_19
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 2332
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c56aa5fdacac374ebda8cff536ae773
+      internalID: 672787454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_20
+      rect:
+        serializedVersion: 2
+        x: 4107
+        y: 2282
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aaef6ce7a5909b4493ac3eae1c78715
+      internalID: -1978968583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_21
+      rect:
+        serializedVersion: 2
+        x: 4166
+        y: 2279
+        width: 1195
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab8a3e204297b24d980439591f87c7c
+      internalID: -1429054267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_22
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 1635
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e1506bf88321241a19d0f9c9b0cb5e
+      internalID: 1830400972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1635
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f61e8fe44c27584cabc7f508cd3baad
+      internalID: -1875371878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_24
+      rect:
+        serializedVersion: 2
+        x: 3041
+        y: 1600
+        width: 53
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3407fa1d93e0548bf4705fb7321943
+      internalID: -995108544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_25
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 1450
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9d1f2bb3fb12841a92609c9692383a
+      internalID: -1416121877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_26
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 692
+        width: 841
+        height: 928
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3eb3d37c99b8e478c9121bc9586ce8
+      internalID: -2038863889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_27
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 1427
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3b2c093a9dab5439803607978150a5
+      internalID: -1628107577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_28
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1354
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113388b1e2b5e4a44a8e0497d3ee5b71
+      internalID: -843076886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_29
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 1354
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c412df2f533bc9a4cb22385e80be46d1
+      internalID: -825354659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_30
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 1336
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6584f5447f820c45b025474c2b3810c
+      internalID: -65586608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_31
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1336
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb76d94a2d1dbe4e9d530c212d3701c
+      internalID: -1764079445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_32
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 911
+        width: 955
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c1d8e48fe709445bca1dba0890431f
+      internalID: -1827706656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_33
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 313
+        width: 955
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b132427f7d44ee84e9438a09418b95d4
+      internalID: -1678538390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_34
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 756
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e91570898c3fd44bacdb0975c5dac76
+      internalID: -68242453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_35
+      rect:
+        serializedVersion: 2
+        x: 3068
+        y: 665
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b31df34529387a4d805b56b28464c87
+      internalID: 926028206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_36
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 668
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5276d4276e62d2c429481e141506121c
+      internalID: 708561636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_37
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 665
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c219f7338c0bd408667fc290ab796c
+      internalID: -230507395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_38
+      rect:
+        serializedVersion: 2
+        x: 3146
+        y: 668
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da2ea1d0d7a28043b002df5b85e7ec6
+      internalID: -1403470223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_0: -357957680
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_1: -300194923
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_10: -1627213910
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_11: -1039169551
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_12: 469839952
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_13: 653890970
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_14: -840110592
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_15: -2004930818
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_16: -211603362
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_17: 380366722
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_18: 1316204176
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_19: 672787454
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_2: 653616863
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_20: -1978968583
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_21: -1429054267
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_22: 1830400972
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_23: -1875371878
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_24: -995108544
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_25: -1416121877
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_26: -2038863889
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_27: -1628107577
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_28: -843076886
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_29: -825354659
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_3: -1933648151
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_30: -65586608
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_31: -1764079445
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_32: -1827706656
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_33: -1678538390
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_34: -68242453
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_35: 926028206
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_36: 708561636
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_37: -230507395
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_38: -1403470223
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_4: -337274884
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_5: 1092709143
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_6: -736547737
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_7: -1920566060
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_8: 1570367884
+      ELEMENTOS_VISUAIS_PI_PROJETO_TAMAR_10_9: 712867357
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

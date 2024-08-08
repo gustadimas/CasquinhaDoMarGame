@@ -13,6 +13,7 @@ namespace cherrydev
 
         private List<Button> buttons = new List<Button>();
         private List<TextMeshProUGUI> buttonTexts = new List<TextMeshProUGUI>();
+        [SerializeField] TMP_FontAsset novaFonte;
 
         /// <summary>
         /// Instantiate answer buttons based on max amount of answer buttons
@@ -25,8 +26,8 @@ namespace cherrydev
                 Button answerButton = Instantiate(answerButtonPrefab, parentTransform);
 
                 answerButton.GetComponentInChildren<TextMeshProUGUI>().enableAutoSizing = true;
+                answerButton.GetComponentInChildren<TextMeshProUGUI>().font = novaFonte;
 
-                
 
                 buttons.Add(answerButton);
                 buttonTexts.Add(answerButton.GetComponentInChildren<TextMeshProUGUI>());

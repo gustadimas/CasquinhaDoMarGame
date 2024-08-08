@@ -41,7 +41,7 @@ public class Player_Pesquisador : MonoBehaviour
 
                         pontoAnalogico.position = (Vector2)analogico.position + posicaoPonto;
 
-                        direcaoMovimento = (pontoAnalogico.position - analogico.position).normalized;
+                        direcaoMovimento = new Vector3(posicaoPonto.x, 0, posicaoPonto.y).normalized;
                     }
 
                     if (_toque.phase == TouchPhase.Ended || _toque.phase == TouchPhase.Canceled)
@@ -58,9 +58,8 @@ public class Player_Pesquisador : MonoBehaviour
     {
         if (direcaoMovimento != Vector3.zero)
         {
-            Vector3 _movimentoHorizontal = cameraTransform.TransformDirection(new Vector3(direcaoMovimento.x, 0, direcaoMovimento.y));
-            rb.MovePosition(transform.position + velocidadeMovimento * Time.deltaTime * _movimentoHorizontal);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_movimentoHorizontal), 0.15f);
+            Vector3 movimento = transform.TransformDirection(direcaoMovimento);
+            rb.MovePosition(transform.position + velocidadeMovimento * Time.deltaTime * movimento);
         }
     }
 
