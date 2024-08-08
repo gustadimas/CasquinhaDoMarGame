@@ -29,8 +29,6 @@ public class NuvemLixo : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Tartaruga"))
-        {
             dentroDaNuvem = false;
-        }
     }
 }

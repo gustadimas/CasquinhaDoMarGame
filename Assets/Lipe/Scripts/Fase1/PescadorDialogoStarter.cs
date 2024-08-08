@@ -103,6 +103,5 @@ public class PescadorDialogoStarter : MonoBehaviour
             acertou = false;
             GetComponent<DesaparecerNPCs>().Call_Desaparecer();
         }
-
     }
 }

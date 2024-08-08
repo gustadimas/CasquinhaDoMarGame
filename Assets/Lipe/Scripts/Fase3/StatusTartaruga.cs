@@ -33,10 +33,7 @@ public class StatusTartaruga : MonoBehaviour
         podeCurar = true;
     }
 
-    void AtualizarBarra(float vida)
-    {
-        healthBar.fillAmount = vida;
-    }
+    void AtualizarBarra(float vida) => healthBar.fillAmount = vida;
 
     public void ReceberDano(float dano)
     {
@@ -59,9 +56,7 @@ public class StatusTartaruga : MonoBehaviour
             healCooldownSlider.value = plasticosComidos;
 
             if (healCooldownSlider.value >= 1)
-            {
                 StartCoroutine(CuraBloqueada());
-            }
         }
     }
 }

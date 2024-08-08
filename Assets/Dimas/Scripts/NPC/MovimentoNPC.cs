@@ -5,14 +5,14 @@ using UnityEngine.AI;
 public class MovimentoNPC : MonoBehaviour
 {
     NavMeshAgent agent;
-    Animator anima;
+    Animator anim;
     [SerializeField] float raioDeVagar = 15f;
     [SerializeField] float tempoEntreDestinos = 10f;
     [SerializeField] float tempoDeEspera = 1f;
 
     private void Start()
     {
-        anima = transform.GetChild(0).GetComponent<Animator>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(Vagar());
     }
@@ -46,12 +46,8 @@ public class MovimentoNPC : MonoBehaviour
         Vector3 movimento = agent.velocity;
 
         if (movimento.magnitude > 0.1f)
-        {
-            anima.SetInteger("estado", 1);
-        }
+            anim.SetInteger("estado", 1);
         else
-        {
-            anima.SetInteger("estado", 0);
-        }
+            anim.SetInteger("estado", 0);
     }
 }

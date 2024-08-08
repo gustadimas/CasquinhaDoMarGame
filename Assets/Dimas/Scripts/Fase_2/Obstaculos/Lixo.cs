@@ -2,19 +2,16 @@ using UnityEngine;
 
 public class Lixo : MonoBehaviour
 {
-    private Camera cam;
-    private int contadorToques = 0;
-    private const int toquesNecessarios = 50;
-    private float distanciaMovimento = 0f;
-    private const float distanciaNecessaria = 25f;
+    Camera cam;
+    int contadorToques = 0;
+    const int toquesNecessarios = 50;
+    float distanciaMovimento = 0f;
+    const float distanciaNecessaria = 25f;
 
-    private Vector2 posicaoToqueAnterior;
-    private bool estaSendoArrastado = false;
+    Vector2 posicaoToqueAnterior;
+    bool estaSendoArrastado = false;
 
-    private void Start()
-    {
-        cam = Camera.main;
-    }
+    private void Start() => cam = Camera.main;
 
     private void Update()
     {
@@ -51,14 +48,10 @@ public class Lixo : MonoBehaviour
             }
 
             if (toque.phase == TouchPhase.Ended || toque.phase == TouchPhase.Canceled)
-            {
                 estaSendoArrastado = false;
-            }
 
             if (contadorToques >= toquesNecessarios)
-            {
                 LimparLixo();
-            }
         }
     }
 

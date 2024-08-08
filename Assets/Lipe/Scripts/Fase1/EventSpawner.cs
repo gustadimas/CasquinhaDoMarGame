@@ -130,8 +130,5 @@ public class EventSpawner : MonoBehaviour
     }
 
 
-    public void RemoveObject(GameObject spawnedObject)
-    {
-        spawnedObjects.Remove(spawnedObject);
-    }
+    public void RemoveObject(GameObject spawnedObject) => spawnedObjects.Remove(spawnedObject);
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerFilhotes : MonoBehaviour
@@ -21,10 +22,7 @@ public class PlayerFilhotes : MonoBehaviour
         }
 
         if (collision.gameObject.CompareTag("DestinoFilhote"))
-        {
-            GameManager.proximaEtapa++;
-            GameManager.instance.LoadScene(GameManager.proximaEtapa);
-        }
+            CarregarProximaCena();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -34,5 +32,24 @@ public class PlayerFilhotes : MonoBehaviour
             Destroy(collision.gameObject);
             VidaTartarugas.instance.PerdeuVida();
         }
+    }
+
+    private void CarregarProximaCena()
+    {
+        int cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        int proximaCena = GameManager.proximaEtapa;
+
+        Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
+
+        if (proximaCena <= cenaAtual)
+        {
+            proximaCena = cenaAtual + 1;
+            GameManager.proximaEtapa = proximaCena;
+        }
+
+        if (proximaCena < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(proximaCena);
+        else
+            Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
     }
 }

@@ -14,22 +14,14 @@ public class Quadriciclo : MonoBehaviour
     GameObject[] filhotes;
     bool isDragging = false;
 
-    public void SetSpawnPoint(Vector3 spawnPoint)
-    {
-        this.spawnPoint = spawnPoint;
-    }
+    public void SetSpawnPoint(Vector3 spawnPoint) => this.spawnPoint = spawnPoint;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    private void Start() => rb = GetComponent<Rigidbody>();
 
     private void Update()
     {
         if (!isDragging)
-        {
             MoverEmDirecaoAosFilhotes();
-        }
     }
 
     private void OnMouseDown()
@@ -40,10 +32,7 @@ public class Quadriciclo : MonoBehaviour
         rb.isKinematic = true;
     }
 
-    private void OnMouseDrag()
-    {
-        finalPos = Input.mousePosition;
-    }
+    private void OnMouseDrag() => finalPos = Input.mousePosition;
 
     private void OnMouseUp()
     {
@@ -71,7 +60,8 @@ public class Quadriciclo : MonoBehaviour
 
     private void MoverEmDirecaoAosFilhotes()
     {
-        if (isDragging) return;
+        if (isDragging) 
+            return;
 
         filhotes = GameObject.FindGameObjectsWithTag("Filhote");
         if (filhotes.Length > 0)

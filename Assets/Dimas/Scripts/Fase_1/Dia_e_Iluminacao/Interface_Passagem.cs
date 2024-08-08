@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Interface_Passagem : MonoBehaviour
 {
@@ -23,10 +24,9 @@ public class Interface_Passagem : MonoBehaviour
         Instance = this;
 
         jogador = GameObject.FindObjectOfType<Player_Pesquisador>().transform;
+
         if (jogador != null)
-        {
             posicaoInicialJogador.position = jogador.position;
-        }
 
         textoDias.text = "DIA 01";
         StartCoroutine(Desaparecer());
@@ -102,13 +102,27 @@ public class Interface_Passagem : MonoBehaviour
             textoDias.text = "";
             textoCompleto.text = "PERÍODO DE INCUBAÇÃO COMPLETO";
             textoCompleto.color = Color.green;
-            Invoke(nameof(EstagioCompleto), 5f);
+            Invoke(nameof(CarregarProximaCena), 5f);
         }
     }
 
-    public void EstagioCompleto()
+    [ContextMenu("Passar Cena")]
+    private void CarregarProximaCena()
     {
-        GameManager.proximaEtapa++;
-        GameManager.instance.LoadScene(GameManager.proximaEtapa);
+        int cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        int proximaCena = GameManager.proximaEtapa;
+
+        Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
+
+        if (proximaCena <= cenaAtual)
+        {
+            proximaCena = cenaAtual + 1;
+            GameManager.proximaEtapa = proximaCena;
+        }
+
+        if (proximaCena < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(proximaCena);
+        else
+            Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
     }
 }

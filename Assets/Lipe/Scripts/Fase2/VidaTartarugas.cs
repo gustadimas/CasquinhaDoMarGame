@@ -22,9 +22,6 @@ public class VidaTartarugas : MonoBehaviour
         contagemTartarugas--;
 
         if (contagemTartarugas < 0)
-        {
             GameManager.instance.LoadScene(GameManager.proximaEtapa);
-        }
     }
-    
 }

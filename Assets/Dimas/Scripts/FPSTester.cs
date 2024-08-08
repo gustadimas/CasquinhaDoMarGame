@@ -4,10 +4,7 @@ public class FPSTester : MonoBehaviour
 {
     float deltaTime = 0.0f;
 
-    void Update()
-    {
-        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
-    }
+    void Update() => deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
 
     void OnGUI()
     {

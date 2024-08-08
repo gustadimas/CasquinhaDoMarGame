@@ -24,7 +24,6 @@ public class QuestController : MonoBehaviour
     private void Start()
     {
         instance = this;
-
         MissoesDiaAtual_Set();
     }
 
@@ -58,13 +57,9 @@ public class QuestController : MonoBehaviour
         for (int i = 0; i < missoesDoDiaAtual.quests.Length; i++)
         {
             if (missoesDoDiaAtual.quests[i].valorAtual >= missoesDoDiaAtual.quests[i].quantidade)
-            {
                 missoesDoDiaAtual.quests[i].estadoMissao = true;
-            }
             else
-            {
                 missoesDoDiaAtual.quests[i].estadoMissao = false;
-            }
 
             textoMissoes[i].text = missoesDoDiaAtual.quests[i].valorAtual + "/" + missoesDoDiaAtual.quests[i].quantidade + " " + missoesDoDiaAtual.quests[i].textoMissao;
 

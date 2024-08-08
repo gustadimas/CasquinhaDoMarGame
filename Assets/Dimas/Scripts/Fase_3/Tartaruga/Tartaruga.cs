@@ -97,9 +97,7 @@ public class Tartaruga : MonoBehaviour
                 }
 
                 if (_toque.phase == TouchPhase.Ended || _toque.phase == TouchPhase.Canceled)
-                {
                     ResetarPosicaoJoystickRotacao();
-                }
             }
         }
     }

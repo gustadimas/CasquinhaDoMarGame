@@ -18,9 +18,7 @@ public class RedeFantasma : MonoBehaviour
 
         scriptMovimentacao = GameObject.FindObjectOfType<Tartaruga>();
         if (scriptMovimentacao != null)
-        {
             posicaoTartaruga = scriptMovimentacao.transform;
-        }
 
         analogicoMov = GameObject.Find("AnalogicoMov");
         analogicoRot = GameObject.Find("AnalogicoRot");

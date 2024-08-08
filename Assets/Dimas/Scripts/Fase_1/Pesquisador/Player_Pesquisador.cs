@@ -25,7 +25,8 @@ public class Player_Pesquisador : MonoBehaviour
 
     void Update()
     {
-        if (!desativarEntradas) Joystick();
+        if (!desativarEntradas) 
+            Joystick();
     }
 
     void FixedUpdate()

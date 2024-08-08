@@ -14,13 +14,10 @@ public class GameManager : MonoBehaviour
 #endif
 
         if (instance == null)
-        {
             instance = this;
-        }
         else
-        {
             Destroy(gameObject);
-        }
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -28,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         if (sceneId >= SceneManager.sceneCountInBuildSettings)
         {
-            Debug.LogError("Scene ID out of range. Please check your scene configuration.");
+            Debug.LogError("ID da cena fora do index. Verifique a configuração de cenas.");
             return;
         }
         SceneManager.LoadScene(sceneId);
