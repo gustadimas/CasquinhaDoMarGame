@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StatusTartaruga : MonoBehaviour
@@ -57,6 +58,25 @@ public class StatusTartaruga : MonoBehaviour
 
             if (healCooldownSlider.value >= 1)
                 StartCoroutine(CuraBloqueada());
+        }
+
+        if (other.gameObject.CompareTag("DestinoMar"))
+        {
+            int cenaAtual = SceneManager.GetActiveScene().buildIndex;
+            int proximaCena = GameManager.proximaEtapa;
+
+            Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
+
+            if (proximaCena <= cenaAtual)
+            {
+                proximaCena = cenaAtual + 1;
+                GameManager.proximaEtapa = proximaCena;
+            }
+
+            if (proximaCena < SceneManager.sceneCountInBuildSettings)
+                SceneManager.LoadScene(proximaCena);
+            else
+                Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
         }
     }
 }

@@ -13,6 +13,7 @@ TagManager:
   - Quadriciclo
   - DestinoFilhote
   - BlockCura
+  - DestinoMar
   layers:
   - Default
   - TransparentFX
