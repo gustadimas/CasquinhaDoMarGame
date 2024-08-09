@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7890684706478000281}
   - component: {fileID: 5360867570543656028}
   - component: {fileID: 5360867570543656030}
+  - component: {fileID: 2751566736642800724}
   m_Layer: 0
   m_Name: RedeFantasma
   m_TagString: Untagged
@@ -118,3 +119,16 @@ MonoBehaviour:
   analogicoRot: {fileID: 0}
   posicaoTartaruga: {fileID: 0}
   danoCausado: 0.2
+--- !u!65 &2751566736642800724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539295068439521612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7984283, y: 1.1275382, z: 2.7984285}
+  m_Center: {x: 0.000000015718019, y: 0.45828164, z: -0.00000034396984}

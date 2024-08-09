@@ -41,12 +41,16 @@ public class Tartaruga : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (direcaoMovimento != Vector3.zero)
         {
             Vector3 _movimentoHorizontal = transform.TransformDirection(new Vector3(direcaoMovimento.x, 0, direcaoMovimento.y));
-            rb.MovePosition(transform.position + velocidadeMovimento * Time.deltaTime * _movimentoHorizontal);
+            rb.velocity = _movimentoHorizontal * velocidadeMovimento;
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
         }
     }
 
