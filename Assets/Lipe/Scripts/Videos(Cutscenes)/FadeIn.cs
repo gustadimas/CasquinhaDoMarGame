@@ -38,52 +38,47 @@ public class FadeIn : MonoBehaviour
         }
     }
 
-    private void VideoPlayer_loopPointReached(VideoPlayer source)
-    {
-        fadeIn = true;
-    }
+    void VideoPlayer_loopPointReached(VideoPlayer source) => fadeIn = true;
 
-    private void DuploToque()
+    void DuploToque()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
             if (Time.time - tempoUltimoToque < tempoDuplotoque)
-            {
                 PularVideo();
-            }
             tempoUltimoToque = Time.time;
         }
     }
 
-    private void PularVideo()
+    void PularVideo()
     {
         fadeIn = true;
         canvasGroup.alpha = 1;
         CarregarProximaCena();
     }
 
-    private void CarregarProximaCena()
+    void CarregarProximaCena()
     {
-        int cenaAtual = SceneManager.GetActiveScene().buildIndex;
-        int proximaCena = GameManager.proximaEtapa;
+        int _cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        int _proximaCena = GameManager.proximaEtapa;
 
-        Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
-        if (cenaAtual != 8)
+        Debug.Log($"Cena Atual: {_cenaAtual}, Próxima Cena: {_proximaCena}");
+        if (_cenaAtual != 8)
         {
-            if (proximaCena <= cenaAtual)
+            if (_proximaCena <= _cenaAtual)
             {
-                proximaCena = cenaAtual + 1;
-                GameManager.proximaEtapa = proximaCena;
+                _proximaCena = _cenaAtual + 1;
+                GameManager.proximaEtapa = _proximaCena;
             }
         }
         else
         {
-            proximaCena = 0;
-            GameManager.proximaEtapa = proximaCena;
+            _proximaCena = 0;
+            GameManager.proximaEtapa = _proximaCena;
         }
 
-        if (proximaCena < SceneManager.sceneCountInBuildSettings)
-            SceneManager.LoadScene(proximaCena);
+        if (_proximaCena < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(_proximaCena);
         else
             Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
     }

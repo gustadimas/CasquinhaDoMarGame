@@ -19,12 +19,12 @@ public class MovimentoNPC : MonoBehaviour
 
     private void Update() => AtualizarEstadoAnimacao();
 
-    private IEnumerator Vagar()
+    IEnumerator Vagar()
     {
         while (true)
         {
-            Vector3 destination = ObterDestinoAleatorio();
-            agent.SetDestination(destination);
+            Vector3 _destino = ObterDestinoAleatorio();
+            agent.SetDestination(_destino);
 
             yield return new WaitUntil(() => agent.remainingDistance < 0.1f);
 
@@ -43,9 +43,9 @@ public class MovimentoNPC : MonoBehaviour
 
     void AtualizarEstadoAnimacao()
     {
-        Vector3 movimento = agent.velocity;
+        Vector3 _movimento = agent.velocity;
 
-        if (movimento.magnitude > 0.1f)
+        if (_movimento.magnitude > 0.1f)
             anim.SetInteger("estado", 1);
         else
             anim.SetInteger("estado", 0);

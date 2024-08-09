@@ -10,13 +10,9 @@ public class SpawnLixo : MonoBehaviour
     private void Start()
     {
         if (pontoSpawn != null)
-        {
             InvokeRepeating(nameof(VerificarEGerarLixo), intervaloGeracao, intervaloGeracao);
-        }
         else
-        {
             Debug.LogError("pontoSpawn não foi atribuído!", this);
-        }
     }
 
     private void VerificarEGerarLixo()

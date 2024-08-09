@@ -41,12 +41,12 @@ public class FadeManager : MonoBehaviour
 
     private IEnumerator FadeInAndLoadScene(int sceneIndex)
     {
-        float elapsedTime = 0f;
+        float _elapsedTime = 0f;
 
-        while (elapsedTime < fadeDuration)
+        while (_elapsedTime < fadeDuration)
         {
-            elapsedTime += Time.deltaTime;
-            fadeImage.color = new Color(0f, 0f, 0f, Mathf.Clamp01(elapsedTime / fadeDuration));
+            _elapsedTime += Time.deltaTime;
+            fadeImage.color = new Color(0f, 0f, 0f, Mathf.Clamp01(_elapsedTime / fadeDuration));
             yield return null;
         }
 
@@ -57,36 +57,32 @@ public class FadeManager : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        float elapsedTime = 0f;
+        float _elapsedTime = 0f;
 
-        while (elapsedTime < fadeDuration)
+        while (_elapsedTime < fadeDuration)
         {
-            elapsedTime += Time.deltaTime;
-            fadeImage.color = new Color(0f, 0f, 0f, 1f - Mathf.Clamp01(elapsedTime / fadeDuration));
+            _elapsedTime += Time.deltaTime;
+            fadeImage.color = new Color(0f, 0f, 0f, 1f - Mathf.Clamp01(_elapsedTime / fadeDuration));
             yield return null;
         }
     }
 
     public void CarregarProximaCenaComFade()
     {
-        int cenaAtual = SceneManager.GetActiveScene().buildIndex;
-        int proximaCena = GameManager.proximaEtapa;
+        int _cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        int _proximaCena = GameManager.proximaEtapa;
 
-        Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
+        Debug.Log($"Cena Atual: {_cenaAtual}, Próxima Cena: {_proximaCena}");
 
-        if (proximaCena <= cenaAtual)
+        if (_proximaCena <= _cenaAtual)
         {
-            proximaCena = cenaAtual + 1;
-            GameManager.proximaEtapa = proximaCena;
+            _proximaCena = _cenaAtual + 1;
+            GameManager.proximaEtapa = _proximaCena;
         }
 
-        if (proximaCena < SceneManager.sceneCountInBuildSettings)
-        {
-            FadeToScene(proximaCena);
-        }
+        if (_proximaCena < SceneManager.sceneCountInBuildSettings)
+            FadeToScene(_proximaCena);
         else
-        {
             Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
-        }
     }
 }

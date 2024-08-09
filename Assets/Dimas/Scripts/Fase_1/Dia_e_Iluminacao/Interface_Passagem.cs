@@ -14,14 +14,14 @@ public class Interface_Passagem : MonoBehaviour
     [SerializeField] CanvasGroup painelDias;
     [SerializeField] TextMeshProUGUI textoDias, textoCompleto;
 
-    public static Interface_Passagem Instance { get; private set; }
+    public static Interface_Passagem instance { get; private set; }
 
     [SerializeField] Transform jogador;
     [SerializeField] Transform posicaoInicialJogador;
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
 
         jogador = GameObject.FindObjectOfType<Player_Pesquisador>().transform;
 
@@ -107,8 +107,5 @@ public class Interface_Passagem : MonoBehaviour
     }
 
     [ContextMenu("Passar Cena")]
-    private void CarregarProximaCena()
-    {
-        FadeManager.instance.CarregarProximaCenaComFade();
-    }
+    void CarregarProximaCena() => FadeManager.instance.CarregarProximaCenaComFade();
 }

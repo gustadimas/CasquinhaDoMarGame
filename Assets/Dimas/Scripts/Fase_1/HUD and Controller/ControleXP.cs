@@ -50,35 +50,35 @@ public class ControleXP : MonoBehaviour
         StartCoroutine(FazerBarraDesaparecer());
     }
 
-    IEnumerator AdicionarXPGradualmente(float valorXP)
+    IEnumerator AdicionarXPGradualmente(float _valorXP)
     {
-        float tempoInicio = Time.time;
-        float tempoDuracao = 1f;
-        float xpInicial = xpAtual;
+        float _tempoInicio = Time.time;
+        float _tempoDuracao = 1f;
+        float _xpInicial = xpAtual;
 
-        while (Time.time - tempoInicio < tempoDuracao)
+        while (Time.time - _tempoInicio < _tempoDuracao)
         {
-            xpAtual = Mathf.Lerp(xpInicial, xpInicial + valorXP, (Time.time - tempoInicio) / tempoDuracao);
+            xpAtual = Mathf.Lerp(_xpInicial, _xpInicial + _valorXP, (Time.time - _tempoInicio) / _tempoDuracao);
             yield return null;
         }
 
-        xpAtual = xpInicial + valorXP;
+        xpAtual = _xpInicial + _valorXP;
         VerificarLevelUp();
     }
 
-    IEnumerator AjustarOpacidade(CanvasGroup grupo, float valorFinal, float duracao)
+    IEnumerator AjustarOpacidade(CanvasGroup _grupo, float _valorFinal, float _duracao)
     {
-        float tempoInicio = Time.time;
-        float opacidadeInicial = grupo.alpha;
+        float _tempoInicio = Time.time;
+        float _opacidadeInicial = _grupo.alpha;
 
-        while (Time.time - tempoInicio < duracao)
+        while (Time.time - _tempoInicio < _duracao)
         {
-            float novaOpacidade = Mathf.Lerp(opacidadeInicial, valorFinal, (Time.time - tempoInicio) / duracao);
-            grupo.alpha = novaOpacidade;
+            float _novaOpacidade = Mathf.Lerp(_opacidadeInicial, _valorFinal, (Time.time - _tempoInicio) / _duracao);
+            _grupo.alpha = _novaOpacidade;
             yield return null;
         }
 
-        grupo.alpha = valorFinal;
+        _grupo.alpha = _valorFinal;
     }
 
     IEnumerator FazerBarraDesaparecer()
@@ -91,7 +91,7 @@ public class ControleXP : MonoBehaviour
     {
         if (xpAtual >= xpNecessario)
         {
-            Interface_Passagem.Instance.StartCoroutine(nameof(Interface_Passagem.Aparecer));
+            Interface_Passagem.instance.StartCoroutine(nameof(Interface_Passagem.Aparecer));
 
             fotinha.sprite = icones[1];
             Invoke(nameof(AtualizarDia), 5f);

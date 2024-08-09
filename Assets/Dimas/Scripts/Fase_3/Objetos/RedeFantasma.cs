@@ -1,5 +1,5 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class RedeFantasma : MonoBehaviour
 {
@@ -9,8 +9,11 @@ public class RedeFantasma : MonoBehaviour
     [SerializeField] Transform posicaoTartaruga;
 
     [SerializeField] float danoCausado;
+    [SerializeField] float tempoEntreDanos = 2f;
+    bool podeAplicarDano = true;
 
     MeshRenderer mesh;
+    Rigidbody rbTartaruga;
 
     private void Start()
     {
@@ -18,7 +21,10 @@ public class RedeFantasma : MonoBehaviour
 
         scriptMovimentacao = GameObject.FindObjectOfType<Tartaruga>();
         if (scriptMovimentacao != null)
+        {
             posicaoTartaruga = scriptMovimentacao.transform;
+            rbTartaruga = scriptMovimentacao.GetComponent<Rigidbody>();
+        }
 
         analogicoMov = GameObject.Find("AnalogicoMov");
         analogicoRot = GameObject.Find("AnalogicoRot");
@@ -26,12 +32,34 @@ public class RedeFantasma : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Tartaruga"))
+        if (collision.gameObject.CompareTag("Tartaruga") && podeAplicarDano)
         {
-            StatusTartaruga status = FindObjectOfType<StatusTartaruga>();
-            status.ReceberDano(danoCausado);
+            StatusTartaruga _status = collision.gameObject.GetComponent<StatusTartaruga>();
+            _status.ReceberDano(danoCausado);
+
+            if (rbTartaruga != null)
+            {
+                StartCoroutine(DesativarTemporariamente(rbTartaruga));
+            }
+
             StartCoroutine(Mover());
+
+            podeAplicarDano = false;
+            StartCoroutine(TempoDeEsperaEntreDanos());
         }
+    }
+
+    private IEnumerator TempoDeEsperaEntreDanos()
+    {
+        yield return new WaitForSeconds(tempoEntreDanos);
+        podeAplicarDano = true;
+    }
+
+    IEnumerator DesativarTemporariamente(Rigidbody rb)
+    {
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(0.1f);
+        rb.isKinematic = false;
     }
 
     IEnumerator Mover()

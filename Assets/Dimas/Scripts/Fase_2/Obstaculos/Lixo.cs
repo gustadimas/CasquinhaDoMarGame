@@ -24,28 +24,28 @@ public class Lixo : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            Touch toque = Input.GetTouch(0);
-            Vector3 posicaoToque = cam.ScreenToWorldPoint(new Vector3(toque.position.x, toque.position.y, cam.nearClipPlane));
+            Touch _toque = Input.GetTouch(0);
+            Vector3 _posicaoToque = cam.ScreenToWorldPoint(new Vector3(_toque.position.x, _toque.position.y, cam.nearClipPlane));
 
-            Ray ray = cam.ScreenPointToRay(toque.position);
+            Ray _ray = cam.ScreenPointToRay(_toque.position);
             RaycastHit hit;
 
-            if (toque.phase == TouchPhase.Began)
+            if (_toque.phase == TouchPhase.Began)
             {
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(_ray, out hit))
                 {
                     if (hit.collider != null && hit.collider.gameObject == gameObject)
                     {
                         estaSendoArrastado = true;
-                        posicaoToqueAnterior = toque.position;
+                        posicaoToqueAnterior = _toque.position;
                     }
                 }
             }
 
-            if (toque.phase == TouchPhase.Moved && estaSendoArrastado)
+            if (_toque.phase == TouchPhase.Moved && estaSendoArrastado)
             {
-                distanciaMovimento += Vector2.Distance(toque.position, posicaoToqueAnterior);
-                posicaoToqueAnterior = toque.position;
+                distanciaMovimento += Vector2.Distance(_toque.position, posicaoToqueAnterior);
+                posicaoToqueAnterior = _toque.position;
 
                 if (distanciaMovimento >= distanciaNecessaria)
                 {
@@ -54,7 +54,7 @@ public class Lixo : MonoBehaviour
                 }
             }
 
-            if (toque.phase == TouchPhase.Ended || toque.phase == TouchPhase.Canceled)
+            if (_toque.phase == TouchPhase.Ended || _toque.phase == TouchPhase.Canceled)
                 estaSendoArrastado = false;
 
             if (contadorToques >= toquesNecessarios)

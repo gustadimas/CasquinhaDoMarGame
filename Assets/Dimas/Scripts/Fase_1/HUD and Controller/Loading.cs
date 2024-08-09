@@ -3,64 +3,59 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-public class Loading : MonoBehaviour
+public class Carregamento : MonoBehaviour
 {
+    [SerializeField] Slider barraProgresso;
 
-    [SerializeField] private Slider progressSlider;
+    [Header("Configuração")]
+    [SerializeField] float atraso;
+    [SerializeField] float atrasoTexto;
+    [SerializeField] float velocidadeRotacao;
 
+    [Header("Componentes da UI")]
+    [SerializeField] Image postit;
+    [SerializeField] Image circulo;
+    [SerializeField] TextMeshProUGUI textoCarregando;
+    [SerializeField] GameObject canvasCarregamentoUI;
+    bool telaCarregando = true;
 
-    [Header("Config")]
-    [SerializeField] private float delay;
-    [SerializeField] private float delayText;
-    [SerializeField] private float velocityRotation;
-
-    [Header("Link UI Components")]
-    [SerializeField] private Image postit;
-    [SerializeField] private Image circle;
-    [SerializeField] private TextMeshProUGUI loadingText;
-    [SerializeField] private GameObject loadingCanvasUI;
-    private bool loadScreen = true;
-
-    private float time;
-
+    float tempo;
 
     private void Start()
     {
-        time = 0;
-        progressSlider.value = 0;
-        progressSlider.maxValue = delay;
-        loadScreen = true;
-        StartCoroutine(AnimText());
-
+        tempo = 0;
+        barraProgresso.value = 0;
+        barraProgresso.maxValue = atraso;
+        telaCarregando = true;
+        StartCoroutine(AnimarTexto());
     }
 
     private void Update()
     {
-        if (loadScreen)
+        if (telaCarregando)
         {
-            progressSlider.value = Mathf.MoveTowards(progressSlider.value, delay, Time.deltaTime);
-            time += Time.deltaTime;
-            circle.rectTransform.localEulerAngles -= new Vector3(0, 0, velocityRotation * Time.deltaTime);
-            if (time >= delay)
+            barraProgresso.value = Mathf.MoveTowards(barraProgresso.value, atraso, Time.deltaTime);
+            tempo += Time.deltaTime;
+            circulo.rectTransform.localEulerAngles -= new Vector3(0, 0, velocidadeRotacao * Time.deltaTime);
+            if (tempo >= atraso)
             {
-                loadScreen = false;
-                loadingCanvasUI.SetActive(false);
+                telaCarregando = false;
+                canvasCarregamentoUI.SetActive(false);
                 this.enabled = false;
             }
         }
     }
 
-    IEnumerator AnimText()
+    IEnumerator AnimarTexto()
     {
-        for (int i = 0; loadScreen; i++)
+        for (int i = 0; telaCarregando; i++)
         {
-            loadingText.text = "Carregando.";
-            yield return new WaitForSeconds(delayText);
-            loadingText.text = "Carregando..";
-            yield return new WaitForSeconds(delayText);
-            loadingText.text = "Carregando...";
-            yield return new WaitForSeconds(delayText);
+            textoCarregando.text = "Carregando.";
+            yield return new WaitForSeconds(atrasoTexto);
+            textoCarregando.text = "Carregando..";
+            yield return new WaitForSeconds(atrasoTexto);
+            textoCarregando.text = "Carregando...";
+            yield return new WaitForSeconds(atrasoTexto);
         }
     }
 }

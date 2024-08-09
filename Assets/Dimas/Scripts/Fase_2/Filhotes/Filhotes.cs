@@ -8,8 +8,8 @@ public class Filhotes : MonoBehaviour
 
     private void Update()
     {
-        Vector3 direcao = (destino.position - transform.position).normalized;
-        transform.position += direcao * velocidade * Time.deltaTime;
+        Vector3 _direcao = (destino.position - transform.position).normalized;
+        transform.position += _direcao * velocidade * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)

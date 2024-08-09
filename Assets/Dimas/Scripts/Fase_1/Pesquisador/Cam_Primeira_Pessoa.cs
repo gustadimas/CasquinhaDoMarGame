@@ -15,8 +15,8 @@ public class Cam_Primeira_Pessoa : MonoBehaviour
 
     void Start()
     {
-        Vector3 eulerAngles = transform.localRotation.eulerAngles;
-        velocidade.y = -eulerAngles.x;
+        Vector3 _eulerAngles = transform.localRotation.eulerAngles;
+        velocidade.y = -_eulerAngles.x;
         velocidade.x = pesquisador.localRotation.eulerAngles.y;
     }
 
