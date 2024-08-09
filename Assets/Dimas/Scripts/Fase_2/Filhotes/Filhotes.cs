@@ -21,25 +21,6 @@ public class Filhotes : MonoBehaviour
         }
 
         if (other.gameObject.CompareTag("DestinoFilhote"))
-            CarregarProximaCena();
-    }
-
-    private void CarregarProximaCena()
-    {
-        int cenaAtual = SceneManager.GetActiveScene().buildIndex;
-        int proximaCena = GameManager.proximaEtapa;
-
-        Debug.Log($"Cena Atual: {cenaAtual}, Próxima Cena: {proximaCena}");
-
-        if (proximaCena <= cenaAtual)
-        {
-            proximaCena = cenaAtual + 1;
-            GameManager.proximaEtapa = proximaCena;
-        }
-
-        if (proximaCena < SceneManager.sceneCountInBuildSettings)
-            SceneManager.LoadScene(proximaCena);
-        else
-            Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
+            FadeManager.instance.CarregarProximaCenaComFade();
     }
 }
