@@ -8,6 +8,7 @@ public class Quadriciclo : MonoBehaviour
     [SerializeField] float forcaArrasteEmX = 50f;
     [SerializeField] float velocidade = 5f;
     [SerializeField] float distanciaMinimaArraste = 50f;
+    [SerializeField] float distanciaParaAcao = 2f;
 
     Rigidbody rb;
     Vector3 spawnPoint;
@@ -22,6 +23,46 @@ public class Quadriciclo : MonoBehaviour
     {
         if (!isDragging)
             MoverEmDirecaoAosFilhotes();
+
+        VerificarDistanciaComFilhote();
+    }
+
+    private void VerificarDistanciaComFilhote()
+    {
+        filhotes = GameObject.FindGameObjectsWithTag("Filhote");
+        if (filhotes.Length > 0)
+        {
+            GameObject filhoteMaisProximo = ObterFilhoteMaisProximo();
+            if (filhoteMaisProximo != null)
+            {
+                float distancia = Vector3.Distance(transform.position, filhoteMaisProximo.transform.position);
+                if (distancia <= distanciaParaAcao && !jaFoi)
+                {
+                    jaFoi = true;
+                    AcaoAoAlcancarFilhote();
+                }
+            }
+        }
+    }
+
+    bool jaFoi = false;
+
+    private void AcaoAoAlcancarFilhote()
+    {
+        var rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
+
+        var collider = GetComponent<Collider>();
+        if (collider != null)
+        {
+            collider.enabled = false;
+        }
+
+        VidaTartarugas.instance.PerdeuVida();
+        Destroy(gameObject);
     }
 
     private void OnMouseDown()
@@ -60,7 +101,7 @@ public class Quadriciclo : MonoBehaviour
 
     private void MoverEmDirecaoAosFilhotes()
     {
-        if (isDragging) 
+        if (isDragging)
             return;
 
         filhotes = GameObject.FindGameObjectsWithTag("Filhote");
@@ -72,13 +113,10 @@ public class Quadriciclo : MonoBehaviour
                 Vector3 direcao = (filhoteMaisProximo.transform.position - transform.position).normalized;
                 Vector3 novaDirecao = new Vector3(direcao.x, 0, direcao.z);
 
-                
                 Quaternion novaRotacao = Quaternion.LookRotation(-novaDirecao);
 
-                
                 transform.rotation = Quaternion.Slerp(transform.rotation, novaRotacao, Time.deltaTime * velocidade);
 
-                
                 transform.position += novaDirecao * velocidade * Time.deltaTime;
             }
         }

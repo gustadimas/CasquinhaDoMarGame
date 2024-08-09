@@ -80,6 +80,7 @@ MonoBehaviour:
   forcaArrasteEmX: 30
   velocidade: 10
   distanciaMinimaArraste: 50
+  distanciaParaAcao: 2
 --- !u!1001 &3141155433853759334
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class SpawnLixo : MonoBehaviour
 {
@@ -8,23 +7,34 @@ public class SpawnLixo : MonoBehaviour
     [SerializeField] float intervaloGeracao = 10f;
     [SerializeField] float limitePosicaoZ;
 
-    private void Start() => StartCoroutine(GerarLixoPeriodicamente());
-
-    IEnumerator GerarLixoPeriodicamente()
+    private void Start()
     {
-        while (true)
+        if (pontoSpawn != null)
         {
-            yield return new WaitForSeconds(intervaloGeracao);
-
-            if (pontoSpawn.position.z >= limitePosicaoZ)
-            {
-                yield break;
-            }
-
-            if (FindObjectsOfType<Lixo>().Length == 0)
-            {
-                Instantiate(prefabLixo, pontoSpawn.position, Quaternion.identity);
-            }
+            InvokeRepeating(nameof(VerificarEGerarLixo), intervaloGeracao, intervaloGeracao);
         }
+        else
+        {
+            Debug.LogError("pontoSpawn não foi atribuído!", this);
+        }
+    }
+
+    private void VerificarEGerarLixo()
+    {
+        if (pontoSpawn == null)
+        {
+            Debug.LogError("pontoSpawn é null. Verifique se foi atribuído corretamente no Inspetor.", this);
+            CancelInvoke(nameof(VerificarEGerarLixo));
+            return;
+        }
+
+        if (pontoSpawn.position.z >= limitePosicaoZ)
+        {
+            CancelInvoke(nameof(VerificarEGerarLixo));
+            return;
+        }
+
+        if (FindObjectsOfType<Lixo>().Length == 0)
+            Instantiate(prefabLixo, pontoSpawn.position, Quaternion.identity);
     }
 }

@@ -11,14 +11,13 @@ public class VidaTartarugas : MonoBehaviour
     private void Start()
     {
         instance = this;
-        tartarugas = GameObject.FindGameObjectsWithTag("Filhote");
         contagemTartarugas = tartarugas.Length-1;
     }
 
     public void PerdeuVida()
     {
-        Destroy(tartarugas[contagemTartarugas]);
-        Destroy(iconesTartaruga[contagemTartarugas]);
+        tartarugas[contagemTartarugas].SetActive(false);
+        iconesTartaruga[contagemTartarugas].SetActive(false);
         contagemTartarugas--;
 
         if (contagemTartarugas < 0)
