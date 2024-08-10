@@ -41,7 +41,7 @@ public class HackManager : MonoBehaviour
                 contadorToques++;
                 tempoUltimoToque = Time.time;
 
-                if (contadorToques >= 6)
+                if (contadorToques >= 10)
                 {
                     AbrirPainelHack();
                 }
