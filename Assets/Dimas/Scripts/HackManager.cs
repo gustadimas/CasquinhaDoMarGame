@@ -20,10 +20,7 @@ public class HackManager : MonoBehaviour
         botaoFase3.onClick.AddListener(() => CarregarFase(6));
     }
 
-    void Update()
-    {
-        VerificarToques();
-    }
+    void Update() => VerificarToques();
 
     void VerificarToques()
     {
@@ -31,7 +28,7 @@ public class HackManager : MonoBehaviour
         {
             Touch toque = Input.GetTouch(0);
 
-            if (toque.phase == TouchPhase.Ended && toque.position.x > Screen.width / 2)
+            if (toque.phase == TouchPhase.Ended && toque.position.x < Screen.width / 2)
             {
                 if (Time.time - tempoUltimoToque > intervaloToques)
                 {
@@ -41,7 +38,7 @@ public class HackManager : MonoBehaviour
                 contadorToques++;
                 tempoUltimoToque = Time.time;
 
-                if (contadorToques >= 10)
+                if (contadorToques >= 6)
                 {
                     AbrirPainelHack();
                 }
@@ -55,8 +52,5 @@ public class HackManager : MonoBehaviour
         contadorToques = 0;
     }
 
-    void CarregarFase(int indiceFase)
-    {
-        SceneManager.LoadScene(indiceFase);
-    }
+    void CarregarFase(int indiceFase) => SceneManager.LoadScene(indiceFase);
 }
