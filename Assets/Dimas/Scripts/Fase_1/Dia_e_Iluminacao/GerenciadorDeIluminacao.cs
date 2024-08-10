@@ -25,9 +25,9 @@ public class GerenciadorDeIluminacao : MonoBehaviour
     private void Awake() => instance = this;
 
 
-    private void Update() => ComeçarDia();
+    private void Update() => ComecarDia();
 
-    void ComeçarDia()
+    void ComecarDia()
     {
         if (atualizarDia == true)
         {
@@ -41,7 +41,9 @@ public class GerenciadorDeIluminacao : MonoBehaviour
                 if (horaDoDia >= 24)
                 {
                     horaDoDia = 24;
-                    if (!atingiu24Horas) atingiu24Horas = true;
+
+                    if (!atingiu24Horas) 
+                        atingiu24Horas = true;
                 }
                 else
                 {
@@ -65,31 +67,43 @@ public class GerenciadorDeIluminacao : MonoBehaviour
 
     void AtualizarIluminacao(float _percentualDeTempo)
     {
+        if (preset == null)
+        {
+            Debug.LogError("Preset de iluminação é nulo!");
+            return;
+        }
+
+        if (luzDirecional == null)
+        {
+            Debug.LogError("Luz direcional é nula!");
+            return;
+        }
+
         RenderSettings.ambientLight = preset.corAmbiente.Evaluate(_percentualDeTempo);
         RenderSettings.fogColor = preset.corNeblina.Evaluate(_percentualDeTempo);
 
-        if (luzDirecional != null)
-        {
-            luzDirecional.color = preset.corDirecional.Evaluate(_percentualDeTempo);
-            luzDirecional.transform.localRotation = Quaternion.Euler(new Vector3((_percentualDeTempo * 360f) - 90f, 170f, 0));
-        }
+        luzDirecional.color = preset.corDirecional.Evaluate(_percentualDeTempo);
+        luzDirecional.transform.localRotation = Quaternion.Euler(new Vector3((_percentualDeTempo * 360f) - 90f, 170f, 0));
     }
 
     private void OnValidate()
     {
-        if (luzDirecional != null) return;
-
-        if (RenderSettings.sun != null) luzDirecional = RenderSettings.sun;
-
-        else
+        if (luzDirecional == null)
         {
-            Light[] _lights = GameObject.FindObjectsOfType<Light>();
-            foreach (Light _light in _lights)
+            if (RenderSettings.sun != null)
             {
-                if (_light.type == LightType.Directional)
+                luzDirecional = RenderSettings.sun;
+            }
+            else
+            {
+                Light[] _lights = GameObject.FindObjectsOfType<Light>();
+                foreach (Light _light in _lights)
                 {
-                    luzDirecional = _light;
-                    return;
+                    if (_light.type == LightType.Directional)
+                    {
+                        luzDirecional = _light;
+                        return;
+                    }
                 }
             }
         }

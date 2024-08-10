@@ -37,8 +37,7 @@ public class ControleXP : MonoBehaviour
 
         if (GerenciadorDeIluminacao.atingiu24Horas == true && xpAtual < xpNecessario)
         {
-            GameManager.instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            GameManager.diasCompletos = 0;
+            ReiniciarCena();
         }
     }
 
@@ -92,7 +91,6 @@ public class ControleXP : MonoBehaviour
         if (xpAtual >= xpNecessario)
         {
             Interface_Passagem.instance.StartCoroutine(nameof(Interface_Passagem.Aparecer));
-
             fotinha.sprite = icones[1];
             Invoke(nameof(AtualizarDia), 5f);
         }
@@ -109,6 +107,16 @@ public class ControleXP : MonoBehaviour
         xpAtual = 0;
         fotinha.sprite = icones[0];
         if (numDia < maxDias) numDia++;
+    }
+
+    private void ReiniciarCena()
+    {
+        Debug.Log("Reiniciando Cena");
+        GerenciadorDeIluminacao.atingiu24Horas = false;
+        FadeManager.instance.CarregarCenaAtualComFade();
+        GameManager.diasCompletos = 0;
+        GerenciadorDeIluminacao.atualizarDia = false;
+        Interface_Passagem.instance.StartCoroutine(nameof(Interface_Passagem.Desaparecer));
     }
 
 #if UNITY_EDITOR

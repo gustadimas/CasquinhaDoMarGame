@@ -22,7 +22,6 @@ public class Interface_Passagem : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
         jogador = GameObject.FindObjectOfType<Player_Pesquisador>().transform;
 
         if (jogador != null)
@@ -32,7 +31,7 @@ public class Interface_Passagem : MonoBehaviour
         StartCoroutine(Desaparecer());
     }
 
-    private IEnumerator Desaparecer()
+    public IEnumerator Desaparecer()
     {
         if (GerenciadorDeIluminacao.atualizarDia == false)
         {

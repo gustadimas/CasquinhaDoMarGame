@@ -85,4 +85,27 @@ public class FadeManager : MonoBehaviour
         else
             Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
     }
+
+    public void CarregarCenaAnteriorComFade()
+    {
+        int _cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        int _cenaAnterior = _cenaAtual - 1;
+
+        if (_cenaAnterior >= 0)
+        {
+            Debug.Log($"Cena Atual: {_cenaAtual}, Cena Anterior: {_cenaAnterior}");
+            FadeToScene(_cenaAnterior);
+        }
+        else
+        {
+            Debug.LogWarning("Não existe uma cena anterior para carregar.");
+        }
+    }
+
+    public void CarregarCenaAtualComFade()
+    {
+        int _cenaAtual = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log($"Recarregando Cena Atual: {_cenaAtual}");
+        FadeToScene(_cenaAtual);
+    }
 }

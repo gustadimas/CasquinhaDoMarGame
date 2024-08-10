@@ -13,7 +13,11 @@ public class HUDController : MonoBehaviour
 
     public void SairBT() => Application.Quit();
 
-    public void VotarMenuBT() => SceneManager.LoadScene(0);
+    public void VotarMenuBT()
+    {
+        SceneManager.LoadScene(0);
+        GameManager.proximaEtapa = 0;
+    }
 
     public void MissaoUIAtiva()
     {
