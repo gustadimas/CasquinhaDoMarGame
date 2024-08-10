@@ -17,6 +17,7 @@ public class GerenciadorNickname : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        FadeManager.instance.ConfigurarUnscaledTime(true);
         Time.timeScale = 0;
         comecou = false;
     }
@@ -27,6 +28,7 @@ public class GerenciadorNickname : MonoBehaviour
             nickname = inputName.text;
             txtNickname.text = nickname;
             panelNickname.SetActive(false);
+            FadeManager.instance.ConfigurarUnscaledTime(false);
             Time.timeScale = 1f;
             comecou = true;
         }

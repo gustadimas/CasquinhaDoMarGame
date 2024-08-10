@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,9 +16,17 @@ public class StatusTartaruga : MonoBehaviour
     float plasticosComidos;
 
     public static StatusTartaruga instance;
+
     void Start()
     {
-        nickname.text = GerenciadorNickname.instance.nickname;
+        if (GerenciadorNickname.instance != null && !string.IsNullOrEmpty(GerenciadorNickname.instance.nickname))
+            nickname.text = GerenciadorNickname.instance.nickname;
+        else
+        {
+            nickname.text = "Casquinha";
+            Debug.LogWarning("Nickname não foi definido. Usando nome padrão.");
+        }
+
         instance = this;
         podeCurar = true;
         vidaAtual = 1;
@@ -32,10 +38,9 @@ public class StatusTartaruga : MonoBehaviour
     private void Update()
     {
         if (vidaAtual <= 0)
-        {
             GameManager.instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
+
     IEnumerator CuraBloqueada()
     {
         podeCurar = false;

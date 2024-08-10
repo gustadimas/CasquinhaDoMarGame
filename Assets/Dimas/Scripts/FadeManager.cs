@@ -6,8 +6,9 @@ using System.Collections;
 public class FadeManager : MonoBehaviour
 {
     public static FadeManager instance;
-    [SerializeField] private Image fadeImage;
-    [SerializeField] private float fadeDuration = 1f;
+    [SerializeField] Image imagemFade;
+    [SerializeField] float duracaoFade = 4f;
+    [SerializeField] bool usarUnscaledTime = false;
 
     private void Awake()
     {
@@ -15,7 +16,7 @@ public class FadeManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            fadeImage.enabled = false;
+            imagemFade.enabled = false;
         }
         else
         {
@@ -23,46 +24,46 @@ public class FadeManager : MonoBehaviour
             return;
         }
 
-        if (fadeImage != null)
+        if (imagemFade != null)
         {
-            fadeImage.color = new Color(0f, 0f, 0f, 1f);
-            StartCoroutine(FadeOut());
+            imagemFade.color = new Color(0f, 0f, 0f, 1f);
+            StartCoroutine(DesaparecerFade());
         }
         else
         {
-            Debug.LogError("Fade Image is not assigned in the FadeManager.");
+            Debug.LogError("A imagem de fade não está atribuída no GerenciadorDeFade.");
         }
     }
 
-    public void FadeToScene(int sceneIndex)
+    public void FazerFadeParaCena(int indiceCena)
     {
-        StartCoroutine(FadeInAndLoadScene(sceneIndex));
+        StartCoroutine(FazerFadeECarregarCena(indiceCena));
     }
 
-    private IEnumerator FadeInAndLoadScene(int sceneIndex)
+    private IEnumerator FazerFadeECarregarCena(int indiceCena)
     {
-        float _elapsedTime = 0f;
+        float _tempoDecorrido = 0f;
 
-        while (_elapsedTime < fadeDuration)
+        while (_tempoDecorrido < duracaoFade)
         {
-            _elapsedTime += Time.deltaTime;
-            fadeImage.color = new Color(0f, 0f, 0f, Mathf.Clamp01(_elapsedTime / fadeDuration));
+            _tempoDecorrido += usarUnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
+            imagemFade.color = new Color(0f, 0f, 0f, Mathf.Clamp01(_tempoDecorrido / duracaoFade));
             yield return null;
         }
 
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(indiceCena);
 
-        StartCoroutine(FadeOut());
+        StartCoroutine(DesaparecerFade());
     }
 
-    private IEnumerator FadeOut()
+    private IEnumerator DesaparecerFade()
     {
-        float _elapsedTime = 0f;
+        float _tempoDecorrido = 0f;
 
-        while (_elapsedTime < fadeDuration)
+        while (_tempoDecorrido < duracaoFade)
         {
-            _elapsedTime += Time.deltaTime;
-            fadeImage.color = new Color(0f, 0f, 0f, 1f - Mathf.Clamp01(_elapsedTime / fadeDuration));
+            _tempoDecorrido += usarUnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
+            imagemFade.color = new Color(0f, 0f, 0f, 1f - Mathf.Clamp01(_tempoDecorrido / duracaoFade));
             yield return null;
         }
     }
@@ -81,9 +82,9 @@ public class FadeManager : MonoBehaviour
         }
 
         if (_proximaCena < SceneManager.sceneCountInBuildSettings)
-            FadeToScene(_proximaCena);
+            FazerFadeParaCena(_proximaCena);
         else
-            Debug.LogError("Proxima cena está fora do range das cenas configuradas no Build Settings.");
+            Debug.LogError("Próxima cena está fora do range das cenas configuradas no Build Settings.");
     }
 
     public void CarregarCenaAnteriorComFade()
@@ -94,7 +95,7 @@ public class FadeManager : MonoBehaviour
         if (_cenaAnterior >= 0)
         {
             Debug.Log($"Cena Atual: {_cenaAtual}, Cena Anterior: {_cenaAnterior}");
-            FadeToScene(_cenaAnterior);
+            FazerFadeParaCena(_cenaAnterior);
         }
         else
         {
@@ -106,6 +107,11 @@ public class FadeManager : MonoBehaviour
     {
         int _cenaAtual = SceneManager.GetActiveScene().buildIndex;
         Debug.Log($"Recarregando Cena Atual: {_cenaAtual}");
-        FadeToScene(_cenaAtual);
+        FazerFadeParaCena(_cenaAtual);
+    }
+
+    public void ConfigurarUnscaledTime(bool usarUnscaled)
+    {
+        usarUnscaledTime = usarUnscaled;
     }
 }
