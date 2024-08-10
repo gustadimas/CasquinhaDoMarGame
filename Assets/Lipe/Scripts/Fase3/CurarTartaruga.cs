@@ -7,22 +7,41 @@ public class CurarTartaruga : MonoBehaviour
     [SerializeField] Tartaruga scriptMovimentacao;
     [SerializeField] GameObject analogicoMov;
     [SerializeField] GameObject analogicoRot;
+    Rigidbody rbTartaruga;
+
+    private void Start()
+    {
+        scriptMovimentacao = GameObject.FindObjectOfType<Tartaruga>();
+        if (scriptMovimentacao != null)
+        {
+            rbTartaruga = scriptMovimentacao.GetComponent<Rigidbody>();
+        }
+
+        analogicoMov = GameObject.Find("AnalogicoMov");
+        analogicoRot = GameObject.Find("AnalogicoRot");
+    }
+
     IEnumerator CuraContinua()
     {
-        float tempoAlimentacao = 3f;
-        float intervaloEntreCuras = 0f;
+        float _tempoAlimentacao = 3f;
+        float _intervaloEntreCuras = 0f;
 
         scriptMovimentacao.enabled = false;
         analogicoMov.SetActive(false);
         analogicoRot.SetActive(false);
 
-        while (intervaloEntreCuras < tempoAlimentacao)
+        if (rbTartaruga != null)
+        {
+            StartCoroutine(DesativarTemporariamente(rbTartaruga));
+        }
+
+        while (_intervaloEntreCuras < _tempoAlimentacao)
         {
             StatusTartaruga status = FindObjectOfType<StatusTartaruga>();
             status.RecuperarVida(danoCurado);
 
             yield return new WaitForSeconds(1);
-            intervaloEntreCuras += 1f;
+            _intervaloEntreCuras += 1f;
         }
 
         scriptMovimentacao.ReativarJogador();
@@ -39,5 +58,12 @@ public class CurarTartaruga : MonoBehaviour
             if (StatusTartaruga.instance.vidaAtual != 1 && StatusTartaruga.instance.podeCurar)
                 StartCoroutine(CuraContinua());
         }
+    }
+
+    IEnumerator DesativarTemporariamente(Rigidbody rb)
+    {
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(0.1f);
+        rb.isKinematic = false;
     }
 }
