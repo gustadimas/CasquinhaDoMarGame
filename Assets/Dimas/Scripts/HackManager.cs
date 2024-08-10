@@ -31,7 +31,7 @@ public class HackManager : MonoBehaviour
         {
             Touch toque = Input.GetTouch(0);
 
-            if (toque.phase == TouchPhase.Ended && toque.position.x < Screen.width / 2)
+            if (toque.phase == TouchPhase.Ended && toque.position.x > Screen.width / 2)
             {
                 if (Time.time - tempoUltimoToque > intervaloToques)
                 {
