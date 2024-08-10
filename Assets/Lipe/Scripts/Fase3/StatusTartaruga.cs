@@ -20,7 +20,7 @@ public class StatusTartaruga : MonoBehaviour
     public static StatusTartaruga instance;
     void Start()
     {
-        //nickname.text = GerenciadorNickname.instance.nickname;
+        nickname.text = GerenciadorNickname.instance.nickname;
         instance = this;
         podeCurar = true;
         vidaAtual = 1;
