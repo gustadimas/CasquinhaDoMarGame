@@ -55,7 +55,6 @@ public class EventSpawner : MonoBehaviour
                     }
                     break;
             }
-            
         }
 
         if (randomizedEvent == "EventoTurista")
@@ -75,9 +74,6 @@ public class EventSpawner : MonoBehaviour
                     Instantiate(turista, pointsTurista[2].transform.position, Quaternion.identity);
                     break;
             }
-            
-            
-
         }
 
         if (randomizedEvent == "EventoPescador")
@@ -97,7 +93,6 @@ public class EventSpawner : MonoBehaviour
                     Instantiate(pescador, pointsPescador[2].transform.position, Quaternion.identity);
                     break;
             }
-            
         }
     }
 
@@ -128,7 +123,6 @@ public class EventSpawner : MonoBehaviour
 
         return Vector3.zero;
     }
-
 
     public void RemoveObject(GameObject spawnedObject) => spawnedObjects.Remove(spawnedObject);
 }

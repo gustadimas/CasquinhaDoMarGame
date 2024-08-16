@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player_Pesquisador : MonoBehaviour
 {
     [Header("Configuracoes:")]
-    [SerializeField] bool desativarEntradas = false;
+    [SerializeField] public bool desativarEntradas = false;
     [SerializeField] float velocidadeMovimento;
 
     [Header("Atribuicoes:")]

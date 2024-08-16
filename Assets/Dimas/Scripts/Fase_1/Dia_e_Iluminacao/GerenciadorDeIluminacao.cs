@@ -9,10 +9,10 @@ public class GerenciadorDeIluminacao : MonoBehaviour
     [SerializeField] PresetDeIluminacao preset;
 
     [Header("Definir a Hora Manual:")]
-    [SerializeField, Range(6, 24)] float horaDoDia;
+    [SerializeField, Range(6, 24)] public float horaDoDia;
 
     [Header("Definir a Hora Automatica:")]
-    [SerializeField] float duracaoDiaMinutos;
+    [SerializeField] public float duracaoDiaMinutos;
 
     [SerializeField] float totalXP;
 
