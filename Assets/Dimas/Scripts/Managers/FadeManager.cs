@@ -35,10 +35,7 @@ public class FadeManager : MonoBehaviour
         }
     }
 
-    public void FazerFadeParaCena(int indiceCena)
-    {
-        StartCoroutine(FazerFadeECarregarCena(indiceCena));
-    }
+    public void FazerFadeParaCena(int indiceCena) => StartCoroutine(FazerFadeECarregarCena(indiceCena));
 
     private IEnumerator FazerFadeECarregarCena(int indiceCena)
     {
@@ -98,9 +95,7 @@ public class FadeManager : MonoBehaviour
             FazerFadeParaCena(_cenaAnterior);
         }
         else
-        {
             Debug.LogWarning("Não existe uma cena anterior para carregar.");
-        }
     }
 
     public void CarregarCenaAtualComFade()
@@ -110,8 +105,5 @@ public class FadeManager : MonoBehaviour
         FazerFadeParaCena(_cenaAtual);
     }
 
-    public void ConfigurarUnscaledTime(bool usarUnscaled)
-    {
-        usarUnscaledTime = usarUnscaled;
-    }
+    public void ConfigurarUnscaledTime(bool usarUnscaled) => usarUnscaledTime = usarUnscaled;
 }
