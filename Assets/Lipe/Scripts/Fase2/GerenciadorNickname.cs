@@ -31,7 +31,6 @@ public class GerenciadorNickname : MonoBehaviour
             FadeManager.instance.ConfigurarUnscaledTime(false);
             Time.timeScale = 1f;
             comecou = true;
-            Time.timeScale = 0f;
         }
     }
 }

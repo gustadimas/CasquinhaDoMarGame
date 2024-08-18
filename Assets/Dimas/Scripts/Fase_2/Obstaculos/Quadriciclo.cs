@@ -11,12 +11,12 @@ public class Quadriciclo : MonoBehaviour
     [SerializeField] float distanciaParaAcao = 2f;
 
     Rigidbody rb;
-    Vector3 spawnPoint;
+    Vector3 pontoSpawn;
     GameObject[] filhotes;
     bool estaArrastando = false;
     bool jaFoi = false;
 
-    public void SetSpawnPoint(Vector3 spawnPoint) => this.spawnPoint = spawnPoint;
+    public void SetarPontoSpawn(Vector3 _pontoSpawn) => this.pontoSpawn = _pontoSpawn;
 
     private void Start() => rb = GetComponent<Rigidbody>();
 
@@ -48,9 +48,9 @@ public class Quadriciclo : MonoBehaviour
 
     private void AcaoAoAlcancarFilhote()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null)
-            rb.isKinematic = true;
+        Rigidbody _rb = GetComponent<Rigidbody>();
+        if (_rb != null)
+            _rb.isKinematic = true;
 
         Collider _collider = GetComponent<Collider>();
         if (_collider != null)
@@ -79,7 +79,7 @@ public class Quadriciclo : MonoBehaviour
         if (Vector2.Distance(inicialPos, finalPos) >= distanciaMinimaArraste)
         {
             Vector2 _dragDirection = finalPos - inicialPos;
-            Vector3 _direcaoSpawn = (spawnPoint - transform.position).normalized;
+            Vector3 _direcaoSpawn = (pontoSpawn - transform.position).normalized;
 
             Vector3 _dragDirectionWorld = Camera.main.ScreenToWorldPoint(new Vector3(_dragDirection.x, 0, 
                 Camera.main.nearClipPlane)) - Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
@@ -109,11 +109,8 @@ public class Quadriciclo : MonoBehaviour
             {
                 Vector3 _direcao = (_filhoteMaisProximo.transform.position - transform.position).normalized;
                 Vector3 _novaDirecao = new Vector3(_direcao.x, 0, _direcao.z);
-
-                Quaternion novaRotacao = Quaternion.LookRotation(-_novaDirecao);
-
-                transform.rotation = Quaternion.Slerp(transform.rotation, novaRotacao, Time.deltaTime * velocidade);
-
+                Quaternion _novaRotacao = Quaternion.LookRotation(-_novaDirecao);
+                transform.rotation = Quaternion.Slerp(transform.rotation, _novaRotacao, Time.deltaTime * velocidade);
                 transform.position += _novaDirecao * velocidade * Time.deltaTime;
             }
         }
@@ -122,15 +119,15 @@ public class Quadriciclo : MonoBehaviour
     private GameObject ObterFilhoteMaisProximo()
     {
         GameObject _filhoteMaisProximo = null;
-        float menorDistancia = Mathf.Infinity;
+        float _menorDistancia = Mathf.Infinity;
 
-        foreach (GameObject filhote in filhotes)
+        foreach (GameObject _filhote in filhotes)
         {
-            float distancia = Vector3.Distance(transform.position, filhote.transform.position);
-            if (distancia < menorDistancia)
+            float _distancia = Vector3.Distance(transform.position, _filhote.transform.position);
+            if (_distancia < _menorDistancia)
             {
-                menorDistancia = distancia;
-                _filhoteMaisProximo = filhote;
+                _menorDistancia = _distancia;
+                _filhoteMaisProximo = _filhote;
             }
         }
 

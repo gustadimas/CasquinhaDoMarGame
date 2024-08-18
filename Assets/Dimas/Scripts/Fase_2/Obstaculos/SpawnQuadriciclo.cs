@@ -3,36 +3,36 @@ using UnityEngine;
 public class SpawnQuadriciclo : MonoBehaviour
 {
     public GameObject quadricicloPrefab;
-    public Transform[] spawnPoints;
-    public float spawnInterval = 5f;
-    [SerializeField] AudioSource spawnSound;
-    private float nextSpawnTime;
+    public Transform[] pontosSpawn;
+    public float intervaloSpawn = 5f;
+    [SerializeField] AudioSource somSpawn;
+    float proximoSpawn;
 
     private void Update()
     {
-        if (Time.time >= nextSpawnTime && !QuadricicloExists() && GerenciadorNickname.instance.comecou)
+        if (Time.time >= proximoSpawn && !QuadricicloExists() && GerenciadorNickname.instance.comecou)
         {
             SpawnarQuadriciclo();
-            nextSpawnTime = Time.time + spawnInterval;
+            proximoSpawn = Time.time + intervaloSpawn;
         }
     }
 
-    private bool QuadricicloExists()
+    bool QuadricicloExists()
     {
         return GameObject.FindObjectOfType<Quadriciclo>() != null;
     }
 
-    private void SpawnarQuadriciclo()
+    void SpawnarQuadriciclo()
     {
-        Transform spawnPointEscolhido = EscolherSpawnAleatorio();
-        GameObject quadriciclo = Instantiate(quadricicloPrefab, spawnPointEscolhido.position, spawnPointEscolhido.rotation);
-        quadriciclo.GetComponent<Quadriciclo>().SetSpawnPoint(spawnPointEscolhido.position);
-        spawnSound.Play();
+        Transform _spawnPointEscolhido = EscolherSpawnAleatorio();
+        GameObject _quadriciclo = Instantiate(quadricicloPrefab, _spawnPointEscolhido.position, _spawnPointEscolhido.rotation);
+        _quadriciclo.GetComponent<Quadriciclo>().SetarPontoSpawn(_spawnPointEscolhido.position);
+        somSpawn.Play();
     }
 
     private Transform EscolherSpawnAleatorio()
     {
-        int spawnIndex = Random.Range(0, spawnPoints.Length);
-        return spawnPoints[spawnIndex];
+        int _spawnIndex = Random.Range(0, pontosSpawn.Length);
+        return pontosSpawn[_spawnIndex];
     }
 }

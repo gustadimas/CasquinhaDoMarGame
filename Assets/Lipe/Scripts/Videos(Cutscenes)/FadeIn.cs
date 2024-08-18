@@ -61,7 +61,6 @@ public class FadeIn : MonoBehaviour
     {
         int _cenaAtual = SceneManager.GetActiveScene().buildIndex;
         int _proximaCena = GameManager.proximaEtapa;
-
         Debug.Log($"Cena Atual: {_cenaAtual}, Próxima Cena: {_proximaCena}");
         if (_cenaAtual != 8)
         {
