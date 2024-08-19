@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VidaTartarugas : MonoBehaviour
 {
@@ -21,6 +22,6 @@ public class VidaTartarugas : MonoBehaviour
         contagemTartarugas--;
 
         if (contagemTartarugas < 0)
-            GameManager.instance.LoadScene(GameManager.proximaEtapa);
+            GameManager.instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

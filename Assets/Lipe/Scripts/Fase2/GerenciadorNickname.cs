@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-
 
 public class GerenciadorNickname : MonoBehaviour
 {
@@ -17,10 +13,13 @@ public class GerenciadorNickname : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        PlayerPrefs.DeleteKey("NicknameFilhote");
+
         FadeManager.instance.ConfigurarUnscaledTime(true);
         Time.timeScale = 0;
         comecou = false;
     }
+
     public void Nomear()
     {
         if (inputName != null && !string.IsNullOrEmpty(inputName.text.Trim()))
@@ -31,6 +30,9 @@ public class GerenciadorNickname : MonoBehaviour
             FadeManager.instance.ConfigurarUnscaledTime(false);
             Time.timeScale = 1f;
             comecou = true;
+
+            PlayerPrefs.SetString("NicknameFilhote", nickname);
+            PlayerPrefs.Save();
         }
     }
 }

@@ -21,7 +21,7 @@ public class SpawnLixo : MonoBehaviour
         if (pontoSpawn != null)
             StartCoroutine(AguardarAtrasoInicial());
         else
-            Debug.LogError("pontoSpawn não foi atribuído!", this);
+            Debug.LogError("O ponto de Spawn não foi atribuído!", this);
     }
 
     IEnumerator AguardarAtrasoInicial()

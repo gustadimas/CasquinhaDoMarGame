@@ -19,8 +19,10 @@ public class StatusTartaruga : MonoBehaviour
 
     void Start()
     {
-        if (GerenciadorNickname.instance != null && !string.IsNullOrEmpty(GerenciadorNickname.instance.nickname))
-            nickname.text = GerenciadorNickname.instance.nickname;
+        string _savedNickname = PlayerPrefs.GetString("NicknameFilhote", "Casquinha");
+
+        if (!string.IsNullOrEmpty(_savedNickname))
+            nickname.text = _savedNickname;
         else
         {
             nickname.text = "Casquinha";

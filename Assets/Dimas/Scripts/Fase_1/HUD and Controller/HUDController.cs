@@ -11,12 +11,17 @@ public class HUDController : MonoBehaviour
 
     public void JogarBT() => SceneManager.LoadScene(1);
 
-    public void SairBT() => Application.Quit();
+    public void SairBT()
+    {
+        PlayerPrefs.DeleteKey("NicknameFilhote");
+        Application.Quit();
+    }
 
     public void VotarMenuBT()
     {
         SceneManager.LoadScene(0);
         GameManager.proximaEtapa = 0;
+        PlayerPrefs.DeleteKey("NicknameFilhote");
     }
 
     public void MissaoUIAtiva()

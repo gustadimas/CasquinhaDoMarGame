@@ -29,9 +29,7 @@ public class SpawnQuadriciclo : MonoBehaviour
     private void Update()
     {
         if (filhote != null && filhote.position.z >= 31)
-        {
             devePararSpawn = true;
-        }
 
         if (!devePararSpawn && Time.time >= proximoSpawn && !QuadricicloExiste() && GerenciadorNickname.instance.comecou)
         {
@@ -55,9 +53,7 @@ public class SpawnQuadriciclo : MonoBehaviour
             tutorial.QuadricicloSpawnado();
         }
         else
-        {
             _spawnPointEscolhido = EscolherSpawnAleatorio();
-        }
 
         GameObject _quadriciclo = Instantiate(quadricicloPrefab, _spawnPointEscolhido.position, _spawnPointEscolhido.rotation);
         _quadriciclo.GetComponent<Quadriciclo>().SetarPontoSpawn(_spawnPointEscolhido.position);
@@ -66,7 +62,7 @@ public class SpawnQuadriciclo : MonoBehaviour
         primeiroSpawn = false;
     }
 
-    private Transform EscolherSpawnAleatorio()
+    Transform EscolherSpawnAleatorio()
     {
         int _spawnIndex = Random.Range(0, pontosSpawn.Length);
         return pontosSpawn[_spawnIndex];
