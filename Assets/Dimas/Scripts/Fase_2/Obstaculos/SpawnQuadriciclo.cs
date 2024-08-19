@@ -6,10 +6,9 @@ public class SpawnQuadriciclo : MonoBehaviour
     public Transform[] pontosSpawn;
     public float intervaloSpawn = 5f;
     public float atrasoInicial = 20f;
+    float proximoSpawn;
     [SerializeField] AudioSource somSpawn;
-    private float proximoSpawn;
-
-    private bool primeiroSpawn = true;
+    bool primeiroSpawn = true;
     TutorialFase2 tutorial;
 
     private void Start()
@@ -21,19 +20,19 @@ public class SpawnQuadriciclo : MonoBehaviour
     IEnumerator AguardarAtrasoInicial()
     {
         yield return new WaitForSeconds(atrasoInicial);
-        proximoSpawn = Time.time; 
+        proximoSpawn = Time.time;
     }
 
     private void Update()
     {
-        if (Time.time >= proximoSpawn && !QuadricicloExists() && GerenciadorNickname.instance.comecou)
+        if (Time.time >= proximoSpawn && !QuadricicloExiste() && GerenciadorNickname.instance.comecou)
         {
             SpawnarQuadriciclo();
             proximoSpawn = Time.time + intervaloSpawn;
         }
     }
 
-    bool QuadricicloExists()
+    bool QuadricicloExiste()
     {
         return GameObject.FindObjectOfType<Quadriciclo>() != null;
     }
