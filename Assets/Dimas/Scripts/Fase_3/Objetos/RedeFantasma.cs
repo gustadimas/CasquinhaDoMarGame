@@ -38,9 +38,7 @@ public class RedeFantasma : MonoBehaviour
             _status.ReceberDano(danoCausado);
 
             if (rbTartaruga != null)
-            {
                 StartCoroutine(DesativarTemporariamente(rbTartaruga));
-            }
 
             StartCoroutine(Mover());
 
