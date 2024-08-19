@@ -15,7 +15,7 @@ public class SpawnLixo : MonoBehaviour
             Debug.LogError("pontoSpawn não foi atribuído!", this);
     }
 
-    private void VerificarEGerarLixo()
+    public void VerificarEGerarLixo()
     {
         if (pontoSpawn == null)
         {
