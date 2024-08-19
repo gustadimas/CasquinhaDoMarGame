@@ -731,7 +731,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5577493273750827408}
         m_TargetAssemblyTypeName: HUDController, Assembly-CSharp
-        m_MethodName: VotarMenuBT
+        m_MethodName: VoltarMenuBT
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

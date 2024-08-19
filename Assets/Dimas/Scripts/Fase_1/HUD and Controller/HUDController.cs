@@ -17,7 +17,7 @@ public class HUDController : MonoBehaviour
         Application.Quit();
     }
 
-    public void VotarMenuBT()
+    public void VoltarMenuBT()
     {
         SceneManager.LoadScene(0);
         GameManager.proximaEtapa = 0;
