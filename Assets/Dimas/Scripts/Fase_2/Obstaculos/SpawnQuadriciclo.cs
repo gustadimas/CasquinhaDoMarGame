@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+
 public class SpawnQuadriciclo : MonoBehaviour
 {
     public GameObject quadricicloPrefab;
@@ -8,7 +9,9 @@ public class SpawnQuadriciclo : MonoBehaviour
     public float atrasoInicial = 20f;
     float proximoSpawn;
     [SerializeField] AudioSource somSpawn;
+    [SerializeField] Transform filhote;
     bool primeiroSpawn = true;
+    bool devePararSpawn = false;
     TutorialFase2 tutorial;
 
     private void Start()
@@ -25,7 +28,12 @@ public class SpawnQuadriciclo : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= proximoSpawn && !QuadricicloExiste() && GerenciadorNickname.instance.comecou)
+        if (filhote != null && filhote.position.z >= 31)
+        {
+            devePararSpawn = true;
+        }
+
+        if (!devePararSpawn && Time.time >= proximoSpawn && !QuadricicloExiste() && GerenciadorNickname.instance.comecou)
         {
             SpawnarQuadriciclo();
             proximoSpawn = Time.time + intervaloSpawn;
@@ -47,7 +55,9 @@ public class SpawnQuadriciclo : MonoBehaviour
             tutorial.QuadricicloSpawnado();
         }
         else
+        {
             _spawnPointEscolhido = EscolherSpawnAleatorio();
+        }
 
         GameObject _quadriciclo = Instantiate(quadricicloPrefab, _spawnPointEscolhido.position, _spawnPointEscolhido.rotation);
         _quadriciclo.GetComponent<Quadriciclo>().SetarPontoSpawn(_spawnPointEscolhido.position);

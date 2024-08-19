@@ -7,65 +7,52 @@ public class SpawnLixo : MonoBehaviour
     [SerializeField] Transform pontoSpawn;
     [SerializeField] float intervaloGeracao = 10f;
     [SerializeField] float limitePosicaoZ;
-    [SerializeField] float atrasoSpawnLixo = 20f; // Atraso para o spawn de lixo
-    TutorialFase2 tutorial; // Referência ao script de tutorial
+    [SerializeField] float atrasoInicialLixo;
+    TutorialFase2 tutorial;
 
-    private bool primeiroSpawn = true;
-    private float proximoSpawn;
+    bool primeiroSpawn = true;
+    bool aguardandoAtraso = true;
+    float proximoSpawn;
 
     private void Start()
     {
         tutorial = GetComponent<TutorialFase2>();
 
         if (pontoSpawn != null)
-            StartCoroutine(AguardarIntervaloInicial());
+            StartCoroutine(AguardarAtrasoInicial());
         else
             Debug.LogError("pontoSpawn não foi atribuído!", this);
     }
 
-    IEnumerator AguardarIntervaloInicial()
+    IEnumerator AguardarAtrasoInicial()
     {
-        // Aguardar um tempo antes de iniciar o primeiro spawn
-        yield return new WaitForSeconds(atrasoSpawnLixo);
-        proximoSpawn = Time.time;
-        VerificarEGerarLixo();
+        yield return new WaitForSeconds(atrasoInicialLixo);
+        aguardandoAtraso = false;
+        proximoSpawn = Time.time + intervaloGeracao;
     }
 
     private void Update()
     {
-        // Verificar se é hora de spawnar o próximo lixo e se não há nenhum lixo na cena
+        if (aguardandoAtraso) return;
+
         if (Time.time >= proximoSpawn && FindObjectsOfType<Lixo>().Length == 0)
         {
-            StartCoroutine(SpawnarComAtraso()); // Adicionar um atraso para o próximo spawn
+            SpawnarLixo();
+            proximoSpawn = Time.time + intervaloGeracao;
         }
     }
 
-    IEnumerator SpawnarComAtraso()
+    void SpawnarLixo()
     {
-        // Adiciona um atraso antes de spawnar o lixo
-        yield return new WaitForSeconds(atrasoSpawnLixo);
-        VerificarEGerarLixo();
-        proximoSpawn = Time.time + intervaloGeracao; // Ajustar o tempo do próximo spawn
-    }
-
-    public void VerificarEGerarLixo()
-    {
-        // Verificar se o ponto de spawn está configurado corretamente
         if (pontoSpawn == null || pontoSpawn.position.z >= limitePosicaoZ)
-        {
-            CancelInvoke(nameof(VerificarEGerarLixo));
             return;
-        }
 
-        // Verificar se não há lixos na cena
-        if (FindObjectsOfType<Lixo>().Length == 0)
+        Instantiate(prefabLixo, pontoSpawn.position, Quaternion.identity);
+
+        if (primeiroSpawn)
         {
-            GameObject lixo = Instantiate(prefabLixo, pontoSpawn.position, Quaternion.identity);
-            if (primeiroSpawn)
-            {
-                tutorial.LixoTutorial(); // Iniciar tutorial no primeiro spawn de lixo
-                primeiroSpawn = false;
-            }
+            tutorial.LixoTutorial();
+            primeiroSpawn = false;
         }
     }
 }

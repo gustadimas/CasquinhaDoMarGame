@@ -7,6 +7,7 @@ public class TutorialFase2 : MonoBehaviour
     [SerializeField] GameObject objetoComAnimacaoQuadriciclo;
     [SerializeField] GameObject objetoComAnimacaoLixo;
     [SerializeField] float tempoEsperaAntesLento = 2.5f;
+    [SerializeField] float tempoEsperaAntesLentoLixo = 1f;
     [SerializeField] float cameraLentaTimeScale = 0.1f;
     [SerializeField] float duracaoMaximaTutorial = 10f;
 
@@ -39,7 +40,7 @@ public class TutorialFase2 : MonoBehaviour
 
     IEnumerator IniciarCameraLentaLixo()
     {
-        yield return new WaitForSeconds(tempoEsperaAntesLento);
+        yield return new WaitForSeconds(tempoEsperaAntesLentoLixo);
 
         objetoComAnimacaoLixo.SetActive(true);
         Time.timeScale = cameraLentaTimeScale;

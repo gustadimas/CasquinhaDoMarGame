@@ -69,7 +69,10 @@ public class TutorialFase1 : MonoBehaviour
         yield return StartCoroutine(FazerFadeIn(canvasGroupTutorial, fadeDuration));
 
         // Introdução
-        yield return ExibirMensagem("Bem-vindo ao período de incubação! Vamos aprender os controles básicos antes de começar.");
+        yield return ExibirMensagem("Bem-vindo ao período de incubação! Você está responsável por proteger a ninhada de filhotes!");
+        yield return new WaitForSecondsRealtime(2f);
+        
+        yield return ExibirMensagem("Vamos aprender os controles básicos antes de começar.");
         if (pularTutorial) yield break;
 
         // Tutorial de Movimento
