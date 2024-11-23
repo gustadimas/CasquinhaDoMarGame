@@ -15,17 +15,17 @@ Em *Casquinha do Mar*, você assume o papel de um pesquisador recém-contratado 
 - **Primeiro Nível: "Proteção dos Ovos"**
   - O jogador assume o papel de um pesquisador que deve cuidar da praia, conscientizar pessoas e proteger os ninhos.
 
-![Image](./Docs/Images/Fase1.png)
+![Image](./Docs/Images/Fase1.jpeg)
 
 - **Diálogos da Fase 1**
   - Interações com pescadores e turistas que permitem conscientizá-los sobre boas práticas de preservação marinha, destacando políticas públicas e ações individuais que ajudam a proteger as tartarugas e seu habitat.
 
-![Image](./Docs/Images/Dialogo.png)
+![Image](./Docs/Images/Dialogo.jpeg)
 
 - **Segundo Nível: "A Caminho do Mar"**
   - O jogador protege os filhotes durante sua jornada da areia até o mar, enfrentando obstáculos como lixo e quadriciclos.
 
-![Image](./Docs/Images/Fase2.png)
+![Image](./Docs/Images/Fase2.jpeg)
 
 - **Terceiro Nível: "Oceano Aberto"**
   - Controle uma tartaruga adulta, enfrentando ameaças como redes fantasmas e poluição enquanto busca sua área de reprodução.
