@@ -6,6 +6,9 @@ Em *Casquinha do Mar*, você assume o papel de um pesquisador recém-contratado 
 
 “Casquinha do Mar” é um jogo que destaca a **importância da conservação ambiental e educação sobre a vida marinha**, com parceria do [Projeto Tamar](https://www.tamar.org.br/). O jogo coloca o jogador na pele de um pesquisador que assume a responsabilidade de proteger e guiar as tartarugas marinhas em momentos cruciais de suas vidas.
 
+## Link para download:
+**https://bunniebel.itch.io/casquinha-do-mar**
+
 ## Imagens do jogo
 
 - **Menu inicial**
